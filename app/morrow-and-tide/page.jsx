@@ -43,6 +43,25 @@ const menu = [
   ["Soft serve", "Olive oil / sea salt", "7"],
 ];
 
+const featuredPlates = [
+  {
+    image: "/assets/morrow-tide/oysters.webp",
+    alt: "Six British oysters on crushed ice with apple mignonette and sea herbs",
+    number: "01",
+    name: "Oysters",
+    detail: "Apple mignonette / sea herbs",
+    price: "£4 each",
+  },
+  {
+    image: "/assets/morrow-tide/crab-toast.webp",
+    alt: "Grilled sourdough crab toast with brown butter and pickled cucumber",
+    number: "02",
+    name: "Crab toast",
+    detail: "Brown butter / pickled cucumber",
+    price: "£14",
+  },
+];
+
 const details = [
   ["Walk in", "We keep half the room for people who simply turn up."],
   ["From the station", "Nine minutes on foot from Margate railway station."],
@@ -163,9 +182,45 @@ export default function MorrowAndTidePage() {
           </div>
         </section>
 
+        <section className={styles.plates} aria-labelledby="mt-plates-title">
+          <div className={styles.platesHeading}>
+            <p className={styles.index}>03 / Start here</p>
+            <div>
+              <p className={styles.platesEyebrow}>Cold beer strongly advised</p>
+              <h2 id="mt-plates-title">TWO PLATES<br />BEFORE THE FISH.</h2>
+            </div>
+            <p>
+              The quick order that becomes a long lunch: oysters from the
+              south coast, then warm crab toast from the grill.
+            </p>
+          </div>
+          <div className={styles.platesGrid}>
+            {featuredPlates.map((plate) => (
+              <article className={styles.plateCard} key={plate.name}>
+                <div className={styles.plateImage}>
+                  <Image
+                    src={plate.image}
+                    alt={plate.alt}
+                    fill
+                    sizes="(max-width: 719px) 100vw, 50vw"
+                  />
+                  <span>{plate.number}</span>
+                </div>
+                <div className={styles.plateCaption}>
+                  <div>
+                    <h3>{plate.name}</h3>
+                    <p>{plate.detail}</p>
+                  </div>
+                  <strong>{plate.price}</strong>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className={styles.menuSection} id="mt-menu">
           <div className={styles.menuHeading}>
-            <p className={styles.index}>03 / Eat</p>
+            <p className={styles.index}>04 / Eat</p>
             <h2>ON THE BOARD<br />TODAY</h2>
             <p>
               A short fictional menu, written to change often. Prices shown in
@@ -192,7 +247,7 @@ export default function MorrowAndTidePage() {
 
         <section className={styles.room}>
           <div className={styles.roomCopy}>
-            <p className={styles.index}>04 / The room</p>
+            <p className={styles.index}>05 / The room</p>
             <h2>SEE THE FIRE.<br />WATCH THE TIDE.</h2>
             <p>
               Counter seats face the pass. Windows face the sea. The music gets
@@ -216,7 +271,7 @@ export default function MorrowAndTidePage() {
 
         <section className={styles.visit} id="mt-visit">
           <div className={styles.visitIntro}>
-            <p className={styles.index}>05 / Before you come</p>
+            <p className={styles.index}>06 / Before you come</p>
             <h2>THE USEFUL<br />BITS.</h2>
           </div>
           <div className={styles.detailGrid}>
@@ -237,7 +292,7 @@ export default function MorrowAndTidePage() {
           </div>
           <div className={styles.locationGrid}>
             <div>
-              <p className={styles.index}>06 / Find us</p>
+              <p className={styles.index}>07 / Find us</p>
               <h2>MEET US<br />BY THE SEA.</h2>
             </div>
             <div className={styles.address}>

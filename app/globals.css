@@ -1119,12 +1119,13 @@ footer {
   }
 
   .dish-layout {
-    grid-template-columns: 1.45fr 0.75fr;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     align-items: start;
     gap: 56px 24px;
   }
 
   .dish-featured {
+    grid-column: span 7;
     grid-row: span 2;
   }
 
@@ -1134,6 +1135,21 @@ footer {
 
   .dish-editorial:not(.dish-featured) .dish-photo {
     aspect-ratio: 4 / 2.85;
+  }
+
+  .dish-editorial:nth-child(2),
+  .dish-editorial:nth-child(3) {
+    grid-column: span 5;
+  }
+
+  .dish-editorial:nth-child(4),
+  .dish-editorial:nth-child(5) {
+    grid-column: span 6;
+  }
+
+  .dish-editorial:nth-child(4) .dish-photo,
+  .dish-editorial:nth-child(5) .dish-photo {
+    aspect-ratio: 4 / 3;
   }
 
   .menu-list {

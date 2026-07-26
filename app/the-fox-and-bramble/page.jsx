@@ -67,6 +67,25 @@ const practical = [
   ["Accessibility", "Step-free side entrance and an accessible ground-floor loo."],
 ];
 
+const houseFavourites = [
+  {
+    image: "/assets/fox-bramble/pollock.webp",
+    alt: "Day-boat pollock with buttered leeks, mussels and cider sauce",
+    label: "From the coast",
+    name: "Day-boat pollock",
+    detail: "Leeks · mussels · cider",
+    price: "£25",
+  },
+  {
+    image: "/assets/fox-bramble/treacle-tart.webp",
+    alt: "Warm treacle tart with clotted cream beside the fire",
+    label: "Save room",
+    name: "Warm treacle tart",
+    detail: "Clotted cream · lemon",
+    price: "£9",
+  },
+];
+
 function Flourish() {
   return <span aria-hidden="true">✦</span>;
 }
@@ -94,6 +113,7 @@ export default function FoxAndBramblePage() {
         <nav aria-label="Main navigation">
           <a href="#fb-story">Our inn</a>
           <a href="#fb-menu">Food &amp; drink</a>
+          <a href="#fb-stay">Rooms</a>
           <a href="#fb-visit">Plan a visit</a>
         </nav>
         <a
@@ -195,6 +215,41 @@ export default function FoxAndBramblePage() {
           </div>
         </section>
 
+        <section className={styles.foodHighlights} aria-labelledby="fb-favourites-title">
+          <div className={styles.highlightsHeading}>
+            <div>
+              <p className={styles.kicker}>More from the kitchen</p>
+              <h2 id="fb-favourites-title">Come hungry.<br />Leave slowly.</h2>
+            </div>
+            <p>
+              The pie has its loyal following, but the day boats and pudding
+              board give equally good reasons to take a table by the fire.
+            </p>
+          </div>
+          <div className={styles.highlightGrid}>
+            {houseFavourites.map((dish) => (
+              <article className={styles.highlightCard} key={dish.name}>
+                <div className={styles.highlightImage}>
+                  <Image
+                    src={dish.image}
+                    alt={dish.alt}
+                    fill
+                    sizes="(max-width: 719px) 100vw, 50vw"
+                  />
+                  <span>{dish.label}</span>
+                </div>
+                <div className={styles.highlightCaption}>
+                  <div>
+                    <h3>{dish.name}</h3>
+                    <p>{dish.detail}</p>
+                  </div>
+                  <strong>{dish.price}</strong>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className={styles.menuSection} id="fb-menu">
           <div className={styles.menuHeading}>
             <div>
@@ -258,6 +313,33 @@ export default function FoxAndBramblePage() {
               <div><strong>2</strong><span>Open fires</span></div>
               <div><strong>∞</strong><span>Good walks</span></div>
             </div>
+          </div>
+        </section>
+
+        <section className={styles.stay} id="fb-stay">
+          <div className={styles.stayImage}>
+            <Image
+              src="/assets/fox-bramble/bedroom.webp"
+              alt="A quiet country-inn bedroom with oak beams, crisp linen and a view over the valley"
+              fill
+              sizes="(max-width: 719px) 100vw, 54vw"
+            />
+            <span>Room seven · valley side</span>
+          </div>
+          <div className={styles.stayCopy}>
+            <p className={styles.kicker}>Seven rooms upstairs</p>
+            <h2>Sleep well.<br />Wake to the valley.</h2>
+            <p>
+              Each room keeps the old beams and uneven walls, then adds a
+              deeply comfortable bed, a proper shower and breakfast downstairs.
+            </p>
+            <ul>
+              <li><span>Check-in</span><strong>From 3pm</strong></li>
+              <li><span>Breakfast</span><strong>8–10am</strong></li>
+              <li><span>Dogs</span><strong>Two rooms</strong></li>
+              <li><span>Parking</span><strong>Behind the inn</strong></li>
+            </ul>
+            <a href="#fb-visit">What to know before you stay <span>→</span></a>
           </div>
         </section>
 

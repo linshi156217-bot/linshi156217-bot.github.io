@@ -7,4 +7,5 @@ next-env.d.ts
 .DS_Store
 playwright-report/
 test-results/
+output/
 public/assets/*.png

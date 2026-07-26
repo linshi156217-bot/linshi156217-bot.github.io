@@ -81,6 +81,24 @@ const dishes = [
     price: "£9",
     className: "",
   },
+  {
+    image: "/assets/salt-hawthorn/croquettes.webp",
+    alt: "Three smoked haddock croquettes with mustard mayonnaise and watercress",
+    number: "04",
+    name: "Smoked haddock croquettes",
+    detail: "Mustard mayonnaise · watercress · pickled shallot",
+    price: "£9.50",
+    className: "",
+  },
+  {
+    image: "/assets/salt-hawthorn/lamb.webp",
+    alt: "Yorkshire lamb rump with peas, broad beans and charred little gem",
+    number: "05",
+    name: "Yorkshire lamb rump",
+    detail: "Peas · broad beans · mint · charred little gem",
+    price: "£28",
+    className: "",
+  },
 ];
 
 const menuGroups = [
@@ -306,7 +324,7 @@ export default function HomePage() {
               <div>
                 <p className="overline">Right now</p>
                 <h2 id="dishes-title">
-                  Three reasons
+                  Five reasons
                   <br />
                   to come inside.
                 </h2>

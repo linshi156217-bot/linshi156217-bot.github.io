@@ -420,6 +420,101 @@
   font-weight: 400;
 }
 
+.foodHighlights {
+  padding: 84px 20px 98px;
+  background: var(--cream);
+}
+
+.highlightsHeading {
+  display: grid;
+  gap: 27px;
+  margin-bottom: 45px;
+}
+
+.highlightsHeading h2 {
+  margin: 0;
+  font-size: clamp(3.2rem, 13vw, 6.8rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+
+.highlightsHeading > p {
+  max-width: 440px;
+  margin: 0;
+  color: #6e6259;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.76rem;
+  line-height: 1.7;
+}
+
+.highlightGrid {
+  display: grid;
+  gap: 48px;
+}
+
+.highlightCard {
+  min-width: 0;
+}
+
+.highlightImage {
+  aspect-ratio: 4 / 3;
+  position: relative;
+  overflow: hidden;
+  background: #9a7859;
+  border: 1px solid var(--line);
+}
+
+.highlightImage img {
+  object-fit: cover;
+  transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.highlightImage > span {
+  padding: 8px 11px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: var(--claret);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.49rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.highlightCaption {
+  padding: 18px 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.highlightCaption h3 {
+  margin: 0;
+  font-size: 1.65rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.highlightCaption p {
+  margin: 5px 0 0;
+  color: #74675e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.57rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.highlightCaption strong {
+  color: var(--claret);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .menuSection {
   padding: 84px 20px;
   background: var(--claret-deep);
@@ -602,6 +697,103 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.47rem;
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stay {
+  display: grid;
+  background: var(--sage);
+  color: white;
+}
+
+.stayImage {
+  min-height: 66svh;
+  position: relative;
+  overflow: hidden;
+  background: #5b4a39;
+}
+
+.stayImage img {
+  object-fit: cover;
+}
+
+.stayImage > span {
+  padding: 8px 11px;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(36, 26, 20, 0.82);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.49rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.stayCopy {
+  padding: 74px 20px 84px;
+}
+
+.stayCopy .kicker {
+  color: #e7d1a6;
+}
+
+.stayCopy h2 {
+  margin: 0;
+  font-size: clamp(3.1rem, 13vw, 6.7rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+
+.stayCopy > p:not(.kicker) {
+  max-width: 470px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.77rem;
+  line-height: 1.7;
+}
+
+.stayCopy ul {
+  margin: 35px 0 0;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  list-style: none;
+}
+
+.stayCopy li {
+  padding: 13px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.62rem;
+}
+
+.stayCopy li span {
+  color: rgba(255, 255, 255, 0.58);
+  text-transform: uppercase;
+}
+
+.stayCopy li strong {
+  font-weight: 700;
+}
+
+.stayCopy > a {
+  margin-top: 31px;
+  padding-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -916,6 +1108,26 @@
     justify-content: center;
   }
 
+  .foodHighlights {
+    padding: 115px 35px 165px;
+  }
+
+  .highlightsHeading {
+    grid-template-columns: 1fr minmax(270px, 0.36fr);
+    align-items: end;
+    gap: 70px;
+    margin-bottom: 70px;
+  }
+
+  .highlightGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+
+  .highlightCard:nth-child(2) {
+    transform: translateY(58px);
+  }
+
   .menuSection {
     padding: 115px 35px;
   }
@@ -950,6 +1162,22 @@
   }
 
   .interiorCopy {
+    padding: 95px clamp(42px, 6vw, 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .stay {
+    min-height: 760px;
+    grid-template-columns: 1.08fr 0.92fr;
+  }
+
+  .stayImage {
+    min-height: 760px;
+  }
+
+  .stayCopy {
     padding: 95px clamp(42px, 6vw, 90px);
     display: flex;
     flex-direction: column;
