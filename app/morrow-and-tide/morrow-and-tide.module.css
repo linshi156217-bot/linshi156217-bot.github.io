@@ -1,0 +1,846 @@
+.site {
+  --blue: #1237ff;
+  --acid: #d7ff38;
+  --orange: #ff5a35;
+  --black: #0b0c0c;
+  --white: #f6f4ed;
+  --grey: #d8d8d2;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--white);
+  color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site * {
+  box-sizing: border-box;
+}
+
+.site h1,
+.site h2,
+.site h3,
+.site p {
+  text-wrap: pretty;
+}
+
+.site a {
+  color: inherit;
+}
+
+.skipLink {
+  padding: 10px 14px;
+  position: fixed;
+  z-index: 100;
+  top: 8px;
+  left: 8px;
+  transform: translateY(-150%);
+  background: white;
+  color: black;
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
+.demoBar {
+  min-height: 29px;
+  padding: 7px 16px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  z-index: 30;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: var(--acid);
+  color: var(--black);
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header {
+  height: 77px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 20;
+  top: 29px;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.logo > span {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.88rem;
+  font-weight: 900;
+}
+
+.logo strong {
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.header nav {
+  display: none;
+}
+
+.headerCta {
+  min-height: 41px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.headerCta span {
+  font-size: 1rem;
+}
+
+.hero {
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  background: #17233f;
+  color: white;
+}
+
+.hero > img {
+  object-fit: cover;
+  object-position: 53% center;
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.15), transparent 35%, rgba(0, 0, 0, 0.7)),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.35), transparent 75%);
+}
+
+.heroType {
+  padding: 165px 15px 170px;
+  position: relative;
+  z-index: 2;
+}
+
+.heroType > p {
+  margin: 0 0 15px;
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.heroType h1 {
+  margin: 0;
+  color: white;
+  font-family: Arial Black, Arial, Helvetica, sans-serif;
+  font-size: clamp(4rem, 19vw, 10.5rem);
+  font-weight: 900;
+  letter-spacing: -0.095em;
+  line-height: 0.71;
+  text-transform: uppercase;
+}
+
+.heroType h1 span {
+  color: var(--acid);
+}
+
+.heroFooter {
+  padding: 18px 16px 27px;
+  display: grid;
+  gap: 16px;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(11, 12, 12, 0.75);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.heroFooter p {
+  max-width: 430px;
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.heroFooter a {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--acid);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.index {
+  margin: 0;
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.manifesto {
+  padding-bottom: 77px;
+  background: var(--acid);
+}
+
+.marquee {
+  width: max-content;
+  display: flex;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-family: Arial Black, Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.marquee span {
+  padding: 13px 18px 14px 0;
+}
+
+.manifestoGrid {
+  padding: 71px 16px 0;
+  display: grid;
+  gap: 31px;
+}
+
+.manifesto h2,
+.feature h2,
+.menuSection h2,
+.room h2,
+.visit h2,
+.location h2 {
+  margin: 0;
+  font-family: Arial Black, Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.075em;
+  line-height: 0.83;
+}
+
+.manifesto h2 {
+  font-size: clamp(3rem, 15vw, 7rem);
+}
+
+.manifestoCopy {
+  display: grid;
+  gap: 18px;
+}
+
+.manifestoCopy p {
+  margin: 0;
+  font-size: 0.79rem;
+  font-weight: 600;
+  line-height: 1.62;
+}
+
+.pillRow {
+  margin: 49px 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.pillRow span {
+  padding: 7px 11px;
+  border: 1px solid black;
+  border-radius: 999px;
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.feature {
+  display: grid;
+  background: var(--white);
+}
+
+.featureImage {
+  min-height: 61svh;
+  position: relative;
+  overflow: hidden;
+  background: #222;
+}
+
+.featureImage img {
+  object-fit: cover;
+}
+
+.imageStamp {
+  padding: 8px 10px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: var(--blue);
+  color: white;
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.featureCopy {
+  padding: 68px 16px 75px;
+  background: var(--blue);
+  color: white;
+}
+
+.featureCopy h2 {
+  margin-top: 45px;
+  font-size: clamp(3rem, 15vw, 7.3rem);
+}
+
+.featureMeta {
+  margin-top: 46px;
+  padding-top: 17px;
+  display: grid;
+  gap: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+  font-size: 0.61rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.featureMeta p {
+  margin: 0;
+}
+
+.featureMeta span {
+  color: var(--acid);
+}
+
+.menuSection {
+  padding: 81px 16px;
+  background: var(--black);
+  color: white;
+}
+
+.menuHeading {
+  display: grid;
+  gap: 28px;
+  margin-bottom: 46px;
+}
+
+.menuHeading h2 {
+  font-size: clamp(3.4rem, 17vw, 8.3rem);
+}
+
+.menuHeading > p:last-child {
+  max-width: 390px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.7rem;
+  line-height: 1.55;
+}
+
+.menuGrid {
+  border-top: 2px solid white;
+}
+
+.menuGrid article {
+  padding: 19px 0;
+  display: grid;
+  grid-template-columns: 26px 1fr auto;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.menuGrid article > span {
+  padding-top: 4px;
+  color: var(--orange);
+  font-size: 0.54rem;
+  font-weight: 900;
+}
+
+.menuGrid h3 {
+  margin: 0;
+  font-size: 0.93rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.menuGrid p {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.62rem;
+}
+
+.menuGrid strong {
+  font-size: 0.78rem;
+}
+
+.allergy {
+  max-width: 540px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.37);
+  font-size: 0.58rem;
+  line-height: 1.55;
+}
+
+.room {
+  display: grid;
+  background: var(--orange);
+}
+
+.roomCopy {
+  padding: 73px 16px;
+}
+
+.roomCopy h2 {
+  margin-top: 39px;
+  font-size: clamp(3.15rem, 16vw, 7.5rem);
+}
+
+.roomCopy > p:not(.index) {
+  max-width: 450px;
+  margin: 29px 0 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.roomStats {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.roomStats div {
+  padding: 17px 8px;
+  display: grid;
+  gap: 4px;
+  border-left: 1px solid black;
+}
+
+.roomStats div:first-child {
+  border-left: 0;
+}
+
+.roomStats strong {
+  font-size: 1.15rem;
+}
+
+.roomStats span {
+  font-size: 0.48rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.roomImage {
+  min-height: 64svh;
+  position: relative;
+}
+
+.roomImage img {
+  object-fit: cover;
+}
+
+.visit {
+  padding: 80px 16px;
+  display: grid;
+  gap: 47px;
+  background: var(--white);
+}
+
+.visitIntro h2 {
+  margin-top: 39px;
+  font-size: clamp(3.4rem, 17vw, 8rem);
+}
+
+.detailGrid {
+  border-top: 2px solid black;
+}
+
+.detailGrid article {
+  padding: 22px 0;
+  display: grid;
+  grid-template-columns: 30px 0.65fr 1fr;
+  gap: 10px;
+  border-bottom: 1px solid black;
+}
+
+.detailGrid article > span {
+  color: var(--blue);
+  font-size: 0.52rem;
+  font-weight: 900;
+}
+
+.detailGrid h3 {
+  margin: 0;
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.detailGrid p {
+  margin: 0;
+  font-size: 0.65rem;
+  line-height: 1.5;
+}
+
+.location {
+  background: var(--blue);
+  color: white;
+}
+
+.locationTop {
+  min-height: 210px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 50px, rgba(255,255,255,.12) 50px 51px),
+    repeating-linear-gradient(0deg, transparent 0 50px, rgba(255,255,255,.12) 50px 51px);
+}
+
+.locationTop p {
+  margin: 0;
+  font-size: 0.55rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.locationTop > span {
+  align-self: flex-end;
+  color: var(--acid);
+  font-family: Arial Black, Arial, sans-serif;
+  font-size: clamp(3.5rem, 19vw, 9rem);
+  font-weight: 900;
+  letter-spacing: -0.09em;
+  line-height: 0.8;
+  white-space: nowrap;
+}
+
+.locationGrid {
+  padding: 69px 16px 85px;
+  display: grid;
+  gap: 46px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.location h2 {
+  margin-top: 39px;
+  font-size: clamp(3.5rem, 17vw, 8rem);
+}
+
+.address address {
+  font-size: 0.95rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.address address small {
+  margin-top: 5px;
+  display: block;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 0.52rem;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.hours {
+  margin: 27px 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.hours span,
+.hours strong {
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  font-size: 0.63rem;
+}
+
+.hours span {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.address > a {
+  min-height: 51px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--acid);
+  color: var(--black);
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.address > a span {
+  font-size: 1.1rem;
+}
+
+.site .footer {
+  padding: 60px 16px 106px;
+  display: grid;
+  gap: 42px;
+  background: var(--acid);
+  color: var(--black);
+}
+
+.footerLogo {
+  font-family: Arial Black, Arial, sans-serif;
+  font-size: clamp(3.5rem, 18vw, 8rem);
+  font-weight: 900;
+  letter-spacing: -0.095em;
+  line-height: 0.72;
+}
+
+.footer > div:last-child {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer a {
+  font-size: 0.55rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.mobileDock {
+  min-height: 69px;
+  padding: 7px max(8px, env(safe-area-inset-left))
+    calc(7px + env(safe-area-inset-bottom))
+    max(8px, env(safe-area-inset-right));
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1fr;
+  gap: 5px;
+  position: fixed;
+  z-index: 50;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--white);
+  border-top: 2px solid black;
+}
+
+.mobileDock a {
+  min-height: 53px;
+  display: grid;
+  place-items: center;
+  border: 1px solid black;
+  font-size: 0.56rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mobileDock a:nth-child(2) {
+  background: var(--blue);
+  color: white;
+}
+
+@media (min-width: 720px) {
+  .header {
+    padding-inline: 32px;
+  }
+
+  .header nav {
+    display: flex;
+    gap: 28px;
+    font-size: 0.57rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .heroType {
+    padding: 180px 32px 165px;
+  }
+
+  .heroFooter {
+    min-height: 80px;
+    padding: 0 32px;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .manifestoGrid {
+    padding: 104px 32px 0;
+    grid-template-columns: 150px 1fr minmax(230px, 0.42fr);
+    align-items: start;
+    gap: 30px;
+  }
+
+  .pillRow {
+    margin: 80px 32px 0;
+  }
+
+  .feature {
+    min-height: 760px;
+    grid-template-columns: 1.18fr 0.82fr;
+  }
+
+  .featureImage {
+    min-height: 760px;
+  }
+
+  .featureCopy {
+    padding: 95px 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menuSection {
+    padding: 110px 32px;
+  }
+
+  .menuHeading {
+    grid-template-columns: 130px 1fr minmax(220px, 0.36fr);
+    align-items: end;
+  }
+
+  .menuGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menuGrid article:nth-child(odd) {
+    padding-right: 25px;
+    border-right: 1px solid rgba(255,255,255,.3);
+  }
+
+  .menuGrid article:nth-child(even) {
+    padding-left: 25px;
+  }
+
+  .room {
+    min-height: 760px;
+    grid-template-columns: 0.82fr 1.18fr;
+  }
+
+  .roomCopy {
+    padding: 95px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .roomImage {
+    min-height: 760px;
+  }
+
+  .visit {
+    padding: 110px 32px;
+    grid-template-columns: 0.78fr 1.22fr;
+    gap: 70px;
+  }
+
+  .locationTop {
+    min-height: 300px;
+    padding: 28px 32px;
+  }
+
+  .locationGrid {
+    padding: 100px 32px;
+    grid-template-columns: 1fr minmax(330px, 0.55fr);
+    align-items: end;
+    gap: 80px;
+  }
+
+  .site .footer {
+    padding: 80px 32px 48px;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+  }
+
+  .footer > div:last-child {
+    min-width: 250px;
+  }
+
+  .mobileDock {
+    display: none;
+  }
+}
+
+@media (min-width: 1100px) {
+  .header {
+    padding-inline: 46px;
+  }
+
+  .heroType {
+    padding-inline: 46px;
+  }
+
+  .heroFooter {
+    padding-inline: 46px;
+  }
+
+  .manifestoGrid,
+  .menuSection,
+  .visit,
+  .locationGrid {
+    padding-right: 46px;
+    padding-left: 46px;
+  }
+
+  .pillRow {
+    margin-right: 46px;
+    margin-left: 46px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site * {
+    scroll-behavior: auto !important;
+  }
+}
