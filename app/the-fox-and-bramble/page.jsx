@@ -5,6 +5,28 @@ export const metadata = {
   title: "The Fox & Bramble | Country Inn, Kitchen & Rooms",
   description:
     "A fictional English country inn concept in the Cotswolds, created as a mobile-first website demonstration.",
+  openGraph: {
+    title: "The Fox & Bramble | Country Inn, Kitchen & Rooms",
+    description:
+      "A fictional Cotswolds country inn concept with a seasonal kitchen and seven rooms.",
+    url: "https://linshi156217-bot.github.io/the-fox-and-bramble/",
+    siteName: "The Fox & Bramble",
+    type: "website",
+    images: [
+      {
+        url: "https://linshi156217-bot.github.io/social/fox-bramble-og.webp",
+        width: 1200,
+        height: 630,
+        alt: "The Fox & Bramble English country inn concept",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [
+      "https://linshi156217-bot.github.io/social/fox-bramble-og.webp",
+    ],
+  },
 };
 
 const mapsUrl =
