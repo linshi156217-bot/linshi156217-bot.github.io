@@ -2,10 +2,11 @@
   "name": "salt-hawthorn-whitby-demo",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && node scripts/package-worker.mjs && node scripts/validate-worker.mjs",
+    "start": "next dev"
   },
   "dependencies": {
     "next": "16.2.11",
