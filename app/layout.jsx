@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Salt & Hawthorn | Whitby Coastal Kitchen — Concept Demo",
+  title: "Salt & Hawthorn | A Coastal Dining Room in Whitby",
   description:
-    "A fictional, mobile-first restaurant website concept showing menus, signature dishes, visitor details and directions for travellers arriving from Google Maps.",
+    "A fictional, editorial restaurant website concept showing seasonal dishes, the current menu and useful visitor details for travellers arriving from Google Maps.",
   robots: {
     index: false,
     follow: false,
@@ -20,7 +20,7 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#172019",
+  themeColor: "#121914",
 };
 
 export default function RootLayout({ children }) {

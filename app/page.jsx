@@ -1,15 +1,13 @@
 import Image from "next/image";
 
+const mapsUrl =
+  "https://www.google.com/maps/search/?api=1&query=Whitby+Harbour";
+
 const iconPaths = {
-  menu: (
-    <>
-      <path d="M4 7h16M4 12h16M4 17h10" />
-    </>
-  ),
   pin: (
     <>
       <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
-      <circle cx="12" cy="10" r="2.5" />
+      <circle cx="12" cy="10" r="2.4" />
     </>
   ),
   phone: (
@@ -27,38 +25,16 @@ const iconPaths = {
       <path d="m11 8-2.5 4 3 2 1.5 6M11 8l4 3 3-1M8.5 12 5 18" />
     </>
   ),
-  leaf: (
+  menu: (
     <>
-      <path d="M20 4C11 4 5 8 5 15c0 3 2 5 5 5 7 0 10-8 10-16Z" />
-      <path d="M5 20c2-5 6-8 11-11" />
-    </>
-  ),
-  access: (
-    <>
-      <circle cx="12" cy="4" r="2" />
-      <path d="M8 8h8M12 6v6m0 0-4 8m4-8 5 7" />
-    </>
-  ),
-  dog: (
-    <>
-      <path d="M7 10 4 7v5c0 5 3 8 8 8s7-3 7-7V9l-3 2" />
-      <path d="M8 4c2 0 4 2 4 4 0-2 2-4 4-4" />
-      <circle cx="9" cy="12" r=".5" fill="currentColor" />
-      <circle cx="15" cy="12" r=".5" fill="currentColor" />
-      <path d="M10 16h4" />
-    </>
-  ),
-  child: (
-    <>
-      <circle cx="12" cy="5" r="2" />
-      <path d="M8 10h8M12 8v7m0 0-4 5m4-5 4 5" />
+      <path d="M4 7h16M4 12h16M4 17h16" />
     </>
   ),
   arrow: <path d="M5 12h14m-5-5 5 5-5 5" />,
-  chevron: <path d="m8 10 4 4 4-4" />,
+  down: <path d="m7 10 5 5 5-5" />,
 };
 
-function Icon({ name, size = 22 }) {
+function Icon({ name, size = 20 }) {
   return (
     <svg
       aria-hidden="true"
@@ -68,7 +44,7 @@ function Icon({ name, size = 22 }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.7"
+      strokeWidth="1.55"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
@@ -80,93 +56,108 @@ function Icon({ name, size = 22 }) {
 const dishes = [
   {
     image: "/assets/hake.webp",
-    alt: "Pan-roasted hake with crushed potatoes, spring greens and caper butter",
-    label: "From the coast",
+    alt: "Pan-roasted North Sea hake with crushed potatoes, greens and caper butter",
+    number: "01",
     name: "North Sea hake",
-    description: "Crushed new potatoes, spring greens, brown butter & capers.",
+    detail: "Crushed new potatoes · spring greens · brown butter · capers",
     price: "£26",
+    className: "dish-featured",
   },
   {
     image: "/assets/crab-linguine.webp",
-    alt: "Crab linguine with tomatoes, chilli, lemon and parsley",
-    label: "Guest favourite",
+    alt: "Whitby crab linguine with tomatoes, chilli, lemon and parsley",
+    number: "02",
     name: "Whitby crab linguine",
-    description: "Cherry tomatoes, chilli, lemon, parsley & shellfish butter.",
-    price: "£24.5",
+    detail: "Cherry tomato · chilli · lemon · parsley · shellfish butter",
+    price: "£24.50",
+    className: "",
   },
   {
     image: "/assets/rhubarb-tart.webp",
     alt: "Yorkshire rhubarb and almond tart with crème fraîche",
-    label: "Save room",
-    name: "Rhubarb almond tart",
-    description: "Forced Yorkshire rhubarb, crème fraîche & warm compote.",
+    number: "03",
+    name: "Rhubarb & almond",
+    detail: "Forced Yorkshire rhubarb · crème fraîche · warm compote",
     price: "£9",
+    className: "",
   },
 ];
 
 const menuGroups = [
   {
-    title: "To start",
-    note: "Smaller plates for the table",
+    title: "First",
+    note: "A few things to begin",
     items: [
-      ["Smoked haddock croquettes", "Mustard mayonnaise · watercress", "£9.5"],
+      ["Smoked haddock croquettes", "Mustard mayonnaise · watercress", "£9.50"],
       ["Brown crab rarebit", "Sourdough · pickled shallot", "£11"],
       ["Woodland mushrooms", "Soft polenta · thyme · hazelnut", "£10"],
     ],
   },
   {
-    title: "Main plates",
+    title: "Main",
     note: "The coast, the moors and the season",
     items: [
       ["North Sea hake", "Crushed potatoes · greens · caper butter", "£26"],
-      ["Whitby crab linguine", "Tomato · chilli · lemon · parsley", "£24.5"],
+      ["Whitby crab linguine", "Tomato · chilli · lemon · parsley", "£24.50"],
       ["Yorkshire lamb rump", "Peas · mint · charred little gem", "£28"],
       ["Salt-baked celeriac", "Pearl barley · leek · smoked almond", "£22"],
     ],
   },
   {
-    title: "Something sweet",
-    note: "Made in our small kitchen",
+    title: "Last",
+    note: "Puddings and Yorkshire cheese",
     items: [
-      ["Rhubarb almond tart", "Crème fraîche · rhubarb compote", "£9"],
+      ["Rhubarb & almond tart", "Crème fraîche · rhubarb compote", "£9"],
       ["Sticky toffee pudding", "Miso caramel · vanilla ice cream", "£9"],
       ["Yorkshire cheeses", "Oatcakes · apple · chutney", "£12"],
     ],
   },
 ];
 
-const visitorDetails = [
+const visitDetails = [
   {
-    icon: "walk",
-    title: "Easy from the harbour",
-    text: "Around a five-minute walk from Whitby Harbour and the swing bridge.",
+    number: "01",
+    title: "From the harbour",
+    text: "About five minutes on foot from Whitby Harbour and the swing bridge.",
   },
   {
-    icon: "access",
-    title: "Step-free entrance",
-    text: "Level access at the front door with an accessible ground-floor loo.",
+    number: "02",
+    title: "Accessibility",
+    text: "Level entrance at the front with an accessible ground-floor loo.",
   },
   {
-    icon: "dog",
-    title: "Dogs welcome outside",
-    text: "Well-behaved dogs are welcome at our two pavement tables.",
+    number: "03",
+    title: "Children",
+    text: "Highchairs are available and the kitchen can prepare smaller portions.",
   },
   {
-    icon: "child",
-    title: "Little visitors",
-    text: "Highchairs available. Half portions can be prepared for children.",
+    number: "04",
+    title: "Dogs",
+    text: "Well-behaved dogs are welcome at our two outdoor pavement tables.",
   },
   {
-    icon: "leaf",
-    title: "Dietary needs",
+    number: "05",
+    title: "Dietaries",
     text: "Vegetarian dishes daily, with gluten-free adaptations where possible.",
   },
   {
-    icon: "clock",
-    title: "Best time to visit",
-    text: "Quieter before 6 pm. Friday and Saturday evenings fill up quickly.",
+    number: "06",
+    title: "What to wear",
+    text: "Come as you are. Walking boots, sea-salt hair and celebrations are all welcome.",
   },
 ];
+
+function Wordmark({ light = false }) {
+  return (
+    <span className={`wordmark${light ? " wordmark-light" : ""}`}>
+      <span className="wordmark-monogram">S&amp;H</span>
+      <span className="wordmark-copy">
+        <strong>Salt &amp; Hawthorn</strong>
+        <small>Whitby · North Yorkshire</small>
+      </span>
+    </span>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -175,27 +166,39 @@ export default function HomePage() {
         Skip to main content
       </a>
 
-      <div className="concept-bar">
-        <span>Concept demo</span>
-        <p>Fictional restaurant · built for mobile visitors from Google Maps</p>
+      <div className="demo-ribbon">
+        <p>
+          <span>Concept website</span>
+          Fictional restaurant created for demonstration
+        </p>
       </div>
 
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Salt and Hawthorn home">
-          <span className="brand-mark">S</span>
-          <span>
-            <strong>Salt &amp; Hawthorn</strong>
-            <small>Whitby · North Yorkshire</small>
-          </span>
+        <a href="#top" aria-label="Salt and Hawthorn home">
+          <Wordmark light />
         </a>
         <nav aria-label="Main navigation">
-          <a href="#dishes">Highlights</a>
+          <a href="#restaurant">Restaurant</a>
           <a href="#menu">Menu</a>
-          <a href="#visit">Visit</a>
-          <a className="nav-cta" href="#find-us">
-            Find us
+          <a href="#visit">Your visit</a>
+          <a
+            className="header-directions"
+            href={mapsUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Directions <Icon name="arrow" size={16} />
           </a>
         </nav>
+        <a
+          className="mobile-header-action"
+          href={mapsUrl}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Open directions in Google Maps"
+        >
+          <Icon name="pin" size={21} />
+        </a>
       </header>
 
       <main id="main">
@@ -203,107 +206,174 @@ export default function HomePage() {
           <Image
             className="hero-image"
             src="/assets/hero-exterior.webp"
-            alt="A warmly lit fictional coastal restaurant on a wet stone street overlooking the sea"
+            alt="A warmly lit coastal restaurant on a wet Whitby street overlooking the sea"
             fill
             priority
             sizes="100vw"
           />
-          <div className="hero-shade" />
-          <div className="hero-content wrap">
-            <p className="eyebrow">Coast-led cooking · Whitby</p>
+          <div className="hero-overlay" />
+          <div className="hero-content page-shell">
+            <p className="overline hero-overline">A coastal dining room in Whitby</p>
             <h1>
-              Good food.
+              The North Sea,
               <br />
-              <em>Sea air.</em>
+              <em>brought to the table.</em>
             </h1>
-            <p className="hero-copy">
-              A small harbour kitchen serving North Sea fish, Yorkshire produce
-              and the kind of pudding worth saving room for.
-            </p>
-            <div className="hero-actions">
-              <a className="button button-light" href="#menu">
-                Explore the menu <Icon name="arrow" size={18} />
-              </a>
-              <a
-                className="button button-ghost"
-                href="https://www.google.com/maps/search/?api=1&query=Whitby+Harbour"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Icon name="pin" size={18} /> Get directions
-              </a>
-            </div>
-            <div className="hero-meta" aria-label="Quick facts">
-              <span>
-                <Icon name="clock" size={17} /> Tue–Sun · from 12 noon
-              </span>
-              <span>
-                <Icon name="walk" size={17} /> 5 min from the harbour
-              </span>
+            <div className="hero-lower">
+              <p>
+                Fish from the harbour, produce from Yorkshire and a warm room at
+                the end of a day on the coast.
+              </p>
+              <div className="hero-actions">
+                <a className="button button-ivory" href="#menu">
+                  Explore the menu <Icon name="arrow" size={17} />
+                </a>
+                <a
+                  className="button button-glass"
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Icon name="pin" size={17} /> Find us
+                </a>
+              </div>
             </div>
           </div>
-          <a className="scroll-cue" href="#dishes" aria-label="Scroll to dishes">
-            Discover <Icon name="chevron" size={17} />
+          <div className="hero-status">
+            <span>
+              <Icon name="clock" size={16} /> Tuesday–Sunday
+            </span>
+            <span>
+              <Icon name="walk" size={16} /> Five minutes from the harbour
+            </span>
+          </div>
+          <a className="scroll-marker" href="#restaurant" aria-label="Discover the restaurant">
+            <span>Discover</span>
+            <Icon name="down" size={16} />
           </a>
         </section>
 
-        <section className="intro section wrap" id="dishes">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow ink">Worth coming in for</p>
-              <h2>Three plates to remember.</h2>
+        <section className="introduction section" id="restaurant">
+          <div className="page-shell intro-grid">
+            <div className="section-index">
+              <span>01</span>
+              <p>The restaurant</p>
             </div>
-            <p>
-              Our menu follows the boats, the growers and the weather. These are
-              the dishes regulars ask for by name.
-            </p>
+            <div className="intro-copy">
+              <p className="overline">Whitby · 54.4863° N, 0.6133° W</p>
+              <h2>
+                A little restaurant
+                <br />
+                with the whole coast outside.
+              </h2>
+              <div className="intro-body">
+                <p className="lead">
+                  Salt &amp; Hawthorn is imagined as the place you hope to find
+                  after a long walk by the sea: calm, generous and unmistakably
+                  of its surroundings.
+                </p>
+                <p>
+                  The menu changes with the boats, the farms and the weather.
+                  Inside, twenty-eight seats face an open kitchen; outside,
+                  Whitby Harbour is only a few minutes away.
+                </p>
+              </div>
+            </div>
           </div>
-
-          <div className="dish-scroller">
-            {dishes.map((dish) => (
-              <article className="dish-card" key={dish.name}>
-                <div className="dish-image">
-                  <Image
-                    src={dish.image}
-                    alt={dish.alt}
-                    fill
-                    sizes="(max-width: 767px) 82vw, 33vw"
-                  />
-                </div>
-                <div className="dish-copy">
-                  <p>{dish.label}</p>
-                  <div className="dish-title">
-                    <h3>{dish.name}</h3>
-                    <span>{dish.price}</span>
-                  </div>
-                  <p className="dish-description">{dish.description}</p>
-                </div>
-              </article>
-            ))}
+          <div className="page-shell fact-line" aria-label="Restaurant quick facts">
+            <div>
+              <span>28</span>
+              <p>Seats in the dining room</p>
+            </div>
+            <div>
+              <span>5 min</span>
+              <p>Walk from the harbour</p>
+            </div>
+            <div>
+              <span>Tue–Sun</span>
+              <p>Lunch and dinner</p>
+            </div>
           </div>
-          <p className="swipe-note">Swipe to see more dishes →</p>
         </section>
 
-        <section className="menu-section section" id="menu">
-          <div className="wrap">
-            <div className="menu-heading">
-              <div>
-                <p className="eyebrow sand">The current menu</p>
-                <h2>Simple things, done properly.</h2>
+        <section className="dishes section" aria-labelledby="dishes-title">
+          <div className="page-shell">
+            <div className="editorial-heading">
+              <div className="section-index">
+                <span>02</span>
+                <p>From the kitchen</p>
               </div>
-              <p>
-                An illustrative sample menu for this concept. A real client site
-                would be updated from the restaurant&apos;s approved menu.
+              <div>
+                <p className="overline">Right now</p>
+                <h2 id="dishes-title">
+                  Three reasons
+                  <br />
+                  to come inside.
+                </h2>
+              </div>
+              <p className="heading-note">
+                Familiar ingredients, treated carefully. These are the plates
+                our fictional regulars would ask for by name.
               </p>
             </div>
 
-            <div className="menu-groups">
+            <div className="dish-layout">
+              {dishes.map((dish) => (
+                <article
+                  className={`dish-editorial ${dish.className}`}
+                  key={dish.name}
+                >
+                  <div className="dish-photo">
+                    <Image
+                      src={dish.image}
+                      alt={dish.alt}
+                      fill
+                      sizes={
+                        dish.className
+                          ? "(max-width: 799px) 100vw, 62vw"
+                          : "(max-width: 799px) 100vw, 34vw"
+                      }
+                    />
+                    <span className="dish-number">{dish.number}</span>
+                  </div>
+                  <div className="dish-information">
+                    <div>
+                      <h3>{dish.name}</h3>
+                      <p>{dish.detail}</p>
+                    </div>
+                    <span>{dish.price}</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="menu-section section" id="menu">
+          <div className="page-shell">
+            <div className="menu-intro">
+              <div className="section-index section-index-light">
+                <span>03</span>
+                <p>The menu</p>
+              </div>
+              <div>
+                <p className="overline overline-gold">An illustrative selection</p>
+                <h2>From coast, field &amp; fire.</h2>
+              </div>
+              <p>
+                A concise menu feels more confident than a catalogue. The dishes
+                below are fictional and show how a real merchant&apos;s current
+                offering could be presented.
+              </p>
+            </div>
+
+            <div className="menu-list">
               {menuGroups.map((group) => (
                 <section className="menu-group" key={group.title}>
-                  <div className="menu-group-heading">
-                    <h3>{group.title}</h3>
+                  <header>
                     <p>{group.note}</p>
-                  </div>
+                    <h3>{group.title}</h3>
+                  </header>
                   <ul>
                     {group.items.map(([name, detail, price]) => (
                       <li key={name}>
@@ -319,65 +389,67 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="allergen-note">
-              <Icon name="leaf" size={20} />
+            <div className="menu-footer">
               <p>
-                Please tell us about allergies before ordering. Our small kitchen
-                handles gluten, dairy, nuts, shellfish and other allergens.
+                Please tell us about allergies before ordering. Our small
+                kitchen handles gluten, dairy, nuts, shellfish and other
+                allergens.
               </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="story section">
-          <div className="wrap story-grid">
-            <div className="story-image">
-              <Image
-                src="/assets/dining-room.webp"
-                alt="Warm, intimate fictional restaurant dining room with oak tables and an open kitchen"
-                fill
-                sizes="(max-width: 899px) 100vw, 50vw"
-              />
-              <p>Twenty-eight seats · one small kitchen</p>
-            </div>
-            <div className="story-copy">
-              <p className="eyebrow ink">A room with a warm welcome</p>
-              <h2>Come as you are. Stay for pudding.</h2>
-              <p className="lead">
-                Salt &amp; Hawthorn is imagined as the sort of place travellers
-                hope to stumble upon: relaxed enough after a day on the coast,
-                thoughtful enough for a special evening.
-              </p>
-              <p>
-                The website answers the questions Google Maps cannot: what the
-                food is really like, how the room feels, whether children and
-                dogs are welcome, and how easy the visit will be.
-              </p>
-              <a className="text-link" href="#visit">
-                Plan your visit <Icon name="arrow" size={18} />
+              <a href="#visit">
+                Plan your visit <Icon name="arrow" size={16} />
               </a>
             </div>
           </div>
         </section>
 
-        <section className="visit section" id="visit">
-          <div className="wrap">
-            <div className="section-heading visit-heading">
+        <section className="room-section">
+          <div className="room-image">
+            <Image
+              src="/assets/dining-room.webp"
+              alt="An intimate restaurant dining room with oak tables, candlelight and an open kitchen"
+              fill
+              sizes="(max-width: 799px) 100vw, 62vw"
+            />
+            <span>Twenty-eight seats · one small kitchen</span>
+          </div>
+          <div className="room-copy">
+            <p className="overline">The room</p>
+            <blockquote>
+              “Come in from the weather.
+              <br />
+              Stay for pudding.”
+            </blockquote>
+            <p>
+              No starched formality. Just warm light, thoughtful cooking and a
+              team that knows when to leave you to the conversation.
+            </p>
+            <div className="room-signature" aria-hidden="true">
+              Salt &amp; Hawthorn
+            </div>
+          </div>
+        </section>
+
+        <section className="visit-section section" id="visit">
+          <div className="page-shell">
+            <div className="visit-heading">
+              <div className="section-index">
+                <span>04</span>
+                <p>Your visit</p>
+              </div>
               <div>
-                <p className="eyebrow ink">Before you set off</p>
-                <h2>The useful details.</h2>
+                <p className="overline">Before you set off</p>
+                <h2>The details that make a difference.</h2>
               </div>
               <p>
-                The small questions that decide whether a visitor chooses this
-                restaurant or goes back to the map.
+                The useful answers visitors rarely find on Google Maps, presented
+                before they need to ask.
               </p>
             </div>
-            <div className="detail-grid">
-              {visitorDetails.map((detail) => (
-                <article className="detail-card" key={detail.title}>
-                  <span className="detail-icon">
-                    <Icon name={detail.icon} size={24} />
-                  </span>
+
+            <div className="visit-list">
+              {visitDetails.map((detail) => (
+                <article key={detail.title}>
+                  <span>{detail.number}</span>
                   <h3>{detail.title}</h3>
                   <p>{detail.text}</p>
                 </article>
@@ -386,33 +458,37 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="find-us" id="find-us">
-          <div className="map-pattern" aria-hidden="true">
-            <span className="map-coast" />
-            <span className="map-road road-one" />
-            <span className="map-road road-two" />
-            <span className="map-road road-three" />
-            <span className="map-pin">
-              <Icon name="pin" size={28} />
+        <section className="location-section" id="find-us">
+          <div className="location-atmosphere" aria-hidden="true">
+            <span className="coordinate coordinate-one">54.4863° N</span>
+            <span className="coordinate coordinate-two">0.6133° W</span>
+            <span className="location-ring ring-one" />
+            <span className="location-ring ring-two" />
+            <span className="location-dot">
+              <Icon name="pin" size={26} />
             </span>
           </div>
-          <div className="find-card">
-            <p className="eyebrow sand">Find us by the harbour</p>
-            <h2>A short walk from the water.</h2>
+          <div className="location-content">
+            <p className="overline overline-gold">Find us in Whitby</p>
+            <h2>
+              Five minutes
+              <br />
+              from the water.
+            </h2>
             <address>
               Harbour Quarter
               <br />
               Whitby, North Yorkshire
-              <br />
-              <span>Concept location — not a real address</span>
+              <small>Concept location — not a real address</small>
             </address>
-            <div className="hours">
+
+            <div className="opening-hours">
               <div>
-                <span>Tue–Thu</span>
+                <span>Tuesday–Thursday</span>
                 <strong>12–3 · 5–10</strong>
               </div>
               <div>
-                <span>Fri–Sat</span>
+                <span>Friday–Saturday</span>
                 <strong>12–10</strong>
               </div>
               <div>
@@ -424,74 +500,86 @@ export default function HomePage() {
                 <strong>Closed</strong>
               </div>
             </div>
-            <div className="find-actions">
-              <a
-                className="button button-rust"
-                href="https://www.google.com/maps/search/?api=1&query=Whitby+Harbour"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Icon name="pin" size={18} /> Open Google Maps
-              </a>
-              <a className="button button-outline" href="#contact">
-                <Icon name="phone" size={18} /> Contact details
-              </a>
-            </div>
+
+            <a
+              className="button button-gold"
+              href={mapsUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Icon name="pin" size={18} /> Open in Google Maps
+            </a>
           </div>
         </section>
 
-        <section className="contact section" id="contact">
-          <div className="wrap contact-grid">
+        <section className="contact-section section" id="contact">
+          <div className="page-shell contact-grid">
             <div>
-              <p className="eyebrow ink">Contact</p>
-              <h2>One tap away when the details are real.</h2>
+              <p className="overline">No booking system required</p>
+              <h2>
+                Find us, call us,
+                <br />
+                or simply walk in.
+              </h2>
             </div>
-            <div className="contact-note">
+            <div className="contact-copy">
               <p>
-                This public demo does not use a real phone number or inbox. For a
-                merchant, these buttons become direct <strong>call</strong>,{" "}
-                <strong>email</strong> and <strong>Google Maps</strong> actions.
+                This demo deliberately keeps the journey simple. For a real
+                restaurant, the buttons below become one-tap directions and a
+                direct call to the team.
               </p>
-              <span>No booking system. No login. No unnecessary friction.</span>
+              <div className="contact-actions">
+                <a
+                  className="button button-dark"
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Get directions <Icon name="arrow" size={16} />
+                </a>
+                <a className="button button-outline" href="#menu">
+                  View menu
+                </a>
+              </div>
             </div>
           </div>
         </section>
       </main>
 
       <footer>
-        <div className="wrap footer-grid">
-          <a className="brand footer-brand" href="#top">
-            <span className="brand-mark">S</span>
-            <span>
-              <strong>Salt &amp; Hawthorn</strong>
-              <small>Whitby · North Yorkshire</small>
-            </span>
-          </a>
+        <div className="page-shell footer-top">
+          <Wordmark light />
           <p>
-            Fictional concept website. This is not a real restaurant; all
-            details, prices and imagery are illustrative.
+            A fictional mobile-first restaurant concept for visitors arriving
+            from Google Maps.
           </p>
-          <a href="#top">Back to top ↑</a>
+          <a href="#top">
+            Back to top <span>↑</span>
+          </a>
+        </div>
+        <div className="page-shell footer-bottom">
+          <span>Concept only · not a real restaurant</span>
+          <span>Whitby · North Yorkshire</span>
         </div>
       </footer>
 
       <nav className="mobile-dock" aria-label="Quick actions">
         <a href="#menu">
-          <Icon name="menu" size={22} />
+          <Icon name="menu" size={20} />
           <span>Menu</span>
         </a>
         <a
           className="dock-primary"
-          href="https://www.google.com/maps/search/?api=1&query=Whitby+Harbour"
+          href={mapsUrl}
           target="_blank"
           rel="noreferrer"
         >
-          <Icon name="pin" size={22} />
+          <Icon name="pin" size={20} />
           <span>Directions</span>
         </a>
         <a href="#contact">
-          <Icon name="phone" size={22} />
-          <span>Call</span>
+          <Icon name="phone" size={20} />
+          <span>Contact</span>
         </a>
       </nav>
     </>
