@@ -1,6 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
+  metadataBase: new URL(
+    "https://salt-hawthorn-whitby-demo.linshi156217.chatgpt.site",
+  ),
   title: "Salt & Hawthorn | A Coastal Dining Room in Whitby",
   description:
     "A fictional, editorial restaurant website concept showing seasonal dishes, the current menu and useful visitor details for travellers arriving from Google Maps.",
