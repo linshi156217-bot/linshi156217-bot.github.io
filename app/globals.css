@@ -121,6 +121,12 @@ img {
   margin: 0;
 }
 
+.demo-ribbon a {
+  margin-right: 9px;
+  color: white;
+  font-weight: 700;
+}
+
 .demo-ribbon span {
   margin-right: 7px;
   color: var(--gold-soft);

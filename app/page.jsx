@@ -186,6 +186,7 @@ export default function HomePage() {
 
       <div className="demo-ribbon">
         <p>
+          <a href="/work/">Linshi portfolio ↑</a>
           <span>Concept website</span>
           Fictional restaurant created for demonstration
         </p>
