@@ -2,12 +2,39 @@ import Image from "next/image";
 import styles from "./work.module.css";
 
 export const metadata = {
+  metadataBase: new URL("https://linshi156217-bot.github.io"),
   title: "Linshi | Mobile-first websites for independent businesses",
   description:
     "A focused portfolio of mobile-first website concepts for UK restaurants, local trades and hair and beauty businesses.",
+  alternates: {
+    canonical: "/work/",
+  },
+  openGraph: {
+    title: "Linshi | Mobile-first websites for independent businesses",
+    description:
+      "Focused mobile-first website concepts for UK restaurants, local trades and hair and beauty businesses.",
+    url: "/work/",
+    siteName: "Linshi",
+    type: "website",
+    images: [
+      {
+        url: "/social/linshi-avatar-v2.png",
+        width: 1024,
+        height: 1024,
+        alt: "Linshi mobile-first web design",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Linshi | Mobile-first websites for independent businesses",
+    description:
+      "Focused mobile-first website concepts for UK restaurants, local trades and hair and beauty businesses.",
+    images: ["/social/linshi-avatar-v2.png"],
+  },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 
