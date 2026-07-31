@@ -11,14 +11,16 @@ assert.equal(typeof worker?.fetch, "function");
 const homeResponse = await worker.fetch(new Request("https://example.test/"));
 assert.equal(homeResponse.status, 200);
 assert.match(homeResponse.headers.get("content-type") ?? "", /text\/html/);
-assert.match(await homeResponse.text(), /Salt &amp; Hawthorn/);
+assert.match(await homeResponse.text(), /Linshi Studio/);
 
 const imageResponse = await worker.fetch(
-  new Request("https://example.test/assets/hero-exterior.webp"),
+  new Request(
+    "https://example.test/assets/studio-v2/hero-campaign-v2.webp",
+  ),
 );
 assert.equal(imageResponse.status, 200);
 assert.equal(imageResponse.headers.get("content-type"), "image/webp");
-assert.ok((await imageResponse.arrayBuffer()).byteLength > 100_000);
+assert.ok((await imageResponse.arrayBuffer()).byteLength > 20_000);
 
 const missingResponse = await worker.fetch(
   new Request("https://example.test/missing-page"),
