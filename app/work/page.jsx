@@ -41,6 +41,9 @@ export const metadata = {
 const instagramUrl = "https://www.instagram.com/designerlinshi/";
 const facebookUrl =
   "https://www.facebook.com/profile.php?id=61592734760210";
+const emailAddress = "hello@linshistudio.com";
+const emailUrl =
+  "mailto:hello@linshistudio.com?subject=Website%20project%20enquiry";
 
 const projects = [
   {
@@ -111,6 +114,7 @@ const structuredData = {
   url: "https://linshistudio.com",
   description:
     "Mobile-first website design for independent restaurants, salons and local trades in the UK.",
+  email: emailAddress,
   sameAs: [instagramUrl, facebookUrl],
   areaServed: {
     "@type": "Country",
@@ -159,11 +163,9 @@ export default function WorkPage() {
         </nav>
         <a
           className={styles.headerCta}
-          href={instagramUrl}
-          target="_blank"
-          rel="noreferrer"
+          href={emailUrl}
         >
-          Start a project <Arrow />
+          Email us <Arrow />
         </a>
       </header>
 
@@ -199,11 +201,9 @@ export default function WorkPage() {
               </a>
               <a
                 className={styles.ghostButton}
-                href={instagramUrl}
-                target="_blank"
-                rel="noreferrer"
+                href={emailUrl}
               >
-                Start a conversation
+                Email the studio
               </a>
             </div>
           </div>
@@ -359,6 +359,13 @@ export default function WorkPage() {
               That is enough for an honest first look.
             </p>
 
+            <a className={styles.emailCard} href={emailUrl}>
+              <span>Direct project email</span>
+              <strong>{emailAddress}</strong>
+              <small>Business name · town · current website or social page</small>
+              <Arrow />
+            </a>
+
             <div className={styles.socialLinks}>
               <a href={instagramUrl} target="_blank" rel="noreferrer">
                 <span>Instagram</span>
@@ -412,6 +419,9 @@ export default function WorkPage() {
           </p>
         </div>
         <div className={styles.footerLinks}>
+          <a href={emailUrl}>
+            {emailAddress} <Arrow />
+          </a>
           <a href="#work">Selected work</a>
           <a href={instagramUrl} target="_blank" rel="noreferrer">
             Instagram <Arrow />
@@ -427,11 +437,9 @@ export default function WorkPage() {
 
       <a
         className={styles.mobileCta}
-        href={instagramUrl}
-        target="_blank"
-        rel="noreferrer"
+        href={emailUrl}
       >
-        Start a project <Arrow />
+        Email the studio <Arrow />
       </a>
     </main>
   );

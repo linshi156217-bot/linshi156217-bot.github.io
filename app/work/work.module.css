@@ -665,8 +665,75 @@
   line-height: 1.7;
 }
 
+.emailCard {
+  min-height: 152px;
+  margin-top: 36px;
+  padding: 21px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 7px 18px;
+  position: relative;
+  overflow: hidden;
+  background: var(--blue);
+  color: white;
+}
+
+.emailCard::after {
+  width: 190px;
+  height: 190px;
+  content: "";
+  position: absolute;
+  top: -112px;
+  right: -84px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  box-shadow: 0 0 0 38px rgba(255, 255, 255, 0.04);
+}
+
+.emailCard > span:first-child,
+.emailCard small {
+  grid-column: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.emailCard > span:first-child {
+  align-self: start;
+  font-size: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.emailCard strong {
+  min-width: 0;
+  grid-column: 1 / -1;
+  position: relative;
+  z-index: 1;
+  font-size: clamp(1.22rem, 5.7vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+.emailCard small {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.55rem;
+  line-height: 1.5;
+}
+
+.emailCard > span:last-child {
+  grid-column: 2;
+  grid-row: 3;
+  position: relative;
+  z-index: 1;
+  font-size: 1.2rem;
+}
+
 .socialLinks {
-  margin-top: 41px;
+  margin-top: 22px;
   border-top: 1px solid var(--line-dark);
 }
 
@@ -879,6 +946,10 @@
   .socialLinks a:hover strong,
   .footerLinks a:hover {
     color: white;
+  }
+
+  .emailCard:hover {
+    background: #1649f2;
   }
 
   .qrFrame:hover {
