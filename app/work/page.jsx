@@ -2,35 +2,35 @@ import Image from "next/image";
 import styles from "./work.module.css";
 
 export const metadata = {
-  metadataBase: new URL("https://linshi156217-bot.github.io"),
-  title: "Linshi Studio | Mobile-first websites for independent businesses",
+  metadataBase: new URL("https://linshistudio.com"),
+  title: "Linshi Studio | Distinctive mobile-first websites",
   description:
-    "Thoughtful, mobile-first websites for UK restaurants, salons and local trades. One-off builds, clear pricing and a free first-screen concept.",
+    "Distinctive mobile-first websites for independent restaurants, salons and local trades in the UK.",
   alternates: {
-    canonical: "/work/",
+    canonical: "/",
   },
   openGraph: {
-    title: "Linshi Studio | Make the next click feel like the right choice",
+    title: "Linshi Studio | Make your next click impossible to forget",
     description:
-      "Mobile-first websites for independent UK businesses, designed around the details customers need before they call, visit or enquire.",
-    url: "/work/",
+      "Distinctive mobile-first websites for independent UK businesses.",
+    url: "/",
     siteName: "Linshi Studio",
     type: "website",
     images: [
       {
-        url: "/social/linshi-avatar-v2.png",
-        width: 1024,
+        url: "/assets/studio-v2/hero-campaign-v2.webp",
+        width: 1536,
         height: 1024,
-        alt: "Linshi Studio mobile-first web design",
+        alt: "Linshi Studio brand campaign for restaurant, renovation and salon websites",
       },
     ],
   },
   twitter: {
-    card: "summary",
-    title: "Linshi Studio | Mobile-first websites for local businesses",
+    card: "summary_large_image",
+    title: "Linshi Studio | Distinctive mobile-first websites",
     description:
-      "Focused websites for the moment a customer looks your business up.",
-    images: ["/social/linshi-avatar-v2.png"],
+      "Websites designed for the moment a customer decides whether to choose you.",
+    images: ["/assets/studio-v2/hero-campaign-v2.webp"],
   },
   robots: {
     index: true,
@@ -39,124 +39,68 @@ export const metadata = {
 };
 
 const instagramUrl = "https://www.instagram.com/designerlinshi/";
+const facebookUrl =
+  "https://www.facebook.com/profile.php?id=61592734760210";
 
 const projects = [
   {
     number: "01",
-    sector: "Restaurant & hospitality",
+    sector: "Restaurant / Hospitality",
     title: "Salt & Hawthorn",
-    location: "Whitby concept",
+    line: "From a Maps result to a table worth finding.",
     description:
-      "A visitor-first restaurant site that turns a Google Maps click into a confident decision with dishes, menu, opening hours and directions.",
-    image: "/assets/hero-exterior.webp",
-    alt: "Salt and Hawthorn coastal restaurant website concept",
+      "A visitor-first restaurant concept with dishes, menu, opening details and directions arranged for a quick decision on a phone.",
+    image: "/assets/studio-v2/restaurant-case-v2.webp",
+    alt: "Moody editorial restaurant table by the North Yorkshire coast",
     href: "/salt-and-hawthorn/",
-    className: styles.restaurant,
-    details: ["Menu at a glance", "Visitor details", "Maps, call & directions"],
+    theme: styles.projectBlue,
   },
   {
     number: "02",
-    sector: "Homes & local trades",
+    sector: "Homes / Local trades",
     title: "Alder & Slate",
-    location: "North Yorkshire concept",
+    line: "Turn good workmanship into visible trust.",
     description:
-      "A calm, trust-led renovation portfolio that shows the standard of the work, the service area and the easiest route to an enquiry.",
-    image: "/assets/alder-slate/hero.webp",
-    alt: "Alder and Slate home renovation website concept",
+      "A renovation concept that gives homeowners a clear standard of work, a useful service area and an uncomplicated route to enquire.",
+    image: "/assets/studio-v2/renovation-case-v2.webp",
+    alt: "Craftsperson installing dark timber cabinetry in a refined home",
     href: "/alder-and-slate/",
-    className: styles.trades,
-    details: ["Project gallery", "Services & service area", "Simple enquiry route"],
+    theme: styles.projectIvory,
   },
   {
     number: "03",
-    sector: "Hair & beauty",
+    sector: "Hair / Beauty",
     title: "Aster House",
-    location: "Bath concept",
+    line: "Show the taste before the appointment.",
     description:
-      "An editorial salon experience that helps a new client understand the look, services, price level and location before getting in touch.",
-    image: "/assets/aster-house/hero.webp",
-    alt: "Aster House hair salon website concept",
+      "An editorial salon concept that communicates atmosphere, work, services, price level and practical visit details before a client messages.",
+    image: "/assets/studio-v2/salon-case-v2.webp",
+    alt: "Refined contemporary hair salon with a sculptural colour portrait",
     href: "/aster-house-hair/",
-    className: styles.beauty,
-    details: ["Work & atmosphere", "Service guide", "Mobile contact actions"],
+    theme: styles.projectRose,
   },
-];
-
-const gaps = [
-  {
-    number: "01",
-    title: "Found on Google",
-    copy: "A customer finds the business on Maps, Instagram or Facebook and wants a little more certainty.",
-  },
-  {
-    number: "02",
-    title: "Judged on mobile",
-    copy: "They open the website on a phone. Slow pages, tiny text or missing information quietly create doubt.",
-  },
-  {
-    number: "03",
-    title: "Ready to decide",
-    copy: "A focused page gives them the details and confidence to call, visit, message or request a quote.",
-  },
-];
-
-const inclusions = [
-  "A mobile-first design shaped around your customers",
-  "Real business information, services and approved imagery",
-  "Clear contact, directions and social links",
-  "Copy editing for a more confident, natural presentation",
-  "Two focused rounds of refinements",
-  "Domain connection, launch and handover",
 ];
 
 const process = [
   {
     number: "01",
-    title: "A useful first look",
-    copy: "Send the business name, town and current website or social page. I will create a focused first-screen direction when the project is a good fit.",
+    title: "Find the decision",
+    copy: "We identify what a customer still needs after Google Maps or social media has introduced the business.",
   },
   {
     number: "02",
-    title: "Content with a purpose",
-    copy: "We confirm the services, practical details, preferred imagery and the action the website should make easiest.",
+    title: "Design mobile first",
+    copy: "The phone experience is the real product. Larger screens are then composed with the same care.",
   },
   {
     number: "03",
-    title: "Design and refinement",
-    copy: "I build the real mobile page first, then adapt it for larger screens and include two rounds of changes.",
+    title: "Build with real detail",
+    copy: "Approved services, images, prices, directions and contact routes replace vague template copy.",
   },
   {
     number: "04",
-    title: "Published properly",
-    copy: "The finished website is tested, connected to the business domain and launched with a straightforward handover.",
-  },
-];
-
-const faqs = [
-  {
-    question: "Is the first-screen concept really free?",
-    answer:
-      "Yes, for a small number of suitable independent businesses. It is a focused visual direction, not a complete free website, and there is no obligation to continue.",
-  },
-  {
-    question: "Do I need to replace my domain?",
-    answer:
-      "Usually not. Your existing domain can point to the new website. If you do not have one, I can help connect a suitable domain registered in your name.",
-  },
-  {
-    question: "Will I have to pay you every month?",
-    answer:
-      "There is no compulsory monthly maintenance package from me. A domain normally renews yearly, and optional future updates are only charged when requested.",
-  },
-  {
-    question: "Can customers book or pay through the site?",
-    answer:
-      "The focused service is built around presentation, menus, services, directions and enquiries. Existing third-party booking links can be connected; more complex booking or payment systems are quoted separately.",
-  },
-  {
-    question: "Are the websites shown here real clients?",
-    answer:
-      "They are clearly labelled original concepts, created to demonstrate the quality and thinking I can adapt to a real business. I do not present concept work as a paid client commission.",
+    title: "Connect and launch",
+    copy: "We test the finished site, connect the business domain and leave a clear route for future changes.",
   },
 ];
 
@@ -164,202 +108,172 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Linshi Studio",
-  url: "https://linshi156217-bot.github.io/work/",
+  url: "https://linshistudio.com",
   description:
     "Mobile-first website design for independent restaurants, salons and local trades in the UK.",
-  sameAs: [instagramUrl],
+  sameAs: [instagramUrl, facebookUrl],
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
   },
-  priceRange: "£650–£1,500",
 };
-
-function Brand() {
-  return (
-    <span className={styles.brand}>
-      <span className={styles.mark}>L</span>
-      <span className={styles.brandCopy}>
-        <strong>Linshi</strong>
-        <small>Independent web studio</small>
-      </span>
-    </span>
-  );
-}
 
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
+function Brand({ compact = false }) {
+  return (
+    <span className={`${styles.brand} ${compact ? styles.brandCompact : ""}`}>
+      <span className={styles.brandMark} aria-hidden="true">
+        L<span>.</span>
+      </span>
+      <span className={styles.brandName}>
+        <strong>Linshi Studio</strong>
+        <small>Independent web design</small>
+      </span>
+    </span>
+  );
+}
+
 export default function WorkPage() {
   return (
-    <main className={styles.page}>
+    <main className={styles.site}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <a className={styles.skipLink} href="#main-content">
-        Skip to main content
+      <a className={styles.skipLink} href="#content">
+        Skip to content
       </a>
 
-      <header className={styles.siteHeader}>
+      <header className={styles.header}>
         <a href="#top" aria-label="Linshi Studio home">
-          <Brand />
+          <Brand compact />
         </a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
-          <a href="#service">Service</a>
-          <a href="#process">Process</a>
+          <a href="#approach">Approach</a>
+          <a href="#contact">Contact</a>
         </nav>
         <a
-          className={styles.headerAction}
+          className={styles.headerCta}
           href={instagramUrl}
           target="_blank"
           rel="noreferrer"
         >
-          Request a concept <Arrow />
+          Start a project <Arrow />
         </a>
       </header>
 
-      <div id="main-content">
+      <div id="content">
         <section className={styles.hero} id="top">
-          <div className={styles.heroCopy}>
+          <Image
+            className={styles.heroImage}
+            src="/assets/studio-v2/hero-campaign-v2.webp"
+            alt="A restaurant, craft workshop and salon connected by a vivid blue digital frame"
+            fill
+            priority
+            sizes="100vw"
+          />
+          <div className={styles.heroShade} />
+          <div className={styles.heroGrid} aria-hidden="true" />
+
+          <div className={styles.heroContent}>
             <p className={styles.eyebrow}>
-              Mobile-first websites · Independent UK businesses
+              Independent web studio · United Kingdom
             </p>
             <h1>
-              Look established
+              Impossible
               <br />
-              <em>before they arrive.</em>
+              <em>to scroll past.</em>
             </h1>
             <p className={styles.heroLead}>
-              Thoughtful websites for the moment a customer looks you up —
-              designed around the details that help them choose, call, visit or
-              enquire.
+              Distinctive mobile-first websites for independent businesses that
+              deserve to look as good online as they do in real life.
             </p>
             <div className={styles.heroActions}>
+              <a className={styles.primaryButton} href="#work">
+                View selected work <Arrow />
+              </a>
               <a
-                className={styles.primaryAction}
+                className={styles.ghostButton}
                 href={instagramUrl}
                 target="_blank"
                 rel="noreferrer"
               >
-                Request a free first screen <Arrow />
-              </a>
-              <a className={styles.textAction} href="#work">
-                Explore the work <span aria-hidden="true">↓</span>
+                Start a conversation
               </a>
             </div>
-            <ul className={styles.heroProof} aria-label="Service highlights">
-              <li>Mobile first</li>
-              <li>One-off build</li>
-              <li>Two refinements</li>
-              <li>Published for you</li>
-            </ul>
           </div>
 
-          <div className={styles.deviceStage} aria-label="Three website previews">
-            {projects.map((project, index) => (
-              <a
-                className={`${styles.device} ${styles[`device${index + 1}`]}`}
-                href={project.href}
-                key={project.title}
-                aria-label={`Open ${project.title} website concept`}
-              >
-                <span className={styles.deviceBar}>
-                  <i />
-                  <span>{project.title}</span>
-                </span>
-                <Image
-                  src={project.image}
-                  alt=""
-                  fill
-                  priority={index === 0}
-                  sizes="(max-width: 760px) 72vw, 25vw"
-                />
-                <span className={styles.deviceLabel}>{project.sector}</span>
-              </a>
-            ))}
+          <div className={styles.heroIndex}>
+            <span>Mobile first</span>
+            <span>Strategy + design + build</span>
+            <span>Independent businesses</span>
           </div>
-
-          <a className={styles.heroScroll} href="#gap">
-            Why this matters <span aria-hidden="true">↓</span>
-          </a>
         </section>
 
-        <section className={styles.gap} id="gap" aria-labelledby="gap-title">
-          <div className={styles.sectionIntro}>
-            <p className={styles.sectionLabel}>The decision after discovery</p>
-            <h2 id="gap-title">
-              Google helps them find you.
-              <br />
-              <em>Your website helps them choose you.</em>
-            </h2>
-          </div>
-          <div className={styles.gapGrid}>
-            {gaps.map((item) => (
-              <article key={item.number}>
-                <span>{item.number}</span>
-                <h3>{item.title}</h3>
-                <p>{item.copy}</p>
-              </article>
-            ))}
+        <section className={styles.signal} aria-label="Studio principles">
+          <p>
+            Found on Google. <span>Judged in seconds.</span> Remembered by
+            design.
+          </p>
+          <div>
+            <span>One-off build</span>
+            <span>Two refinements</span>
+            <span>Domain connected</span>
           </div>
         </section>
 
         <section className={styles.work} id="work" aria-labelledby="work-title">
-          <div className={styles.workHeading}>
-            <p className={styles.sectionLabel}>Selected concepts</p>
+          <div className={styles.sectionHead}>
+            <p className={styles.sectionLabel}>01 · Selected work</p>
             <h2 id="work-title">
-              Three businesses.
+              Three worlds.
               <br />
-              <em>One clear standard.</em>
+              <em>Three complete websites.</em>
             </h2>
             <p>
-              Each concept is an original demonstration, built to show the
-              quality, clarity and mobile experience I can adapt to a real
-              independent business.
+              These are original concept websites, not claimed client
+              commissions. Open each one to experience the full mobile-first
+              thinking—not just a pretty homepage.
             </p>
           </div>
 
           <div className={styles.projectList}>
             {projects.map((project) => (
               <article
-                className={`${styles.project} ${project.className}`}
+                className={`${styles.project} ${project.theme}`}
                 key={project.title}
               >
                 <a
-                  className={styles.projectImage}
+                  className={styles.projectVisual}
                   href={project.href}
-                  aria-label={`Open the ${project.title} website concept`}
+                  aria-label={`View the complete ${project.title} website`}
                 >
                   <Image
                     src={project.image}
                     alt={project.alt}
                     fill
-                    sizes="(max-width: 760px) 100vw, 62vw"
+                    sizes="(max-width: 760px) 100vw, 58vw"
                   />
                   <span className={styles.projectNumber}>{project.number}</span>
-                  <span className={styles.openTag}>
-                    Open website <Arrow />
+                  <span className={styles.projectOpen}>
+                    View full website <Arrow />
                   </span>
                 </a>
+
                 <div className={styles.projectCopy}>
-                  <div className={styles.projectMeta}>
-                    <span>{project.sector}</span>
-                    <span>{project.location}</span>
-                  </div>
+                  <p className={styles.projectSector}>{project.sector}</p>
                   <h3>{project.title}</h3>
+                  <blockquote>{project.line}</blockquote>
                   <p>{project.description}</p>
-                  <ul>
-                    {project.details.map((detail) => (
-                      <li key={detail}>{detail}</li>
-                    ))}
-                  </ul>
                   <a className={styles.projectLink} href={project.href}>
-                    Explore this concept <Arrow />
+                    Enter the complete case <Arrow />
                   </a>
+                  <small>Original concept · built by Linshi Studio</small>
                 </div>
               </article>
             ))}
@@ -367,69 +281,34 @@ export default function WorkPage() {
         </section>
 
         <section
-          className={styles.service}
-          id="service"
-          aria-labelledby="service-title"
+          className={styles.approach}
+          id="approach"
+          aria-labelledby="approach-title"
         >
-          <div className={styles.serviceHeading}>
-            <p className={styles.sectionLabel}>A focused website service</p>
-            <h2 id="service-title">
-              Enough website.
+          <div className={styles.approachIntro}>
+            <p className={styles.sectionLabel}>02 · The point of the work</p>
+            <h2 id="approach-title">
+              Beauty earns attention.
               <br />
-              <em>None of the theatre.</em>
+              <em>Clarity earns the enquiry.</em>
             </h2>
-            <p>
-              The goal is a polished, useful public website — not a complicated
-              system your business never asked for.
-            </p>
           </div>
-
-          <div className={styles.offerCard}>
-            <div className={styles.offerTop}>
-              <div>
-                <span>Typical one-off investment</span>
-                <strong>£650–£1,500</strong>
-              </div>
-              <p>
-                Final price depends on the number of pages, content and any
-                additional features.
-              </p>
-            </div>
-            <div className={styles.inclusions}>
-              <p>Every focused build includes</p>
-              <ul>
-                {inclusions.map((item, index) => (
-                  <li key={item}>
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className={styles.offerNote}>
-              <p>
-                No compulsory monthly maintenance package from me. Domain
-                renewal and any optional third-party service are kept clear
-                before the project begins.
-              </p>
-              <a
-                href={instagramUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Check whether your business is a fit <Arrow />
-              </a>
-            </div>
+          <div className={styles.approachCopy}>
+            <p>
+              A local website does not need to become complicated software. It
+              needs to answer the right questions, create confidence and make
+              the next action effortless.
+            </p>
+            <p>
+              That is why every page starts with the real customer journey:
+              Maps, social profile, phone, decision.
+            </p>
           </div>
         </section>
 
-        <section
-          className={styles.process}
-          id="process"
-          aria-labelledby="process-title"
-        >
-          <div className={styles.processHeading}>
-            <p className={styles.sectionLabel}>How it works</p>
+        <section className={styles.process} aria-labelledby="process-title">
+          <div className={styles.processTitle}>
+            <p className={styles.sectionLabel}>03 · A focused process</p>
             <h2 id="process-title">
               From first look
               <br />
@@ -449,80 +328,100 @@ export default function WorkPage() {
           </div>
         </section>
 
-        <section className={styles.brief} aria-labelledby="brief-title">
-          <p className={styles.sectionLabel}>Start with three details</p>
-          <h2 id="brief-title">A business name. A town. A current link.</h2>
-          <p>
-            That is enough for an honest first look. If a focused rebuild would
-            not improve the customer experience, I will say so.
-          </p>
-          <div className={styles.briefExample} aria-label="Example message">
-            <span>Example message</span>
-            <p>
-              “Hi — the business is [name] in [town]. This is our current
-              website or social page: [link].”
-            </p>
-          </div>
-          <a
-            className={styles.darkAction}
-            href={instagramUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Message Linshi on Instagram <Arrow />
-          </a>
-        </section>
-
-        <section className={styles.faq} aria-labelledby="faq-title">
-          <div>
-            <p className={styles.sectionLabel}>Straight answers</p>
-            <h2 id="faq-title">Before you ask.</h2>
-          </div>
-          <div className={styles.faqList}>
-            {faqs.map((faq, index) => (
-              <details key={faq.question}>
-                <summary>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  {faq.question}
-                  <i aria-hidden="true">+</i>
-                </summary>
-                <p>{faq.answer}</p>
-              </details>
-            ))}
-          </div>
-        </section>
-
-        <section className={styles.finalCta}>
-          <p className={styles.sectionLabel}>One useful next step</p>
-          <h2>
-            See what your first
+        <section className={styles.promise}>
+          <p className={styles.sectionLabel}>The standard</p>
+          <blockquote>
+            “Your own business,
             <br />
-            <em>mobile screen could become.</em>
-          </h2>
+            <em>seen properly.</em>”
+          </blockquote>
           <p>
-            Send the business name and current link. I will review it before
-            suggesting anything.
+            No generic demo dressed up as custom work. Real details, a clear
+            visual point of view and a page built for the phone in your
+            customer&apos;s hand.
           </p>
-          <a
-            className={styles.lightAction}
-            href={instagramUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Request a free first screen <Arrow />
-          </a>
+        </section>
+
+        <section
+          className={styles.contact}
+          id="contact"
+          aria-labelledby="contact-title"
+        >
+          <div className={styles.contactIntro}>
+            <p className={styles.sectionLabel}>04 · Start here</p>
+            <h2 id="contact-title">
+              Show us the business.
+              <br />
+              <em>We&apos;ll show you the possibility.</em>
+            </h2>
+            <p>
+              Send the business name, town and current website or social page.
+              That is enough for an honest first look.
+            </p>
+
+            <div className={styles.socialLinks}>
+              <a href={instagramUrl} target="_blank" rel="noreferrer">
+                <span>Instagram</span>
+                <strong>@designerlinshi</strong>
+                <Arrow />
+              </a>
+              <a href={facebookUrl} target="_blank" rel="noreferrer">
+                <span>Facebook</span>
+                <strong>Shi Lin</strong>
+                <Arrow />
+              </a>
+            </div>
+          </div>
+
+          <div className={styles.whatsappCard}>
+            <div className={styles.whatsappTop}>
+              <span className={styles.liveDot} />
+              <p>WhatsApp · Real contact</p>
+            </div>
+            <a
+              className={styles.qrFrame}
+              href="/assets/studio-v2/whatsapp-qr.png"
+              target="_blank"
+              aria-label="Open the WhatsApp QR code at full size"
+            >
+              <Image
+                src="/assets/studio-v2/whatsapp-qr.png"
+                alt="WhatsApp QR code for Linshi"
+                width={320}
+                height={320}
+              />
+            </a>
+            <div className={styles.whatsappCopy}>
+              <span>Scan to add</span>
+              <h3>Linshi on WhatsApp</h3>
+              <p>
+                Open your camera or WhatsApp scanner. Tap the code to view the
+                full-size contact code.
+              </p>
+            </div>
+          </div>
         </section>
       </div>
 
       <footer className={styles.footer}>
-        <Brand />
-        <p>Mobile-first websites for independent businesses.</p>
-        <a href={instagramUrl} target="_blank" rel="noreferrer">
-          @designerlinshi <Arrow />
-        </a>
+        <div>
+          <Brand />
+          <p>
+            Distinctive mobile-first websites for independent restaurants,
+            salons and local trades.
+          </p>
+        </div>
+        <div className={styles.footerLinks}>
+          <a href="#work">Selected work</a>
+          <a href={instagramUrl} target="_blank" rel="noreferrer">
+            Instagram <Arrow />
+          </a>
+          <a href={facebookUrl} target="_blank" rel="noreferrer">
+            Facebook <Arrow />
+          </a>
+        </div>
         <small>
-          Portfolio concepts are illustrative demonstrations, not claimed
-          client commissions.
+          © 2026 Linshi Studio · Concept work is clearly identified throughout.
         </small>
       </footer>
 
@@ -532,7 +431,7 @@ export default function WorkPage() {
         target="_blank"
         rel="noreferrer"
       >
-        Request a free first screen <Arrow />
+        Start a project <Arrow />
       </a>
     </main>
   );

@@ -1,51 +1,36 @@
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL(
-    "https://salt-hawthorn-whitby-demo.linshi156217.chatgpt.site",
-  ),
-  title: "Salt & Hawthorn | A Coastal Dining Room in Whitby",
-  description:
-    "A fictional, editorial restaurant website concept showing seasonal dishes, the current menu and useful visitor details for travellers arriving from Google Maps.",
-  openGraph: {
-    title: "Salt & Hawthorn | A Coastal Dining Room in Whitby",
-    description:
-      "A fictional, editorial restaurant website concept inspired by the North Yorkshire coast.",
-    url: "https://linshi156217-bot.github.io/salt-and-hawthorn/",
-    siteName: "Salt & Hawthorn",
-    type: "website",
-    images: [
-      {
-        url: "https://linshi156217-bot.github.io/social/salt-hawthorn-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Salt & Hawthorn coastal restaurant concept",
-      },
-    ],
+  metadataBase: new URL("https://linshistudio.com"),
+  title: {
+    default: "Linshi Studio | Distinctive mobile-first websites",
+    template: "%s | Linshi Studio",
   },
-  twitter: {
-    card: "summary_large_image",
-    images: [
-      "https://linshi156217-bot.github.io/social/salt-hawthorn-og.webp",
-    ],
+  description:
+    "Distinctive mobile-first websites for independent restaurants, salons and local trades in the UK.",
+  applicationName: "Linshi Studio",
+  openGraph: {
+    siteName: "Linshi Studio",
+    type: "website",
+    locale: "en_GB",
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
     },
   },
   icons: {
-    icon: "/mark.svg",
+    icon: "/linshi-mark.svg",
   },
 };
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#121914",
+  themeColor: "#090a0c",
 };
 
 export default function RootLayout({ children }) {
