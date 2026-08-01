@@ -481,6 +481,9 @@ export default function WorkPage() {
             <div>
               <p className={styles.sectionLabel}>Before we begin</p>
               <h3>Useful answers, upfront.</h3>
+              <a className={styles.guideLink} href="/project-guide/">
+                Read the full project guide <Arrow />
+              </a>
             </div>
             <div className={styles.faqList}>
               {faqs.map((item) => (
@@ -582,6 +585,8 @@ export default function WorkPage() {
             {emailAddress} <Arrow />
           </a>
           <a href="#work">Selected work</a>
+          <a href="/project-guide/">Project guide</a>
+          <a href="/privacy/">Privacy</a>
           <a href={instagramUrl} target="_blank" rel="noreferrer">
             Instagram <Arrow />
           </a>

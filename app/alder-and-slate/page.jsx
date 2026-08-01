@@ -5,16 +5,19 @@ export const metadata = {
   title: "Alder & Slate | Considered Home Renovation in North Yorkshire",
   description:
     "A fictional mobile-first website concept for a premium home renovation company serving Harrogate and North Yorkshire.",
+  alternates: {
+    canonical: "/alder-and-slate/",
+  },
   openGraph: {
     title: "Alder & Slate | Built for weather. Finished for life.",
     description:
       "A premium fictional home renovation website concept for North Yorkshire.",
-    url: "https://linshi156217-bot.github.io/alder-and-slate/",
+    url: "/alder-and-slate/",
     siteName: "Alder & Slate",
     type: "website",
     images: [
       {
-        url: "https://linshi156217-bot.github.io/assets/alder-slate/og.webp",
+        url: "/assets/alder-slate/og.webp",
         width: 1200,
         height: 630,
         alt: "Restored Yorkshire stone home with a natural slate roof",

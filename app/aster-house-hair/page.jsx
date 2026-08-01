@@ -5,15 +5,18 @@ export const metadata = {
   title: "Aster House | Cut & Colour in Bath",
   description:
     "A fictional mobile-first website concept for an independent hair salon in Bath.",
+  alternates: {
+    canonical: "/aster-house-hair/",
+  },
   openGraph: {
     title: "Aster House | Cuts with character. Colour with restraint.",
     description: "A premium fictional independent salon website concept.",
-    url: "https://linshi156217-bot.github.io/aster-house-hair/",
+    url: "/aster-house-hair/",
     siteName: "Aster House",
     type: "website",
     images: [
       {
-        url: "https://linshi156217-bot.github.io/assets/aster-house/og.webp",
+        url: "/assets/aster-house/og.webp",
         width: 1200,
         height: 630,
         alt: "A warm contemporary independent hair salon",

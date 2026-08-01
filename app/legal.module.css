@@ -1,0 +1,252 @@
+.page {
+  min-height: 100vh;
+  background: #f4f2ec;
+  color: #0b0c0f;
+}
+
+.header {
+  min-height: 78px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #090a0c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  color: white;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  background: #2457ff;
+  font-size: 0.82rem;
+  letter-spacing: 0;
+}
+
+.back {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero {
+  padding: 82px 20px 70px;
+  background:
+    linear-gradient(135deg, rgba(36, 87, 255, 0.17), transparent 43%),
+    #090a0c;
+  color: white;
+}
+
+.heroInner,
+.content {
+  width: min(100%, 980px);
+  margin-inline: auto;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: #6f8eff;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 850px;
+  margin: 0;
+  font-size: clamp(3rem, 12vw, 7rem);
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+}
+
+.hero h1 em {
+  color: #6f8eff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.heroLead {
+  max-width: 680px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.content {
+  padding: 60px 20px 90px;
+}
+
+.notice {
+  margin-bottom: 42px;
+  padding: 20px;
+  background: white;
+  border-left: 4px solid #2457ff;
+  box-shadow: 0 16px 50px rgba(9, 10, 12, 0.07);
+  color: #54565d;
+  font-size: 0.76rem;
+  line-height: 1.7;
+}
+
+.section {
+  padding: 36px 0;
+  border-top: 1px solid rgba(9, 10, 12, 0.15);
+}
+
+.section h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.65rem, 7vw, 2.7rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.section h3 {
+  margin: 28px 0 10px;
+  font-size: 0.95rem;
+}
+
+.section p,
+.section li {
+  color: #555860;
+  font-size: 0.8rem;
+  line-height: 1.75;
+}
+
+.section p {
+  margin: 0 0 14px;
+}
+
+.section ul,
+.section ol {
+  margin: 16px 0 0;
+  padding-left: 20px;
+}
+
+.section a {
+  color: #1649f2;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.priceGrid {
+  display: grid;
+  gap: 12px;
+}
+
+.priceCard {
+  padding: 24px;
+  background: white;
+  border: 1px solid rgba(9, 10, 12, 0.13);
+}
+
+.priceCardFeatured {
+  background: #2457ff;
+  border-color: #2457ff;
+  color: white;
+}
+
+.priceCard h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.priceCard strong {
+  margin-top: 20px;
+  display: block;
+  font-size: 2.7rem;
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+
+.priceCardFeatured p,
+.priceCardFeatured li {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cta {
+  margin-top: 42px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #090a0c;
+  color: white;
+}
+
+.cta span {
+  display: grid;
+  gap: 5px;
+}
+
+.cta small {
+  color: #6f8eff;
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.cta strong {
+  font-size: 0.92rem;
+}
+
+.footer {
+  padding: 30px 20px 92px;
+  background: #090a0c;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 0.58rem;
+  line-height: 1.6;
+}
+
+.footerInner {
+  width: min(100%, 980px);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.footer a {
+  color: white;
+}
+
+@media (min-width: 760px) {
+  .header {
+    padding-inline: 36px;
+  }
+
+  .hero {
+    padding: 120px 36px 96px;
+  }
+
+  .content {
+    padding: 78px 36px 120px;
+  }
+
+  .priceGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .footer {
+    padding: 34px 36px;
+  }
+}

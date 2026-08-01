@@ -829,6 +829,25 @@
   gap: 38px;
 }
 
+.guideLink {
+  width: fit-content;
+  min-height: 44px;
+  margin-top: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--blue);
+  color: var(--blue);
+  font-size: 0.57rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.guideLink span {
+  font-size: 1rem;
+}
+
 .faqBlock > div:first-child {
   display: grid;
   gap: 22px;
@@ -1232,6 +1251,11 @@
   .socialLinks a:hover strong,
   .footerLinks a:hover {
     color: white;
+  }
+
+  .guideLink:hover {
+    color: var(--black);
+    border-color: var(--black);
   }
 
   .emailCard:hover {
