@@ -107,6 +107,74 @@ const process = [
   },
 ];
 
+const packages = [
+  {
+    name: "Essential",
+    price: "£650",
+    note: "A focused one-page website",
+    features: [
+      "Up to 6 considered content sections",
+      "Services or menu highlights",
+      "Gallery, opening details and contact routes",
+      "Domain connection and launch support",
+      "Two consolidated revision rounds",
+    ],
+  },
+  {
+    name: "Signature",
+    price: "£950",
+    note: "A fuller multi-page brand experience",
+    featured: true,
+    features: [
+      "Up to 5 pages or an equivalent long-form site",
+      "Full menu, services or treatment presentation",
+      "Expanded portfolio, reviews and trust details",
+      "Existing booking or ordering link integration",
+      "Two consolidated revision rounds",
+    ],
+  },
+  {
+    name: "Bespoke",
+    price: "From £1,350",
+    note: "For additional pages or custom integrations",
+    features: [
+      "Scope agreed before work begins",
+      "Advanced content organisation",
+      "Custom enquiry journeys",
+      "Fixed written quotation",
+      "Two consolidated revision rounds",
+    ],
+  },
+];
+
+const faqs = [
+  {
+    question: "What does the price include?",
+    answer:
+      "Mobile, tablet and desktop design, approved content formatting, image optimisation, basic technical SEO, secure launch, domain connection and two revision rounds are included in every standard package.",
+  },
+  {
+    question: "How does payment work?",
+    answer:
+      "A 50% deposit confirms the project. The remaining 50% is due after the agreed revisions and final approval, before the website is launched on the live domain.",
+  },
+  {
+    question: "How long does a website take?",
+    answer:
+      "Essential projects typically take 7-10 working days and Signature projects 10-15 working days after all approved content has been received.",
+  },
+  {
+    question: "Are there monthly website-builder fees?",
+    answer:
+      "Linshi Studio charges a one-off build fee. Domain renewals and any optional third-party services remain the business owner's responsibility and are always disclosed before purchase.",
+  },
+  {
+    question: "What is not included?",
+    answer:
+      "E-commerce, custom booking systems, customer accounts, bespoke dashboards, professional photography, large-scale copywriting and paid advertising are quoted separately when required.",
+  },
+];
+
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -116,6 +184,7 @@ const structuredData = {
     "Mobile-first website design for independent restaurants, salons and local trades in the UK.",
   email: emailAddress,
   sameAs: [instagramUrl, facebookUrl],
+  priceRange: "£650-£1,350+",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
@@ -159,6 +228,7 @@ export default function WorkPage() {
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
           <a href="#approach">Approach</a>
+          <a href="#pricing">Pricing</a>
           <a href="#contact">Contact</a>
         </nav>
         <a
@@ -221,7 +291,7 @@ export default function WorkPage() {
             design.
           </p>
           <div>
-            <span>One-off build</span>
+            <span>Websites from £650</span>
             <span>Two refinements</span>
             <span>Domain connected</span>
           </div>
@@ -343,12 +413,101 @@ export default function WorkPage() {
         </section>
 
         <section
+          className={styles.offer}
+          id="pricing"
+          aria-labelledby="pricing-title"
+        >
+          <div className={styles.offerIntro}>
+            <p className={styles.sectionLabel}>04 · Clear scope, clear price</p>
+            <h2 id="pricing-title">
+              Know the scope.
+              <br />
+              <em>Know the price.</em>
+            </h2>
+            <p>
+              Every project begins with a written scope and a fixed price. No
+              vague monthly builder fee, no surprise additions and no work
+              outside the agreed brief without approval.
+            </p>
+          </div>
+
+          <div className={styles.priceGrid}>
+            {packages.map((item) => (
+              <article
+                className={item.featured ? styles.priceFeatured : ""}
+                key={item.name}
+              >
+                <div className={styles.priceHead}>
+                  <p>{item.name}</p>
+                  {item.featured && <span>Most complete</span>}
+                </div>
+                <strong>{item.price}</strong>
+                <p className={styles.priceNote}>{item.note}</p>
+                <ul>
+                  {item.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+
+          <div className={styles.scopeGrid}>
+            <section>
+              <p className={styles.scopeLabel}>Included as standard</p>
+              <h3>Ready to launch properly.</h3>
+              <ul>
+                <li>Mobile-first responsive design</li>
+                <li>Image optimisation and technical checks</li>
+                <li>Secure HTTPS launch and domain connection</li>
+                <li>Two rounds of consolidated revisions</li>
+                <li>30 days of support for delivered-work defects</li>
+              </ul>
+            </section>
+            <section>
+              <p className={styles.scopeLabel}>Quoted separately</p>
+              <h3>Only when the business needs it.</h3>
+              <ul>
+                <li>E-commerce or custom booking systems</li>
+                <li>Customer accounts or bespoke dashboards</li>
+                <li>Logo design and professional photography</li>
+                <li>Large-scale copywriting or verified translation</li>
+                <li>Domain renewal and paid third-party services</li>
+              </ul>
+            </section>
+          </div>
+
+          <div className={styles.faqBlock}>
+            <div>
+              <p className={styles.sectionLabel}>Before we begin</p>
+              <h3>Useful answers, upfront.</h3>
+            </div>
+            <div className={styles.faqList}>
+              {faqs.map((item) => (
+                <details key={item.question}>
+                  <summary>{item.question}</summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+
+          <a className={styles.quoteCta} href={emailUrl}>
+            <span>
+              <small>Start with the business name and current link</small>
+              Request a clear quote
+            </span>
+            <Arrow />
+          </a>
+        </section>
+
+        <section
           className={styles.contact}
           id="contact"
           aria-labelledby="contact-title"
         >
           <div className={styles.contactIntro}>
-            <p className={styles.sectionLabel}>04 · Start here</p>
+            <p className={styles.sectionLabel}>05 · Start here</p>
             <h2 id="contact-title">
               Show us the business.
               <br />
