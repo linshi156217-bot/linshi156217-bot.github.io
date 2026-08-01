@@ -33,7 +33,7 @@ export default function PrivacyPage() {
         <section className={styles.section}>
           <h2>Information we receive</h2>
           <p>We receive information when you contact us by email, WhatsApp or social media, or when you choose to work with us. This may include your name, business details, contact information, project brief, website content, images and feedback.</p>
-          <p>The website does not currently use an on-site enquiry form, advertising pixel or optional analytics cookies. Our hosting provider may process basic technical logs for security and reliable delivery.</p>
+          <p>The website includes a project-brief composer that runs in your browser and opens an email on your device. Information typed into that composer is not submitted to or stored by the website. The website does not currently use an advertising pixel or optional analytics cookies. Our hosting provider may process basic technical logs for security and reliable delivery.</p>
         </section>
 
         <section className={styles.section}>

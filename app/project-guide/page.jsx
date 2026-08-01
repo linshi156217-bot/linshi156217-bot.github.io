@@ -57,6 +57,7 @@ export default function ProjectGuidePage() {
             <li>The remaining 50% is due after approval and before live-domain launch.</li>
           </ol>
           <p>Essential projects usually take 7–10 working days and Signature projects 10–15 working days after all approved content is received.</p>
+          <p>The business keeps control of its domain and approved content. Handover notes are included, together with 30 days of support for defects in the delivered work.</p>
         </section>
 
         <section className={styles.section}>

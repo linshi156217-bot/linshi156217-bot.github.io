@@ -1,4 +1,5 @@
 import Image from "next/image";
+import EnquiryComposer from "./EnquiryComposer";
 import styles from "./work.module.css";
 
 export const metadata = {
@@ -44,6 +45,7 @@ const facebookUrl =
 const emailAddress = "hello@linshistudio.com";
 const emailUrl =
   "mailto:hello@linshistudio.com?subject=Website%20project%20enquiry";
+const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
 
 const projects = [
   {
@@ -103,7 +105,7 @@ const process = [
   {
     number: "04",
     title: "Connect and launch",
-    copy: "We test the finished site, connect the business domain and leave a clear route for future changes.",
+    copy: "We test the finished site, connect the business-owned domain and provide clear handover notes for future changes.",
   },
 ];
 
@@ -173,6 +175,16 @@ const faqs = [
     answer:
       "E-commerce, custom booking systems, customer accounts, bespoke dashboards, professional photography, large-scale copywriting and paid advertising are quoted separately when required.",
   },
+  {
+    question: "Who owns the domain and finished website?",
+    answer:
+      "The business keeps control of its domain and approved content. The written scope explains the launch setup, handover files and any third-party account that remains in the business owner's name.",
+  },
+  {
+    question: "What happens after launch?",
+    answer:
+      "Every standard project includes 30 days of support for defects in the delivered work. Future content changes or new features can then be quoted clearly before any work begins.",
+  },
 ];
 
 const structuredData = {
@@ -184,6 +196,12 @@ const structuredData = {
     "Mobile-first website design for independent restaurants, salons and local trades in the UK.",
   email: emailAddress,
   sameAs: [instagramUrl, facebookUrl],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "project enquiries",
+    email: emailAddress,
+    availableLanguage: ["English"],
+  },
   priceRange: "£650-£1,350+",
   areaServed: {
     "@type": "Country",
@@ -233,9 +251,9 @@ export default function WorkPage() {
         </nav>
         <a
           className={styles.headerCta}
-          href={emailUrl}
+          href="#project-brief"
         >
-          Email us <Arrow />
+          Start a brief <Arrow />
         </a>
       </header>
 
@@ -254,7 +272,7 @@ export default function WorkPage() {
 
           <div className={styles.heroContent}>
             <p className={styles.eyebrow}>
-              Independent web studio · United Kingdom
+              Serving independent businesses across the UK
             </p>
             <h1>
               Impossible
@@ -271,9 +289,9 @@ export default function WorkPage() {
               </a>
               <a
                 className={styles.ghostButton}
-                href={emailUrl}
+                href="#project-brief"
               >
-                Email the studio
+                Start a project brief
               </a>
             </div>
           </div>
@@ -293,7 +311,7 @@ export default function WorkPage() {
           <div>
             <span>Websites from £650</span>
             <span>Two refinements</span>
-            <span>Domain connected</span>
+            <span>Your domain stays yours</span>
           </div>
         </section>
 
@@ -398,6 +416,46 @@ export default function WorkPage() {
           </div>
         </section>
 
+        <section
+          className={styles.ownership}
+          aria-labelledby="ownership-title"
+        >
+          <div className={styles.ownershipIntro}>
+            <p className={styles.sectionLabel}>04 · Built to hand over</p>
+            <h2 id="ownership-title">
+              Your website.
+              <br />
+              <em>Your control.</em>
+            </h2>
+            <p>
+              The polished page matters. So does knowing exactly what you own,
+              what is included and what happens after launch.
+            </p>
+          </div>
+          <div className={styles.ownershipGrid}>
+            <article>
+              <span>01</span>
+              <h3>The domain stays with the business</h3>
+              <p>Your domain and essential third-party accounts remain in your name wherever the service allows it.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Scope and price are written first</h3>
+              <p>No work begins without a clear deliverable, fixed price and list of anything quoted separately.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Handover is part of delivery</h3>
+              <p>You receive the live link, account notes and a practical route for requesting future changes.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Defects are covered for 30 days</h3>
+              <p>Problems in the delivered work are corrected during the included post-launch support period.</p>
+            </article>
+          </div>
+        </section>
+
         <section className={styles.promise}>
           <p className={styles.sectionLabel}>The standard</p>
           <blockquote>
@@ -418,7 +476,7 @@ export default function WorkPage() {
           aria-labelledby="pricing-title"
         >
           <div className={styles.offerIntro}>
-            <p className={styles.sectionLabel}>04 · Clear scope, clear price</p>
+            <p className={styles.sectionLabel}>05 · Clear scope, clear price</p>
             <h2 id="pricing-title">
               Know the scope.
               <br />
@@ -495,7 +553,7 @@ export default function WorkPage() {
             </div>
           </div>
 
-          <a className={styles.quoteCta} href={emailUrl}>
+          <a className={styles.quoteCta} href="#project-brief">
             <span>
               <small>Start with the business name and current link</small>
               Request a clear quote
@@ -505,20 +563,40 @@ export default function WorkPage() {
         </section>
 
         <section
+          className={styles.briefSection}
+          id="project-brief"
+          aria-labelledby="brief-title"
+        >
+          <div className={styles.briefIntro}>
+            <p className={styles.sectionLabel}>06 · A useful first message</p>
+            <h2 id="brief-title">
+              Five details.
+              <br />
+              <em>One honest first look.</em>
+            </h2>
+            <p>
+              No account and no sales call are required. This short brief opens
+              a prepared email so you stay in control of what is sent.
+            </p>
+          </div>
+          <EnquiryComposer />
+        </section>
+
+        <section
           className={styles.contact}
           id="contact"
           aria-labelledby="contact-title"
         >
           <div className={styles.contactIntro}>
-            <p className={styles.sectionLabel}>05 · Start here</p>
+            <p className={styles.sectionLabel}>07 · Direct contact</p>
             <h2 id="contact-title">
               Show us the business.
               <br />
               <em>We&apos;ll show you the possibility.</em>
             </h2>
             <p>
-              Send the business name, town and current website or social page.
-              That is enough for an honest first look.
+              Prefer a direct message? Email the studio or open the verified
+              WhatsApp contact below. We reply personally.
             </p>
 
             <a className={styles.emailCard} href={emailUrl}>
@@ -549,9 +627,10 @@ export default function WorkPage() {
             </div>
             <a
               className={styles.qrFrame}
-              href="/assets/studio-v2/whatsapp-qr.png"
+              href={whatsappUrl}
               target="_blank"
-              aria-label="Open the WhatsApp QR code at full size"
+              rel="noreferrer"
+              aria-label="Open Linshi Studio in WhatsApp"
             >
               <Image
                 src="/assets/studio-v2/whatsapp-qr.png"
@@ -561,12 +640,20 @@ export default function WorkPage() {
               />
             </a>
             <div className={styles.whatsappCopy}>
-              <span>Scan to add</span>
+              <span>Scan or tap</span>
               <h3>Linshi on WhatsApp</h3>
               <p>
-                Open your camera or WhatsApp scanner. Tap the code to view the
-                full-size contact code.
+                On the same phone, tap the button below. On another device,
+                scan the verified contact code.
               </p>
+              <a
+                className={styles.whatsappButton}
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open WhatsApp <Arrow />
+              </a>
             </div>
           </div>
         </section>
@@ -593,18 +680,21 @@ export default function WorkPage() {
           <a href={facebookUrl} target="_blank" rel="noreferrer">
             Facebook <Arrow />
           </a>
+          <a href={whatsappUrl} target="_blank" rel="noreferrer">
+            WhatsApp <Arrow />
+          </a>
         </div>
         <small>
           © 2026 Linshi Studio · Concept work is clearly identified throughout.
         </small>
       </footer>
 
-      <a
-        className={styles.mobileCta}
-        href={emailUrl}
-      >
-        Email the studio <Arrow />
-      </a>
+      <div className={styles.mobileCta} aria-label="Quick contact">
+        <a href="#project-brief">Start a brief</a>
+        <a href={whatsappUrl} target="_blank" rel="noreferrer">
+          WhatsApp <Arrow />
+        </a>
+      </div>
     </main>
   );
 }

@@ -206,8 +206,10 @@
 .sectionHead h2 em,
 .approach h2 em,
 .process h2 em,
+.ownership h2 em,
 .promise blockquote em,
 .offer h2 em,
+.briefSection h2 em,
 .contact h2 em {
   color: var(--blue);
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, serif;
@@ -343,6 +345,8 @@
 .sectionHead h2,
 .approach h2,
 .process h2,
+.ownership h2,
+.briefSection h2,
 .contact h2 {
   margin: 0;
   font-size: clamp(3.2rem, 13.4vw, 8.7rem);
@@ -585,6 +589,69 @@
   margin: 9px 0 0;
   color: #66686e;
   font-size: 0.73rem;
+  line-height: 1.65;
+}
+
+.ownership {
+  padding: 96px 19px;
+  display: grid;
+  gap: 58px;
+  background: #15171d;
+  color: white;
+}
+
+.ownershipIntro {
+  display: grid;
+  gap: 22px;
+}
+
+.ownershipIntro .sectionLabel {
+  color: var(--blue-light);
+}
+
+.ownershipIntro > p:last-child {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.ownershipGrid {
+  display: grid;
+  border-top: 1px solid var(--line-dark);
+}
+
+.ownershipGrid article {
+  min-height: 220px;
+  padding: 24px 0 28px;
+  display: grid;
+  align-content: start;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.ownershipGrid article > span {
+  color: var(--blue-light);
+  font-size: 0.53rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+}
+
+.ownershipGrid h3 {
+  max-width: 370px;
+  margin: 42px 0 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.ownershipGrid p {
+  max-width: 430px;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.54);
+  font-size: 0.7rem;
   line-height: 1.65;
 }
 
@@ -942,6 +1009,128 @@
   font-size: 1.4rem;
 }
 
+.briefSection {
+  padding: 94px 19px 104px;
+  display: grid;
+  gap: 52px;
+  background: var(--white);
+  color: var(--black);
+  scroll-margin-top: 24px;
+}
+
+.briefIntro {
+  display: grid;
+  gap: 22px;
+}
+
+.briefIntro .sectionLabel {
+  color: var(--blue);
+}
+
+.briefIntro > p:last-child {
+  max-width: 530px;
+  margin: 0;
+  color: #62656c;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.briefForm {
+  padding: 22px;
+  background: var(--black);
+  color: white;
+}
+
+.briefGrid {
+  display: grid;
+  gap: 16px;
+}
+
+.formField {
+  display: grid;
+  gap: 9px;
+}
+
+.formField > span {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.formField input,
+.formField select,
+.formField textarea {
+  width: 100%;
+  min-height: 54px;
+  padding: 14px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  background: #17191f;
+  color: white;
+  font: inherit;
+  font-size: 16px;
+  transition:
+    border-color 160ms ease,
+    outline-color 160ms ease;
+}
+
+.formField textarea {
+  min-height: 126px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.formField input:focus,
+.formField select:focus,
+.formField textarea:focus {
+  border-color: var(--blue-light);
+  outline-color: rgba(139, 166, 255, 0.4);
+}
+
+.formFieldFull {
+  margin-top: 16px;
+}
+
+.briefSubmitRow {
+  margin-top: 19px;
+  display: grid;
+  gap: 14px;
+}
+
+.briefButton {
+  min-height: 58px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 0;
+  background: var(--blue);
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.59rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.briefButton span {
+  font-size: 1rem;
+}
+
+.briefNote {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.57rem;
+  line-height: 1.55;
+}
+
 .contact {
   padding: 94px 19px 104px;
   display: grid;
@@ -1146,6 +1335,26 @@
   line-height: 1.6;
 }
 
+.whatsappButton {
+  min-height: 52px;
+  margin-top: 20px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: #1fa855;
+  color: white !important;
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.whatsappButton span {
+  font-size: 1rem;
+}
+
 .footer {
   padding: 65px 19px 108px;
   display: grid;
@@ -1195,22 +1404,38 @@
 
 .mobileCta {
   min-height: 59px;
-  padding: 0 19px calc(env(safe-area-inset-bottom) / 2);
-  display: flex;
+  padding: 4px 4px calc(4px + env(safe-area-inset-bottom) / 2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
+  gap: 4px;
   position: fixed;
   z-index: 50;
   right: 9px;
   bottom: calc(9px + env(safe-area-inset-bottom));
   left: 9px;
-  background: var(--blue);
+  background: rgba(9, 10, 12, 0.94);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.38);
-  color: white;
   font-size: 0.59rem;
   font-weight: 800;
   letter-spacing: 0.13em;
   text-transform: uppercase;
+}
+
+.mobileCta a {
+  min-height: 51px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--blue);
+  color: white;
+  text-align: center;
+}
+
+.mobileCta a:last-child {
+  background: #1fa855;
 }
 
 .mobileCta span {
@@ -1264,6 +1489,14 @@
 
   .qrFrame:hover {
     border-color: var(--blue);
+  }
+
+  .briefButton:hover {
+    background: #1649f2;
+  }
+
+  .whatsappButton:hover {
+    background: #168844;
   }
 }
 
@@ -1385,6 +1618,26 @@
     gap: 80px;
   }
 
+  .ownership {
+    padding: 124px 36px;
+    grid-template-columns: minmax(0, 0.8fr) minmax(440px, 1.2fr);
+    gap: 80px;
+  }
+
+  .ownershipGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ownershipGrid article {
+    min-height: 290px;
+    padding: 28px 26px;
+    border-right: 1px solid var(--line-dark);
+  }
+
+  .ownershipGrid article:nth-child(even) {
+    border-right: 0;
+  }
+
   .promise {
     padding: 128px 36px;
   }
@@ -1439,6 +1692,27 @@
 
   .quoteCta {
     padding: 28px 32px;
+  }
+
+  .briefSection {
+    padding: 126px 36px;
+    grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
+    align-items: start;
+    gap: 70px;
+  }
+
+  .briefForm {
+    padding: 30px;
+  }
+
+  .briefGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .briefSubmitRow {
+    grid-template-columns: minmax(250px, 0.7fr) minmax(220px, 0.3fr);
+    align-items: center;
+    gap: 24px;
   }
 
   .promise > p:last-child {
@@ -1501,8 +1775,10 @@
   .sectionHead,
   .approach,
   .process,
+  .ownership,
   .promise,
   .offer,
+  .briefSection,
   .contact,
   .footer {
     padding-right: max(52px, calc((100vw - 1500px) / 2));
