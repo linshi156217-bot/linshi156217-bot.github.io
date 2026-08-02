@@ -7,6 +7,7 @@ export const metadata = {
 };
 
 const email = "hello@linshistudio.com";
+const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
 
 export default function PrivacyPage() {
   return (
@@ -71,7 +72,14 @@ export default function PrivacyPage() {
         </a>
       </div>
 
-      <footer className={styles.footer}><div className={styles.footerInner}><span>© 2026 Linshi Studio</span><a href="/project-guide/">Project guide</a></div></footer>
+      <footer className={styles.footer}>
+        <div className={styles.footerInner}>
+          <span>© 2026 Linshi Studio</span>
+          <a href={`mailto:${email}?subject=Privacy%20request`}>{email}</a>
+          <a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a>
+          <a href="/project-guide/">Project guide</a>
+        </div>
+      </footer>
     </main>
   );
 }
