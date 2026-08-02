@@ -29,12 +29,18 @@ export default function PrivacyPage() {
       </section>
 
       <div className={styles.content}>
-        <p className={styles.notice}>Last updated: 1 August 2026. Linshi Studio is an independent web studio serving businesses in the United Kingdom.</p>
+        <p className={styles.notice}>Last updated: 2 August 2026. Linshi Studio is an independent web studio serving businesses in the United Kingdom.</p>
 
         <section className={styles.section}>
           <h2>Information we receive</h2>
           <p>We receive information when you contact us by email, WhatsApp or social media, or when you choose to work with us. This may include your name, business details, contact information, project brief, website content, images and feedback.</p>
-          <p>The website includes a project-brief composer that runs in your browser and opens an email on your device. Information typed into that composer is not submitted to or stored by the website. The website does not currently use an advertising pixel or optional analytics cookies. Our hosting provider may process basic technical logs for security and reliable delivery.</p>
+          <p>The website includes a project-brief composer that runs in your browser and opens an email on your device. Information typed into that composer is not submitted to or stored by the website. Our hosting provider may process basic technical logs for security and reliable delivery.</p>
+        </section>
+
+        <section className={styles.section}>
+          <h2>Privacy-friendly website analytics</h2>
+          <p>We use Cloudflare Web Analytics to understand aggregate page views, referring websites, device types, approximate countries and website performance. The analytics beacon does not use analytics cookies or advertising pixels, does not record URL query strings and does not support individual visitor profiles or custom events.</p>
+          <p>Cloudflare states that Web Analytics does not collect or use visitors&apos; personal data and does not track individual visitors across its customers&apos; websites. You can read more in <a href="https://developers.cloudflare.com/web-analytics/about/" target="_blank" rel="noreferrer">Cloudflare&apos;s Web Analytics documentation</a>.</p>
         </section>
 
         <section className={styles.section}>
@@ -62,7 +68,7 @@ export default function PrivacyPage() {
 
         <section className={styles.section}>
           <h2>Links and policy updates</h2>
-          <p>This website links to third-party services including email, Instagram, Facebook, WhatsApp and Google Maps. Their own privacy terms apply when you use them.</p>
+          <p>This website links to third-party services including email, Instagram, Facebook, WhatsApp, Google Maps and Cloudflare. Their own privacy terms apply when you use them.</p>
           <p>Material changes to this policy will be published on this page with a revised date.</p>
         </section>
 
