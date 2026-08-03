@@ -52,6 +52,8 @@ export default function EnquiryComposer() {
             <option>Home renovation / local trade</option>
             <option>Hair / beauty</option>
             <option>Restaurant / hospitality</option>
+            <option>Dental / private healthcare</option>
+            <option>Boutique hotel / guesthouse</option>
             <option>Another independent business</option>
           </select>
         </label>

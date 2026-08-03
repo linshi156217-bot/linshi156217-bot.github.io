@@ -364,12 +364,49 @@
   line-height: 1.7;
 }
 
+.workIndex {
+  padding: 0 19px 24px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+}
+
+.workIndex::-webkit-scrollbar {
+  display: none;
+}
+
+.workIndex a {
+  min-width: 136px;
+  min-height: 66px;
+  padding: 12px 13px;
+  display: grid;
+  align-content: space-between;
+  flex: 1 0 136px;
+  border: 1px solid var(--line-light);
+  scroll-snap-align: start;
+}
+
+.workIndex span {
+  color: var(--blue);
+  font-size: 0.52rem;
+  font-weight: 800;
+}
+
+.workIndex strong {
+  font-size: 0.54rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .projectList {
   border-top: 1px solid var(--line-light);
 }
 
 .project {
   display: grid;
+  scroll-margin-top: 18px;
   border-bottom: 1px solid var(--line-light);
 }
 
@@ -509,6 +546,14 @@
 
 .projectRose .projectCopy {
   background: #e5d7d1;
+}
+
+.projectSage .projectCopy {
+  background: #cbd2c6;
+}
+
+.projectRust .projectCopy {
+  background: #d8a28e;
 }
 
 .approach {
@@ -1567,6 +1612,18 @@
     grid-column: 2;
   }
 
+  .workIndex {
+    padding: 0 36px 38px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    overflow: visible;
+  }
+
+  .workIndex a {
+    min-width: 0;
+    flex-basis: auto;
+  }
+
   .project {
     min-height: 800px;
     grid-template-columns: minmax(0, 1.42fr) minmax(330px, 0.58fr);
@@ -1798,21 +1855,98 @@
     grid-column: 3;
   }
 
+  .workIndex {
+    padding-right: max(52px, calc((100vw - 1500px) / 2));
+    padding-left: max(52px, calc((100vw - 1500px) / 2));
+  }
+
+  .projectList {
+    padding: 0 max(52px, calc((100vw - 1500px) / 2)) 130px;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1px;
+    border-top: 0;
+    background: var(--line-light);
+  }
+
   .project {
+    min-height: 0;
+    grid-column: span 6;
+    grid-template-columns: minmax(0, 1fr);
+    background: var(--white);
+    border-bottom: 0;
+  }
+
+  .project:first-child {
     min-height: 900px;
-    grid-template-columns: minmax(0, 1.55fr) minmax(400px, 0.45fr);
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1.25fr) minmax(480px, 0.75fr);
+  }
+
+  .project:nth-child(2),
+  .project:nth-child(5) {
+    grid-column: span 5;
+  }
+
+  .project:nth-child(3),
+  .project:nth-child(4) {
+    grid-column: span 7;
   }
 
   .project:nth-child(even) {
-    grid-template-columns: minmax(400px, 0.45fr) minmax(0, 1.55fr);
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .projectVisual {
+  .project:nth-child(even) .projectVisual,
+  .project:nth-child(even) .projectCopy {
+    grid-column: 1;
+  }
+
+  .project:nth-child(even) .projectVisual {
+    grid-row: 1;
+  }
+
+  .project:nth-child(even) .projectCopy {
+    grid-row: 2;
+  }
+
+  .project:first-child .projectVisual,
+  .project:first-child .projectCopy {
+    grid-row: 1;
+  }
+
+  .project:first-child .projectVisual {
+    grid-column: 1;
+  }
+
+  .project:first-child .projectCopy {
+    grid-column: 2;
+  }
+
+  .project:first-child .projectVisual {
     min-height: 900px;
   }
 
+  .project:not(:first-child) .projectVisual {
+    min-height: 620px;
+  }
+
   .projectCopy {
+    min-height: 430px;
+    padding: 64px 40px 46px;
+  }
+
+  .project:first-child .projectCopy {
+    min-height: 900px;
     padding: 86px 52px 58px;
+  }
+
+  .project:first-child .projectCopy h3 {
+    font-size: clamp(3rem, 4.2vw, 3.8rem);
+  }
+
+  .project:not(:first-child) .projectCopy h3 {
+    font-size: clamp(2.5rem, 4vw, 3.7rem);
   }
 
   .projectOpen {

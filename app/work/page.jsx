@@ -6,7 +6,7 @@ export const metadata = {
   metadataBase: new URL("https://linshistudio.com"),
   title: "Linshi Studio | Distinctive mobile-first websites",
   description:
-    "Distinctive mobile-first websites for independent restaurants, salons and local trades in the UK.",
+    "Distinctive mobile-first websites for independent restaurants, local trades, salons, dental practices and boutique stays in the UK.",
   alternates: {
     canonical: "/",
   },
@@ -83,6 +83,30 @@ const projects = [
     alt: "Refined contemporary hair salon with a sculptural colour portrait",
     href: "/aster-house-hair/",
     theme: styles.projectRose,
+  },
+  {
+    number: "04",
+    sector: "Dental / Private healthcare",
+    title: "Marlowe Dental House",
+    line: "Turn clinical detail into calm, credible trust.",
+    description:
+      "A regulation-aware dental concept that organises care, approach, verified team information and first-visit details without exaggerated treatment claims.",
+    image: "/assets/marlowe-dental/reception.webp",
+    alt: "Warm reception inside the fictional Marlowe Dental House",
+    href: "/marlowe-dental/",
+    theme: styles.projectSage,
+  },
+  {
+    number: "05",
+    sector: "Boutique stays / Hospitality",
+    title: "Gable & Mere",
+    line: "Make the stay feel real before the guest arrives.",
+    description:
+      "A cinematic guesthouse concept that shows rooms, breakfast, parking and the practical rhythm of a Lake District stay before sending guests to book.",
+    image: "/assets/gable-and-mere/exterior.webp",
+    alt: "Fictional Lakeland guesthouse glowing above the lake at blue hour",
+    href: "/gable-and-mere/",
+    theme: styles.projectRust,
   },
 ];
 
@@ -193,7 +217,7 @@ const structuredData = {
   name: "Linshi Studio",
   url: "https://linshistudio.com",
   description:
-    "Mobile-first website design for independent restaurants, salons and local trades in the UK.",
+    "Mobile-first website design for independent restaurants, salons, local trades, dental practices and boutique stays in the UK.",
   email: emailAddress,
   sameAs: [instagramUrl, facebookUrl],
   contactPoint: {
@@ -319,9 +343,9 @@ export default function WorkPage() {
           <div className={styles.sectionHead}>
             <p className={styles.sectionLabel}>01 · Selected work</p>
             <h2 id="work-title">
-              Three worlds.
+              Five worlds.
               <br />
-              <em>Three complete websites.</em>
+              <em>Five complete websites.</em>
             </h2>
             <p>
               These are original concept websites, not claimed client
@@ -330,10 +354,20 @@ export default function WorkPage() {
             </p>
           </div>
 
+          <div className={styles.workIndex} aria-label="Five website concept categories">
+            {projects.map((project) => (
+              <a href={`#case-${project.number}`} key={project.number}>
+                <span>{project.number}</span>
+                <strong>{project.sector.split(" / ")[0]}</strong>
+              </a>
+            ))}
+          </div>
+
           <div className={styles.projectList}>
             {projects.map((project) => (
               <article
                 className={`${styles.project} ${project.theme}`}
+                id={`case-${project.number}`}
                 key={project.title}
               >
                 <a
@@ -664,7 +698,7 @@ export default function WorkPage() {
           <Brand />
           <p>
             Distinctive mobile-first websites for independent restaurants,
-            salons and local trades.
+            local trades, salons, dental practices and boutique stays.
           </p>
         </div>
         <div className={styles.footerLinks}>

@@ -10,7 +10,7 @@ export const metadata = {
     template: "%s | Linshi Studio",
   },
   description:
-    "Distinctive mobile-first websites for independent restaurants, salons and local trades in the UK.",
+    "Distinctive mobile-first websites for independent restaurants, local trades, salons, dental practices and boutique stays in the UK.",
   applicationName: "Linshi Studio",
   openGraph: {
     siteName: "Linshi Studio",

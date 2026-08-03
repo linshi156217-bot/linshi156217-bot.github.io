@@ -6,6 +6,8 @@ const routes = [
   ["/salt-and-hawthorn/", "monthly", 0.8],
   ["/alder-and-slate/", "monthly", 0.8],
   ["/aster-house-hair/", "monthly", 0.8],
+  ["/marlowe-dental/", "monthly", 0.8],
+  ["/gable-and-mere/", "monthly", 0.8],
   ["/privacy/", "yearly", 0.3],
 ];
 
