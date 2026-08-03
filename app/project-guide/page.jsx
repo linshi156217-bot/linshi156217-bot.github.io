@@ -10,6 +10,7 @@ export const metadata = {
 const email = "hello@linshistudio.com";
 const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
 const startUrl = `mailto:${email}?subject=Website%20project%20enquiry&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AMain%20services%3A%0AIdeal%20launch%20date%3A`;
+const sprintUrl = `mailto:${email}?subject=%C2%A3149%20mobile%20enquiry%20sprint&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AThe%20mobile%20step%20that%20may%20be%20causing%20friction%3A`;
 
 const packages = [
   { name: "Essential", price: "£650", copy: "A focused one-page website", items: ["Up to 6 considered sections", "Services or menu highlights", "Gallery and contact routes", "Domain connection", "Two revision rounds"] },
@@ -36,6 +37,26 @@ export default function ProjectGuidePage() {
       <div className={styles.content}>
         <p className={styles.notice}>Prices are one-off build fees. Domain renewals and optional third-party services remain the client&apos;s responsibility and are agreed before purchase.</p>
 
+        <section className={styles.sprintPanel}>
+          <div>
+            <p className={styles.eyebrow}>Low-risk first project</p>
+            <h2>Mobile enquiry sprint</h2>
+            <strong>£149</strong>
+            <p>A private, fixed-scope way to test the value before commissioning a complete rebuild.</p>
+          </div>
+          <div>
+            <ul>
+              <li>One verified mobile enquiry problem</li>
+              <li>One redesigned priority screen or section</li>
+              <li>Private before-and-after preview within 3 working days</li>
+              <li>Written implementation recommendation</li>
+              <li>Full £149 credited to an Essential or larger website booked within 30 days</li>
+            </ul>
+            <p>No live-site access is required for the private preview. Live implementation is outside this starter scope unless confirmed separately in writing.</p>
+            <a href={sprintUrl}>Ask about one mobile problem ↗</a>
+          </div>
+        </section>
+
         <section className={styles.section}>
           <h2>Website packages</h2>
           <div className={styles.priceGrid}>
@@ -50,6 +71,7 @@ export default function ProjectGuidePage() {
 
         <section className={styles.section}>
           <h2>Payment and delivery</h2>
+          <p>The £149 mobile enquiry sprint is paid in full after its written fixed scope is accepted. Standard website projects use the 50% deposit and 50% final-payment structure below.</p>
           <p>Payments are requested by a formal PayPal invoice in GBP after the written scope and fixed price have been accepted. The invoice identifies Linshi Studio, the agreed service, the amount and the due date.</p>
           <ol>
             <li>A written scope and fixed price are agreed first.</li>

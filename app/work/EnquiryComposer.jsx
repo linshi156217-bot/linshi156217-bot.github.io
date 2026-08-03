@@ -14,16 +14,18 @@ export default function EnquiryComposer() {
     const business = String(data.get("business") || "").trim();
     const town = String(data.get("town") || "").trim();
     const sector = String(data.get("sector") || "").trim();
+    const projectType = String(data.get("projectType") || "").trim();
     const currentLink = String(data.get("currentLink") || "").trim();
     const goal = String(data.get("goal") || "").trim();
 
-    const subject = `Website project brief — ${business}`;
+    const subject = `${projectType || "Website project"} — ${business}`;
     const body = [
       "Hello Linshi Studio,",
       "",
       `Business name: ${business}`,
       `Town / service area: ${town}`,
       `Business type: ${sector}`,
+      `Preferred starting point: ${projectType || "I would like your recommendation"}`,
       `Current website or social page: ${currentLink || "None yet"}`,
       `What the website should help with: ${goal || "I would like your recommendation"}`,
       "",
@@ -37,6 +39,15 @@ export default function EnquiryComposer() {
   return (
     <form className={styles.briefForm} method="post" onSubmit={handleSubmit}>
       <div className={styles.briefGrid}>
+        <label className={styles.formField}>
+          <span>Preferred starting point *</span>
+          <select name="projectType" defaultValue="" required>
+            <option value="" disabled>Select one</option>
+            <option>£149 mobile enquiry sprint</option>
+            <option>Complete website from £650</option>
+            <option>I would like your recommendation</option>
+          </select>
+        </label>
         <label className={styles.formField}>
           <span>Business name *</span>
           <input name="business" autoComplete="organization" required />

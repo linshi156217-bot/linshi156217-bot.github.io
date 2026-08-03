@@ -104,6 +104,73 @@
   line-height: 1.7;
 }
 
+.sprintPanel {
+  margin-bottom: 64px;
+  padding: 28px;
+  display: grid;
+  gap: 32px;
+  background: #d9ff45;
+  border: 1px solid rgba(9, 10, 12, 0.18);
+  box-shadow: 14px 14px 0 #2457ff;
+}
+
+.sprintPanel h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2.15rem, 9vw, 4.6rem);
+  letter-spacing: -0.065em;
+  line-height: 0.92;
+}
+
+.sprintPanel strong {
+  display: block;
+  font-size: clamp(3.8rem, 16vw, 7rem);
+  letter-spacing: -0.085em;
+  line-height: 0.86;
+}
+
+.sprintPanel p,
+.sprintPanel li {
+  color: rgba(9, 10, 12, 0.7);
+  font-size: 0.76rem;
+  line-height: 1.7;
+}
+
+.sprintPanel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sprintPanel li {
+  padding: 11px 0 11px 22px;
+  position: relative;
+  border-bottom: 1px solid rgba(9, 10, 12, 0.16);
+}
+
+.sprintPanel li::before {
+  content: "↗";
+  position: absolute;
+  left: 0;
+  color: #1649f2;
+  font-weight: 900;
+}
+
+.sprintPanel a {
+  min-height: 54px;
+  margin-top: 20px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #090a0c;
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .section {
   padding: 36px 0;
   border-top: 1px solid rgba(9, 10, 12, 0.15);
@@ -240,6 +307,14 @@
 
   .content {
     padding: 78px 36px 120px;
+  }
+
+  .sprintPanel {
+    padding: 42px;
+    grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr);
+    align-items: center;
+    gap: 60px;
+    box-shadow: 20px 20px 0 #2457ff;
   }
 
   .priceGrid {

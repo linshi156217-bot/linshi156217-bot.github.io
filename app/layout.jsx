@@ -6,11 +6,11 @@ const cloudflareAnalyticsToken = "bfd3b6308f63424980ba769e9e3aaea1";
 export const metadata = {
   metadataBase: new URL("https://linshistudio.com"),
   title: {
-    default: "Linshi Studio | Distinctive mobile-first websites",
+    default: "Linshi Studio | Mobile enquiry journeys for UK businesses",
     template: "%s | Linshi Studio",
   },
   description:
-    "Distinctive mobile-first websites for independent restaurants, local trades, salons, dental practices and boutique stays in the UK.",
+    "Founder-led mobile website design for independent UK businesses. Start with a fixed-scope £149 mobile enquiry sprint or commission a complete website.",
   applicationName: "Linshi Studio",
   openGraph: {
     siteName: "Linshi Studio",

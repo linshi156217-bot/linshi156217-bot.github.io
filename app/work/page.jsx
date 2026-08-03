@@ -4,16 +4,16 @@ import styles from "./work.module.css";
 
 export const metadata = {
   metadataBase: new URL("https://linshistudio.com"),
-  title: "Linshi Studio | Distinctive mobile-first websites",
+  title: "Linshi Studio | Mobile enquiry journeys for UK businesses",
   description:
-    "Distinctive mobile-first websites for independent restaurants, local trades, salons, dental practices and boutique stays in the UK.",
+    "Founder-led mobile website design for independent UK businesses. Start with a fixed-scope £149 mobile enquiry sprint or commission a complete website.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Linshi Studio | Make your next click impossible to forget",
+    title: "Linshi Studio | Turn mobile visits into clearer enquiries",
     description:
-      "Distinctive mobile-first websites for independent UK businesses.",
+      "A founder-led studio fixing the point where a mobile visitor gets stuck.",
     url: "/",
     siteName: "Linshi Studio",
     type: "website",
@@ -28,9 +28,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Linshi Studio | Distinctive mobile-first websites",
+    title: "Linshi Studio | Mobile enquiry journeys",
     description:
-      "Websites designed for the moment a customer decides whether to choose you.",
+      "Start with one fixed-scope mobile enquiry sprint or commission a complete website.",
     images: ["/assets/studio-v2/hero-campaign-v2.webp"],
   },
   robots: {
@@ -133,6 +133,21 @@ const process = [
   },
 ];
 
+const starterOffer = {
+  name: "Mobile enquiry sprint",
+  price: "£149",
+  timeline: "Private preview in 3 working days",
+  copy:
+    "A low-risk first project for a business that knows its mobile journey is losing clarity but is not ready to commission a complete rebuild.",
+  features: [
+    "One verified mobile enquiry problem",
+    "One redesigned priority screen or section",
+    "Private before-and-after preview",
+    "A written implementation recommendation",
+    "The full £149 credited against an Essential or larger website booked within 30 days",
+  ],
+};
+
 const packages = [
   {
     name: "Essential",
@@ -178,6 +193,11 @@ const faqs = [
     question: "What does the price include?",
     answer:
       "Mobile, tablet and desktop design, approved content formatting, image optimisation, basic technical SEO, secure launch, domain connection and two revision rounds are included in every standard package.",
+  },
+  {
+    question: "What is the £149 mobile enquiry sprint?",
+    answer:
+      "It is a fixed-scope first project: one verified mobile problem, one redesigned priority screen or section, a private before-and-after preview and a written recommendation. It is not a complete website. If an Essential or larger website is booked within 30 days, the full £149 is credited against that project.",
   },
   {
     question: "How does payment work?",
@@ -226,7 +246,7 @@ const structuredData = {
     email: emailAddress,
     availableLanguage: ["English"],
   },
-  priceRange: "£650-£1,350+",
+  priceRange: "£149-£1,350+",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
@@ -269,15 +289,15 @@ export default function WorkPage() {
         </a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
+          <a href="#starter">Start small</a>
           <a href="#approach">Approach</a>
           <a href="#pricing">Pricing</a>
-          <a href="#contact">Contact</a>
         </nav>
         <a
           className={styles.headerCta}
-          href="#project-brief"
+          href="#starter"
         >
-          Start a brief <Arrow />
+          Start at £149 <Arrow />
         </a>
       </header>
 
@@ -296,34 +316,35 @@ export default function WorkPage() {
 
           <div className={styles.heroContent}>
             <p className={styles.eyebrow}>
-              Serving independent businesses across the UK
+              Founder-led · Mobile first · Serving the UK
             </p>
             <h1>
-              Impossible
+              Turn mobile visits
               <br />
-              <em>to scroll past.</em>
+              <em>into enquiries.</em>
             </h1>
             <p className={styles.heroLead}>
-              Distinctive mobile-first websites for independent businesses that
-              deserve to look as good online as they do in real life.
+              We find the point where a customer gets stuck between Google,
+              your website and the next action—then redesign that journey with
+              one clear purpose.
             </p>
             <div className={styles.heroActions}>
-              <a className={styles.primaryButton} href="#work">
-                View selected work <Arrow />
+              <a className={styles.primaryButton} href="#starter">
+                Start with one £149 sprint <Arrow />
               </a>
               <a
                 className={styles.ghostButton}
-                href="#project-brief"
+                href="#work"
               >
-                Start a project brief
+                Explore five concepts
               </a>
             </div>
           </div>
 
           <div className={styles.heroIndex}>
-            <span>Mobile first</span>
-            <span>Strategy + design + build</span>
-            <span>Independent businesses</span>
+            <span>One person accountable</span>
+            <span>Fixed scope before payment</span>
+            <span>Your domain stays yours</span>
           </div>
         </section>
 
@@ -333,9 +354,9 @@ export default function WorkPage() {
             design.
           </p>
           <div>
-            <span>Websites from £650</span>
-            <span>Two refinements</span>
-            <span>Your domain stays yours</span>
+            <span>Start with one problem · £149</span>
+            <span>Complete websites from £650</span>
+            <span>Concept work clearly labelled</span>
           </div>
         </section>
 
@@ -428,9 +449,47 @@ export default function WorkPage() {
           </div>
         </section>
 
+        <section
+          className={styles.starter}
+          id="starter"
+          aria-labelledby="starter-title"
+        >
+          <div className={styles.starterIntro}>
+            <p className={styles.sectionLabel}>03 · A smaller first decision</p>
+            <span className={styles.starterBadge}>Fixed-scope starter</span>
+            <h2 id="starter-title">
+              Fix one moment.
+              <br />
+              <em>Prove the value.</em>
+            </h2>
+            <p>{starterOffer.copy}</p>
+          </div>
+          <article className={styles.starterCard}>
+            <div className={styles.starterPriceRow}>
+              <div>
+                <span>{starterOffer.name}</span>
+                <strong>{starterOffer.price}</strong>
+              </div>
+              <p>{starterOffer.timeline}</p>
+            </div>
+            <ul>
+              {starterOffer.features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
+            <a href="#project-brief">
+              Ask about one mobile problem <Arrow />
+            </a>
+            <small>
+              No live-site access is needed for the private preview. Any live
+              implementation is agreed separately in writing.
+            </small>
+          </article>
+        </section>
+
         <section className={styles.process} aria-labelledby="process-title">
           <div className={styles.processTitle}>
-            <p className={styles.sectionLabel}>03 · A focused process</p>
+            <p className={styles.sectionLabel}>04 · A focused process</p>
             <h2 id="process-title">
               From first look
               <br />
@@ -455,7 +514,7 @@ export default function WorkPage() {
           aria-labelledby="ownership-title"
         >
           <div className={styles.ownershipIntro}>
-            <p className={styles.sectionLabel}>04 · Built to hand over</p>
+            <p className={styles.sectionLabel}>05 · Built to hand over</p>
             <h2 id="ownership-title">
               Your website.
               <br />
@@ -490,6 +549,44 @@ export default function WorkPage() {
           </div>
         </section>
 
+        <section className={styles.founder} aria-labelledby="founder-title">
+          <div className={styles.founderPortrait}>
+            <Image
+              src="/social/linshi-avatar-v2.png"
+              alt="Linshi Studio monogram"
+              width={720}
+              height={720}
+            />
+            <span>Shi Lin · Founder-led</span>
+          </div>
+          <div className={styles.founderCopy}>
+            <p className={styles.sectionLabel}>06 · A real person behind the work</p>
+            <h2 id="founder-title">
+              One studio.
+              <br />
+              <em>One person accountable.</em>
+            </h2>
+            <p>
+              I&apos;m Shi, the independent designer and builder behind Linshi
+              Studio. I research the customer journey, design the interface,
+              build the website and complete the mobile checks myself. You are
+              not passed between a salesperson, an account manager and an
+              unknown production team.
+            </p>
+            <div className={styles.founderFacts}>
+              <span>Concept portfolio identified honestly</span>
+              <span>Written fixed scope before payment</span>
+              <span>Direct email and WhatsApp contact</span>
+              <span>Business-owned domain and clear handover</span>
+            </div>
+            <p className={styles.founderStatus}>
+              Current status: accepting founding-client projects and requesting
+              permission to document the process and ask for an honest review.
+              Publication is always the client&apos;s choice.
+            </p>
+          </div>
+        </section>
+
         <section className={styles.promise}>
           <p className={styles.sectionLabel}>The standard</p>
           <blockquote>
@@ -510,7 +607,7 @@ export default function WorkPage() {
           aria-labelledby="pricing-title"
         >
           <div className={styles.offerIntro}>
-            <p className={styles.sectionLabel}>05 · Clear scope, clear price</p>
+            <p className={styles.sectionLabel}>07 · Clear scope, clear price</p>
             <h2 id="pricing-title">
               Know the scope.
               <br />
@@ -602,15 +699,16 @@ export default function WorkPage() {
           aria-labelledby="brief-title"
         >
           <div className={styles.briefIntro}>
-            <p className={styles.sectionLabel}>06 · A useful first message</p>
+            <p className={styles.sectionLabel}>08 · A useful first message</p>
             <h2 id="brief-title">
               Five details.
               <br />
               <em>One honest first look.</em>
             </h2>
             <p>
-              No account and no sales call are required. This short brief opens
-              a prepared email so you stay in control of what is sent.
+              Choose the £149 sprint or a complete website. No account and no
+              sales call are required; this brief opens a prepared email so you
+              stay in control of what is sent.
             </p>
           </div>
           <EnquiryComposer />
@@ -622,7 +720,7 @@ export default function WorkPage() {
           aria-labelledby="contact-title"
         >
           <div className={styles.contactIntro}>
-            <p className={styles.sectionLabel}>07 · Direct contact</p>
+            <p className={styles.sectionLabel}>09 · Direct contact</p>
             <h2 id="contact-title">
               Show us the business.
               <br />
@@ -697,8 +795,8 @@ export default function WorkPage() {
         <div>
           <Brand />
           <p>
-            Distinctive mobile-first websites for independent restaurants,
-            local trades, salons, dental practices and boutique stays.
+            Founder-led mobile website design for independent UK businesses,
+            from one verified enquiry problem to a complete launch.
           </p>
         </div>
         <div className={styles.footerLinks}>
@@ -724,7 +822,7 @@ export default function WorkPage() {
       </footer>
 
       <div className={styles.mobileCta} aria-label="Quick contact">
-        <a href="#project-brief">Start a brief</a>
+        <a href="#starter">£149 sprint</a>
         <a href={whatsappUrl} target="_blank" rel="noreferrer">
           WhatsApp <Arrow />
         </a>
