@@ -6,6 +6,9 @@ next-env.d.ts
 *.log
 .DS_Store
 playwright-report/
+.playwright-cli/
 test-results/
 output/
 public/assets/*.png
+worker/.dev.vars
+.wrangler/

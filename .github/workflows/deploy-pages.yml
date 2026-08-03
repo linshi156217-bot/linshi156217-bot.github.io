@@ -40,6 +40,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build static website
+        env:
+          NEXT_PUBLIC_ENQUIRY_API_URL: ${{ vars.NEXT_PUBLIC_ENQUIRY_API_URL }}
         run: pnpm exec next build
 
       - name: Upload website

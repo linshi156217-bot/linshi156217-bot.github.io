@@ -1316,6 +1316,31 @@
   color: white;
 }
 
+.honeypot {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+}
+
+.formStatus {
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border: 1px solid rgba(116, 192, 151, 0.42);
+  border-radius: 10px;
+  color: #c9f3dc;
+  background: rgba(29, 82, 55, 0.28);
+  line-height: 1.55;
+}
+
+.formStatusError {
+  border-color: rgba(230, 133, 116, 0.48);
+  color: #ffd5cc;
+  background: rgba(96, 38, 29, 0.3);
+}
+
 .briefGrid {
   display: grid;
   gap: 16px;
