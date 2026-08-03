@@ -34,7 +34,7 @@ export default function PrivacyPage() {
         <section className={styles.section}>
           <h2>Information we receive</h2>
           <p>We receive information when you contact us by email, WhatsApp or social media, or when you choose to work with us. This may include your name, business details, contact information, project brief, website content, images and feedback.</p>
-          <p>The website includes a project-brief composer that runs in your browser and opens an email on your device. Information typed into that composer is not submitted to or stored by the website. Our hosting provider may process basic technical logs for security and reliable delivery.</p>
+          <p>The project-brief form sends the details you enter to our secure enquiry service. We store them so we can review your request, prepare a response and keep a record of follow-up. We do not send an automated sales reply without a person reviewing it first. Our hosting providers may also process basic technical logs for security and reliable delivery.</p>
         </section>
 
         <section className={styles.section}>

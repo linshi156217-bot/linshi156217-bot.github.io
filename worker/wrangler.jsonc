@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "linshi-enquiries",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-03",
+  "workers_dev": true,
+  "vars": {
+    "ALLOWED_ORIGINS": "https://linshistudio.com,https://www.linshistudio.com,http://localhost:3000",
+    "OWNER_EMAIL": "hello@linshistudio.com",
+    "FROM_EMAIL": "hello@linshistudio.com",
+    "ADMIN_URL": "https://linshistudio.com/inquiries/",
+    "ZOHO_ACCOUNTS_URL": "https://accounts.zoho.com",
+    "ZOHO_MAIL_URL": "https://mail.zoho.com"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "linshi-enquiries",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

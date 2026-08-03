@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && node scripts/package-worker.mjs && node scripts/validate-worker.mjs",
-    "start": "next dev"
+    "start": "next dev",
+    "test": "node --test worker/src/index.test.js"
   },
   "dependencies": {
     "next": "16.2.11",

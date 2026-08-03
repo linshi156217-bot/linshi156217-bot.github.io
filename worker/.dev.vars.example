@@ -1,0 +1,9 @@
+ADMIN_TOKEN=generate-a-long-random-value
+RATE_LIMIT_SALT=generate-another-random-value
+EMAIL_MODE=mock
+
+# Zoho OAuth production secrets. Never commit real values.
+ZOHO_CLIENT_ID=
+ZOHO_CLIENT_SECRET=
+ZOHO_REFRESH_TOKEN=
+ZOHO_ACCOUNT_ID=

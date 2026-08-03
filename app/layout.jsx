@@ -1,5 +1,5 @@
 import "./globals.css";
-import Script from "next/script";
+import CloudflareAnalytics from "./CloudflareAnalytics";
 
 const cloudflareAnalyticsToken = "bfd3b6308f63424980ba769e9e3aaea1";
 
@@ -41,13 +41,7 @@ export default function RootLayout({ children }) {
     <html lang="en-GB">
       <body>
         {children}
-        <Script
-          id="cloudflare-web-analytics"
-          type="module"
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          strategy="afterInteractive"
-          data-cf-beacon={JSON.stringify({ token: cloudflareAnalyticsToken })}
-        />
+        <CloudflareAnalytics token={cloudflareAnalyticsToken} />
       </body>
     </html>
   );

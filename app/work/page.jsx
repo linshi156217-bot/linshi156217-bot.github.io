@@ -707,8 +707,8 @@ export default function WorkPage() {
             </h2>
             <p>
               Choose the £149 sprint or a complete website. No account and no
-              sales call are required; this brief opens a prepared email so you
-              stay in control of what is sent.
+              sales call are required; the brief is sent securely and a person
+              reviews it before replying.
             </p>
           </div>
           <EnquiryComposer />
