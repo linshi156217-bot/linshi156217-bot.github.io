@@ -9,3 +9,20 @@ playwright-report/
 test-results/
 output/
 public/assets/*.png
+
+# Secrets and local environment files. Commit only redacted examples.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+credentials.json
+service-account*.json
+
+# Local security reports and backups are retained outside Git history.
+outputs/
+tmp/
+.playwright-cli/
