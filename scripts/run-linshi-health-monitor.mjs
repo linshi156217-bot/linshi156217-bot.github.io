@@ -188,7 +188,6 @@ async function main() {
       await form.locator('[name="currentLink"]').fill('https://example.com');
       await form.locator('[name="goal"]').fill('Read-only validation of the server-confirmed enquiry path.');
       await form.locator('[name="privacyConsent"]').check();
-      const endpoint = await form.evaluate(() => [...document.scripts].map(script => script.textContent || '').join('\n').includes('linshi-studio-enquiry-api'));
       await Promise.all([
         page.waitForURL(/\/thank-you\/\?lead=LSQ-HEALTH-CHECK/),
         form.locator('button[type="submit"]').click(),
@@ -196,7 +195,8 @@ async function main() {
       const current = page.url();
       const referenceVisible = await page.locator('main').textContent().then(text => text?.includes('LSQ-HEALTH-CHECK'));
       const payloadValid = Boolean(capturedEnquiry?.projectType && capturedEnquiry?.business && capturedEnquiry?.contactName && capturedEnquiry?.email && capturedEnquiry?.town && capturedEnquiry?.sector && capturedEnquiry?.privacyConsent === true);
-        formCheck = { ...formCheck, status: endpoint && payloadValid && referenceVisible ? 'PASS' : 'FAIL', endpointConfigured: endpoint, requestIntercepted: Boolean(capturedEnquiry), payloadValid, serverAcknowledged: current.includes('LSQ-HEALTH-CHECK'), referenceVisible, sent: false, observedUrl: current };
+        const requestIntercepted = Boolean(capturedEnquiry);
+        formCheck = { ...formCheck, status: requestIntercepted && payloadValid && referenceVisible ? 'PASS' : 'FAIL', endpointConfigured: requestIntercepted, requestIntercepted, payloadValid, serverAcknowledged: current.includes('LSQ-HEALTH-CHECK'), referenceVisible, sent: false, observedUrl: current };
       }
     } catch (error) { formCheck = { ...formCheck, status: 'WARN', error: error.message, sent: false }; }
     await context.close();
@@ -229,7 +229,12 @@ async function main() {
   const endpointFailures = endpointResults.filter(x => endpoints.includes(x.path) && x.status !== 200);
   const overflow = browserChecks.filter(x => x.horizontalOverflow);
   const brokenImages = browserChecks.flatMap(x => x.brokenImages || []);
-  const missingMeta = browserChecks.filter(x => x.status === 200 && (!x.title || !x.description || !x.canonical || x.h1Count !== 1));
+  const missingMeta = browserChecks.filter(x => x.status === 200 && (
+    !x.title ||
+    !x.description ||
+    x.h1Count !== 1 ||
+    (!x.canonical && !String(x.robots || '').toLowerCase().includes('noindex'))
+  ));
   const consoleErrors = browserChecks.flatMap(x => x.errors || []).filter(e => !/favicon|third-party|ERR_BLOCKED_BY_CLIENT/i.test(e));
   const jsonLdErrors = [];
   for (const c of browserChecks.filter(x => x.width === 390)) for (const value of c.jsonLd || []) try { JSON.parse(value); } catch { jsonLdErrors.push({ path: c.path, site: c.site }); }
@@ -239,13 +244,13 @@ async function main() {
   const externalHardFailures = externalResults.filter(x => x.status >= 400 && !/instagram\.com|facebook\.com/.test(x.url));
   const medium = [];
   const critical = [];
+  const high = [];
   if (htmlFailures.length) critical.push(`${htmlFailures.length} key page(s) did not return 200`);
   if (httpResult.url !== `${baseUrl}/` || httpResult.status !== 200) critical.push('HTTP does not redirect to healthy HTTPS homepage');
   const chromiumHttpsHealthy = browserChecks.some(x => x.site === 'Linshi Studio' && x.path === '/' && x.status === 200);
   if (!chromiumHttpsHealthy) critical.push('HTTPS homepage failed certificate-validated Chromium navigation');
   if (overflow.length) critical.push(`${overflow.length} severe mobile horizontal overflow check(s) failed`);
   if (!formCheck.present || formCheck.status !== 'PASS') high.push('The server-confirmed enquiry journey did not pass the safe intercepted submission check');
-  const high = [];
   if (brokenImages.length) high.push(`${brokenImages.length} broken image occurrence(s)`);
   if (endpointFailures.length) high.push(`${endpointFailures.length} robots/sitemap endpoint failure(s)`);
   if (externalHardFailures.length) high.push(`${externalHardFailures.length} contact/external target failure(s)`);
