@@ -38,7 +38,16 @@ function executeD1(command) {
       "--command",
       command,
     ],
-    { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] },
+    {
+      cwd: root,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"],
+      env: {
+        ...process.env,
+        CI: "true",
+        WRANGLER_SEND_METRICS: "false",
+      },
+    },
   );
   const result = JSON.parse(stdout);
   if (!Array.isArray(result) || !result[0]?.success) {
