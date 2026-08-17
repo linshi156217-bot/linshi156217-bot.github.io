@@ -104,7 +104,7 @@ export default function EnquiryComposer() {
   }
 
   return (
-    <form className={styles.briefForm} onSubmit={handleSubmit}>
+    <form className={styles.briefForm} method="post" onSubmit={handleSubmit}>
       <div className={styles.briefGrid}>
         <label className={styles.formField}>
           <span>Preferred starting point *</span>
