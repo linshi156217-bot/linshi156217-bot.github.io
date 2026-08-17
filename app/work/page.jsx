@@ -6,7 +6,7 @@ export const metadata = {
   metadataBase: new URL("https://linshistudio.com"),
   title: "Linshi Studio | Mobile enquiry journeys for UK businesses",
   description:
-    "Founder-led mobile website design for independent UK businesses. Start with a fixed-scope £149 mobile enquiry sprint or commission a complete website.",
+    "Founder-led mobile website design for independent UK businesses. Request a £350 annual website and AI-search review, start with a £149 mobile sprint or commission a complete website.",
   alternates: {
     canonical: "/",
   },
@@ -150,6 +150,19 @@ const starterOffer = {
 
 const packages = [
   {
+    name: "Annual review",
+    price: "£350",
+    note: "Website, mobile journey and AI-search clarity",
+    href: "/website-review/",
+    features: [
+      "Main website and priority pages",
+      "Mobile customer journey review",
+      "Navigation, wording and trust signals",
+      "OAI-SearchBot access and AI-search clarity",
+      "Prioritised written action list",
+    ],
+  },
+  {
     name: "Essential",
     price: "£650",
     note: "A focused one-page website",
@@ -289,15 +302,16 @@ export default function WorkPage() {
         </a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
+          <a href="/website-review/">Annual review</a>
           <a href="#starter">Start small</a>
           <a href="#approach">Approach</a>
           <a href="#pricing">Pricing</a>
         </nav>
         <a
           className={styles.headerCta}
-          href="#starter"
+          href="/website-review/"
         >
-          Start at £149 <Arrow />
+          Annual review · £350 <Arrow />
         </a>
       </header>
 
@@ -329,8 +343,8 @@ export default function WorkPage() {
               one clear purpose.
             </p>
             <div className={styles.heroActions}>
-              <a className={styles.primaryButton} href="#starter">
-                Start with one £149 sprint <Arrow />
+              <a className={styles.primaryButton} href="/website-review/">
+                See the £350 annual review <Arrow />
               </a>
               <a
                 className={styles.ghostButton}
@@ -354,6 +368,7 @@ export default function WorkPage() {
             design.
           </p>
           <div>
+            <span>Annual website + AI-search review · £350</span>
             <span>Start with one problem · £149</span>
             <span>Complete websites from £650</span>
             <span>Concept work clearly labelled</span>
@@ -637,6 +652,11 @@ export default function WorkPage() {
                     <li key={feature}>{feature}</li>
                   ))}
                 </ul>
+                {item.href && (
+                  <a className={styles.priceLearn} href={item.href}>
+                    View the full review scope <Arrow />
+                  </a>
+                )}
               </article>
             ))}
           </div>
@@ -706,9 +726,9 @@ export default function WorkPage() {
               <em>One honest first look.</em>
             </h2>
             <p>
-              Choose the £149 sprint or a complete website. No account and no
-              sales call are required; this brief opens a prepared email so you
-              stay in control of what is sent.
+              Choose the £350 annual review, the £149 sprint or a complete
+              website. No account or sales call is required; the brief is saved
+              securely and given a reference number.
             </p>
           </div>
           <EnquiryComposer />
@@ -822,7 +842,7 @@ export default function WorkPage() {
       </footer>
 
       <div className={styles.mobileCta} aria-label="Quick contact">
-        <a href="#starter">£149 sprint</a>
+        <a href="/website-review/">£350 review</a>
         <a href={whatsappUrl} target="_blank" rel="noreferrer">
           WhatsApp <Arrow />
         </a>

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "linshi-studio-enquiry-api",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-17",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "ALLOWED_ORIGINS": "https://linshistudio.com,https://www.linshistudio.com",
+    "CONSENT_VERSION": "2026-08-17",
+    "DATA_RETENTION_DAYS": "730"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "linshi-studio-enquiries",
+      "database_id": "b3d666e4-f0a0-4275-af96-7e901b275bb3"
+    }
+  ]
+}
