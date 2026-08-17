@@ -29,12 +29,12 @@ export default function PrivacyPage() {
       </section>
 
       <div className={styles.content}>
-        <p className={styles.notice}>Last updated: 2 August 2026. Linshi Studio is an independent web studio serving businesses in the United Kingdom.</p>
+        <p className={styles.notice}>Last updated: 17 August 2026. Linshi Studio is an independent web studio serving businesses in the United Kingdom.</p>
 
         <section className={styles.section}>
           <h2>Information we receive</h2>
-          <p>We receive information when you contact us by email, WhatsApp or social media, or when you choose to work with us. This may include your name, business details, contact information, project brief, website content, images and feedback.</p>
-          <p>The website includes a project-brief composer that runs in your browser and opens an email on your device. Information typed into that composer is not submitted to or stored by the website. Our hosting provider may process basic technical logs for security and reliable delivery.</p>
+          <p>We receive information when you submit the project brief, contact us by email, WhatsApp or social media, or choose to work with us. This may include your name, business name, email address, optional phone number, town or service area, business type, current website, project goals, website content, images and feedback.</p>
+          <p>The project brief is submitted to a Cloudflare Worker and stored in a Cloudflare D1 database. It also records the submission time, consent version, optional email-marketing choice, campaign/source information, referring page, browser user agent and a salted one-way hash of the submitting IP address. The hash is used to limit abuse; the raw IP address is not stored in the enquiry record.</p>
         </section>
 
         <section className={styles.section}>
@@ -52,17 +52,19 @@ export default function PrivacyPage() {
             <li>To protect the website, email service and business from misuse.</li>
           </ul>
           <p>We do not sell personal information or use enquiry details for unrelated advertising.</p>
+          <p>We use enquiry information because it is necessary to respond to your request and, where relevant, to take steps before entering a contract. We use limited security and service-management information for our legitimate interests in protecting the service and running the studio. Optional marketing email is based on the separate unticked consent choice shown on the form and can be withdrawn at any time.</p>
         </section>
 
         <section className={styles.section}>
           <h2>Service providers and retention</h2>
-          <p>Information may be processed by providers used for secure hosting, domain management, email and file delivery. They receive only the information needed to provide their service.</p>
-          <p>Enquiry and project information is kept only for as long as reasonably needed for communication, delivery, support, accounting, security and applicable legal obligations.</p>
+          <p>Information may be processed by providers used for secure hosting, database storage, domain management, email, analytics, invoicing and file delivery. These currently include Cloudflare for the enquiry endpoint/database and website analytics, GitHub Pages for public website hosting, Zoho for business email and PayPal when an invoice is issued. They receive only the information needed to provide their service.</p>
+          <p>Unsuccessful enquiry records are normally retained for up to 24 months so we can answer follow-up questions, avoid duplicated contact and understand service demand. Security records may be retained for the same period. If you become a client, essential project, contract, invoice and accounting records may be kept longer where reasonably needed for delivery or legal obligations. Records may be deleted earlier when no longer needed.</p>
         </section>
 
         <section className={styles.section}>
           <h2>Your choices</h2>
           <p>You may ask what information we hold about you, request a correction or ask us to delete information that no longer needs to be retained.</p>
+          <p>You can withdraw optional marketing consent at any time by replying “unsubscribe” to an email or contacting the address below. Withdrawing marketing consent does not affect a project enquiry or an agreed service.</p>
           <p>Email <a href={`mailto:${email}?subject=Privacy%20request`}>{email}</a> with the subject “Privacy request”. We may need to verify that the request relates to you before acting.</p>
         </section>
 

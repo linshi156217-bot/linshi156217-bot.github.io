@@ -1284,6 +1284,22 @@
   font-size: 1.4rem;
 }
 
+.priceLearn {
+  min-height: 48px;
+  margin-top: 24px;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border-top: 1px solid rgba(9, 10, 12, 0.2);
+  color: var(--blue);
+  font-size: 0.56rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .briefSection {
   padding: 94px 19px 104px;
   display: grid;
@@ -1366,8 +1382,82 @@
   outline-color: rgba(139, 166, 255, 0.4);
 }
 
+.formField [aria-invalid="true"] {
+  border-color: #ff8f83;
+}
+
+.fieldError {
+  color: #ffaea6;
+  font-size: 0.62rem;
+  line-height: 1.45;
+}
+
 .formFieldFull {
   margin-top: 16px;
+}
+
+.honeypot {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.consentGroup {
+  margin-top: 20px;
+  padding-top: 18px;
+  display: grid;
+  gap: 13px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.consentField {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 11px;
+  align-items: start;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.62rem;
+  line-height: 1.55;
+}
+
+.consentField input {
+  width: 18px;
+  height: 18px;
+  margin: 1px 0 0;
+  accent-color: var(--blue);
+}
+
+.consentField a,
+.formStatus a {
+  color: var(--blue-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.formStatus {
+  margin-top: 20px;
+  padding: 17px;
+  border: 1px solid rgba(255, 143, 131, 0.62);
+  background: rgba(133, 35, 28, 0.22);
+  color: white;
+}
+
+.formStatus strong {
+  display: block;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.formStatus p {
+  margin: 8px 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.67rem;
+  line-height: 1.5;
 }
 
 .briefSubmitRow {
@@ -1397,6 +1487,11 @@
 
 .briefButton span {
   font-size: 1rem;
+}
+
+.briefButton:disabled {
+  cursor: wait;
+  opacity: 0.72;
 }
 
 .briefNote {
@@ -1978,7 +2073,7 @@
   }
 
   .priceGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .priceGrid > article {
@@ -2060,6 +2155,10 @@
 }
 
 @media (min-width: 1100px) {
+  .priceGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .header {
     padding-inline: 52px;
   }

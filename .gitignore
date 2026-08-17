@@ -26,3 +26,4 @@ service-account*.json
 outputs/
 tmp/
 .playwright-cli/
+.wrangler/

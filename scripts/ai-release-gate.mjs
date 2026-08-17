@@ -10,6 +10,8 @@ const baseUrl = `http://127.0.0.1:${releaseGatePort}`;
 const routes = [
   "/",
   "/work/",
+  "/website-review/",
+  "/thank-you/?lead=LSQ-QA-20260817&source=release_gate",
   "/project-guide/",
   "/privacy/",
   "/alder-and-slate/",
@@ -102,6 +104,19 @@ try {
         return {
           statusTitle: document.title,
           overflow: document.documentElement.scrollWidth > window.innerWidth,
+          overflowElements: [...document.querySelectorAll("body *")]
+            .map((element) => {
+              const rect = element.getBoundingClientRect();
+              return {
+                tag: element.tagName.toLowerCase(),
+                className: typeof element.className === "string" ? element.className : "",
+                left: Math.round(rect.left),
+                right: Math.round(rect.right),
+                width: Math.round(rect.width),
+              };
+            })
+            .filter((item) => item.left < -1 || item.right > window.innerWidth + 1)
+            .slice(0, 8),
           imageSources: [...new Set(images.map((image) => image.currentSrc || image.src).filter(Boolean))],
           missingHashTargets: hashLinks
             .map((link) => link.getAttribute("href"))
@@ -119,7 +134,7 @@ try {
       }
 
       if (!response?.ok()) recordFailure(route, width, `HTTP ${response?.status() ?? "no response"}`);
-      if (audit.overflow) recordFailure(route, width, "horizontal overflow");
+      if (audit.overflow) recordFailure(route, width, `horizontal overflow: ${JSON.stringify(audit.overflowElements)}`);
       if (brokenImages.length) recordFailure(route, width, `broken images: ${brokenImages.join(", ")}`);
       if (audit.missingHashTargets.length) recordFailure(route, width, `missing hash targets: ${audit.missingHashTargets.join(", ")}`);
       if (audit.unlabeledControls.length) recordFailure(route, width, `unlabelled controls: ${audit.unlabeledControls.join(", ")}`);
@@ -134,6 +149,31 @@ try {
   await formPage.route("https://cloudflareinsights.com/**", async (route) => {
     await route.fulfill({ status: 204, headers: { "access-control-allow-origin": "*" }, body: "" });
   });
+  await formPage.route(
+    "https://linshi-studio-enquiry-api.salt-hawthorn-whitby-demo.workers.dev/v1/enquiries",
+    async (route) => {
+      const request = route.request();
+      if (request.method() !== "POST") {
+        await route.fulfill({ status: 405, body: "" });
+        return;
+      }
+      const payload = request.postDataJSON();
+      const required = ["projectType", "business", "contactName", "email", "town", "sector"];
+      if (required.some((field) => !payload?.[field]) || payload?.privacyConsent !== true) {
+        await route.fulfill({
+          status: 422,
+          contentType: "application/json",
+          body: JSON.stringify({ ok: false, error: "validation_failed" }),
+        });
+        return;
+      }
+      await route.fulfill({
+        status: 201,
+        contentType: "application/json",
+        body: JSON.stringify({ ok: true, leadId: "LSQ-QA-20260817" }),
+      });
+    },
+  );
   await formPage.goto(`${baseUrl}/work/`, { waitUntil: "domcontentloaded" });
   const form = formPage.locator("#project-brief form");
   if ((await form.count()) !== 1) {
@@ -143,14 +183,25 @@ try {
     if (emptyValid) recordFailure("/work/", 390, "required-field validation did not block an empty form");
     await formPage.selectOption('select[name="projectType"]', { index: 1 });
     await formPage.fill('input[name="business"]', "Release Gate Test Business");
+    await formPage.fill('input[name="contactName"]', "Release Gate Tester");
+    await formPage.fill('input[name="email"]', "qa@example.com");
     await formPage.fill('input[name="town"]', "Bath");
     await formPage.selectOption('select[name="sector"]', { index: 1 });
     await formPage.fill('input[name="currentLink"]', "https://example.com");
     await formPage.fill('textarea[name="goal"]', "Test a clear mobile enquiry route.");
+    await formPage.check('input[name="privacyConsent"]');
     const completedValid = await form.evaluate((element) => element.checkValidity());
     if (!completedValid) recordFailure("/work/", 390, "completed enquiry form remained invalid");
     const submitText = (await form.locator('button[type="submit"]').textContent())?.trim() ?? "";
-    if (!/project email/i.test(submitText)) recordFailure("/work/", 390, "email preparation submit action missing");
+    if (!/send my project brief/i.test(submitText)) recordFailure("/work/", 390, "secure enquiry submit action missing");
+    await Promise.all([
+      formPage.waitForURL(/\/thank-you\/\?lead=LSQ-QA-20260817/),
+      form.locator('button[type="submit"]').click(),
+    ]);
+    const confirmation = await formPage.locator("main").textContent();
+    if (!confirmation?.includes("LSQ-QA-20260817")) {
+      recordFailure("/thank-you/", 390, "server-confirmed enquiry reference was not shown");
+    }
   }
   await formPage.screenshot({ path: path.join(outputDir, "work-form-mobile.png"), fullPage: true });
   await formPage.close();
@@ -176,4 +227,4 @@ if (failures.length) {
   console.error(JSON.stringify({ result: report.result, failures }, null, 2));
   process.exit(1);
 }
-console.log(`AI release gate passed: ${results.length} mobile page checks and the project enquiry form validated.`);
+console.log(`AI release gate passed: ${results.length} mobile page checks and the server-confirmed enquiry journey validated.`);
