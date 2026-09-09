@@ -1,4 +1,4 @@
-import HomepageConceptV2 from "./homepage-concept-v2/HomepageConceptV2";
+import StudioHome from "./studio-home/StudioHome";
 
 const instagramUrl = "https://www.instagram.com/designerlinshi/";
 const facebookUrl =
@@ -77,7 +77,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <HomepageConceptV2 />
+      <StudioHome />
     </>
   );
 }
