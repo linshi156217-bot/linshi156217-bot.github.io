@@ -2330,3 +2330,6 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+.qrCrop { display: block; position: relative; width: min(100%, 320px); aspect-ratio: 1; overflow: hidden; background: white; }
+.qrFrame .qrCrop img { position: absolute; width: 209.0909%; max-width: none; height: auto; left: -54.5455%; top: -175%; image-rendering: auto; }
