@@ -1,0 +1,566 @@
+.concept {
+  --bg: #f5f0e8;
+  --ink: #1c1815;
+  --accent: #d0a48f;
+  --accent-ink: #1c1815;
+  --muted: rgba(28, 24, 21, 0.62);
+  --line: rgba(28, 24, 21, 0.18);
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+
+:global(html),
+:global(body) {
+  scrollbar-width: none;
+}
+
+:global(html::-webkit-scrollbar),
+:global(body::-webkit-scrollbar) {
+  display: none;
+}
+
+.concept * {
+  box-sizing: border-box;
+}
+
+.disclosure {
+  height: 27px;
+  margin: 0;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  position: relative;
+  z-index: 20;
+  background: var(--ink);
+  color: color-mix(in srgb, var(--bg) 68%, transparent);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.disclosure span {
+  color: var(--accent);
+}
+
+.header {
+  height: 76px;
+  padding: 0 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 15;
+  top: 27px;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.32);
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brand > div {
+  display: grid;
+  gap: 3px;
+}
+
+.monogram {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-family: var(--serif);
+  font-size: 0.72rem;
+  font-style: italic;
+}
+
+.brand strong {
+  max-width: 215px;
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.brand small {
+  opacity: 0.66;
+  font-size: 0.46rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.menu {
+  width: 41px;
+  height: 41px;
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 50%;
+}
+
+.menu i {
+  width: 15px;
+  height: 1px;
+  margin-inline: auto;
+  display: block;
+  background: currentColor;
+}
+
+.hero {
+  min-height: 760px;
+  position: relative;
+  background: var(--ink);
+  color: #fff;
+}
+
+.imageWrap {
+  position: absolute;
+  inset: 0;
+}
+
+.imageWrap img {
+  object-fit: cover;
+}
+
+.imageShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(18, 14, 12, 0.12) 10%, rgba(18, 14, 12, 0.18) 40%, rgba(18, 14, 12, 0.92) 100%),
+    linear-gradient(90deg, rgba(18, 14, 12, 0.35), transparent 72%);
+}
+
+.copy {
+  padding: 224px 20px 148px;
+  position: relative;
+  z-index: 3;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--accent);
+  font-size: 0.54rem;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.copy h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(3.7rem, 16vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 0.88;
+}
+
+.copy h1 span:last-child {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.supporting {
+  max-width: 330px;
+  margin: 23px 0 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.actions {
+  margin-top: 27px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.actions a {
+  min-height: 51px;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.primary {
+  gap: 12px;
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.primary span {
+  font-size: 0.95rem;
+}
+
+.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  color: #fff;
+}
+
+.sequence {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  position: absolute;
+  z-index: 4;
+  right: 19px;
+  bottom: 91px;
+  font-size: 0.47rem;
+  letter-spacing: 0.08em;
+}
+
+.sequence i {
+  width: 52px;
+  height: 1px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.sequence i::after {
+  width: 35%;
+  height: 100%;
+  display: block;
+  content: "";
+  background: var(--accent);
+}
+
+.proof {
+  min-height: 156px;
+  padding: 24px 19px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.proof span {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  font-family: var(--serif);
+  font-size: 0.7rem;
+  line-height: 1.25;
+}
+
+.proof small {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.44rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.mobileDock {
+  min-height: 76px;
+  padding: 7px 8px calc(7px + env(safe-area-inset-bottom));
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 0.8fr;
+  gap: 6px;
+  position: fixed;
+  z-index: 30;
+  inset: auto 0 0;
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -14px 35px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(16px);
+}
+
+.mobileDock a {
+  min-height: 57px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--ink);
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mobileDock small {
+  opacity: 0.55;
+  font-size: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+.mobileDock .dockPrimary {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.clay {
+  --bg: #f3e7dc;
+  --ink: #271b17;
+  --accent: #e0b49e;
+}
+
+.porcelain {
+  --bg: #f8f4ed;
+  --ink: #262321;
+  --accent: #d7c1b0;
+}
+
+.ink {
+  --bg: #f0eee8;
+  --ink: #101113;
+  --accent: #e1ff45;
+  --accent-ink: #101113;
+}
+
+.sage {
+  --bg: #eef0e7;
+  --ink: #1f2c22;
+  --accent: #c9dba6;
+}
+
+.navy {
+  --bg: #ece8df;
+  --ink: #111d2a;
+  --accent: #d0ad72;
+}
+
+.stone {
+  --bg: #eee9e1;
+  --ink: #292520;
+  --accent: #d8c2aa;
+}
+
+.rouge {
+  --bg: #f1e5dc;
+  --ink: #3b1116;
+  --accent: #e65345;
+  --accent-ink: #fff;
+}
+
+.pearl {
+  --bg: #f7f5f0;
+  --ink: #171719;
+  --accent: #d9d7d1;
+}
+
+.electric {
+  --bg: #f2e9f2;
+  --ink: #17101a;
+  --accent: #f59add;
+}
+
+.red {
+  --bg: #f4eee8;
+  --ink: #241615;
+  --accent: #c54238;
+  --accent-ink: #fff;
+}
+
+.soft .copy {
+  padding-top: 250px;
+}
+
+.soft .copy h1 {
+  font-size: 4.2rem;
+}
+
+.soft .imageShade {
+  background:
+    linear-gradient(180deg, rgba(28, 24, 22, 0.09), rgba(28, 24, 22, 0.15) 38%, rgba(28, 24, 22, 0.9)),
+    linear-gradient(90deg, rgba(28, 24, 22, 0.25), transparent);
+}
+
+.fashion .brand strong,
+.bold .brand strong,
+.impact .brand strong {
+  font-family: Arial, sans-serif;
+  font-size: 0.84rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.fashion .copy h1,
+.bold .copy h1,
+.impact .copy h1 {
+  font-family: Arial, sans-serif;
+  font-size: 4.15rem;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: -0.075em;
+  line-height: 0.84;
+  text-transform: uppercase;
+}
+
+.fashion .copy h1 span:last-child,
+.bold .copy h1 span:last-child,
+.impact .copy h1 span:last-child {
+  font-style: normal;
+}
+
+.fashion .imageWrap {
+  inset: 0 0 0 27%;
+}
+
+.fashion .imageShade {
+  background:
+    linear-gradient(180deg, rgba(8, 9, 10, 0.05), rgba(8, 9, 10, 0.22) 40%, #101113 94%),
+    linear-gradient(90deg, #101113 0%, rgba(16, 17, 19, 0.62) 36%, transparent 78%);
+}
+
+.calm .hero {
+  background: var(--ink);
+}
+
+.calm .imageWrap {
+  inset: 103px 18px 252px;
+  border-radius: 190px 190px 12px 12px;
+  overflow: hidden;
+}
+
+.calm .imageShade {
+  background: linear-gradient(180deg, rgba(18, 25, 20, 0.04), rgba(18, 25, 20, 0.64));
+}
+
+.calm .copy {
+  padding-top: 366px;
+}
+
+.calm .copy h1 {
+  font-size: 3.85rem;
+}
+
+.calm .sequence {
+  display: none;
+}
+
+.award .copy::before {
+  width: 82px;
+  height: 82px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 128px;
+  right: 22px;
+  border: 1px solid color-mix(in srgb, var(--accent) 68%, transparent);
+  border-radius: 50%;
+  color: var(--accent);
+  content: "WINNER";
+  font-size: 0.47rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-align: center;
+  white-space: pre;
+}
+
+.studio .imageWrap {
+  inset: 104px 18px 260px 45%;
+  border-radius: 180px 180px 0 0;
+  overflow: hidden;
+}
+
+.studio .imageShade {
+  background: linear-gradient(180deg, transparent 50%, rgba(24, 20, 18, 0.48));
+}
+
+.studio .copy {
+  padding-top: 206px;
+}
+
+.studio .copy h1 {
+  max-width: 305px;
+  font-size: 4rem;
+}
+
+.studio .supporting {
+  max-width: 300px;
+}
+
+.bold .imageWrap {
+  inset: 0 0 0 22%;
+}
+
+.bold .imageShade {
+  background:
+    linear-gradient(180deg, rgba(35, 5, 9, 0.05), rgba(45, 8, 12, 0.28) 45%, rgba(59, 17, 22, 0.96)),
+    linear-gradient(90deg, rgba(59, 17, 22, 0.9), transparent 76%);
+}
+
+.minimal .imageWrap {
+  inset: 103px 18px 250px 37%;
+  filter: saturate(0.2);
+}
+
+.minimal .imageShade {
+  background:
+    linear-gradient(180deg, transparent, rgba(15, 15, 16, 0.35)),
+    linear-gradient(90deg, #171719 0%, rgba(23, 23, 25, 0.36) 70%, transparent);
+}
+
+.minimal .copy h1 {
+  font-size: 4.55rem;
+}
+
+.impact .imageShade {
+  background:
+    linear-gradient(180deg, rgba(18, 8, 20, 0.08), rgba(18, 8, 20, 0.26) 45%, rgba(23, 16, 26, 0.94)),
+    linear-gradient(90deg, rgba(23, 16, 26, 0.7), transparent 75%);
+}
+
+.impact .copy h1 {
+  font-size: 4.35rem;
+}
+
+.ritual .imageWrap {
+  inset: 103px 18px 286px;
+  overflow: hidden;
+}
+
+.ritual .imageShade {
+  background:
+    linear-gradient(180deg, rgba(22, 11, 10, 0.03), rgba(22, 11, 10, 0.62)),
+    linear-gradient(90deg, rgba(22, 11, 10, 0.24), transparent);
+}
+
+.ritual .copy {
+  padding-top: 367px;
+}
+
+.ritual .copy h1 {
+  font-size: 3.95rem;
+}
+
+@media (min-width: 700px) {
+  .concept {
+    max-width: 430px;
+    min-height: 900px;
+    margin-inline: auto;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.18);
+  }
+}

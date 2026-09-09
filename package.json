@@ -1,0 +1,38 @@
+{
+  "name": "salt-hawthorn-whitby-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && node scripts/package-worker.mjs && node scripts/validate-worker.mjs",
+    "build:site": "next build",
+    "start": "next dev",
+    "security:scan": "node scripts/scan-repository-secrets.mjs",
+    "security:audit": "pnpm audit --prod --audit-level high",
+    "enquiries:sync": "node scripts/sync-website-enquiries.mjs",
+    "automation:audit": "node scripts/reconcile-automation-control.mjs",
+    "automation:repair": "node scripts/reconcile-automation-control.mjs --repair",
+    "sales:funnel:rebuild": "node scripts/rebuild-sales-funnel.mjs",
+    "sales:daily-summary": "node scripts/write-daily-sales-summary.mjs",
+    "outreach:list-and-score": "node scripts/run-linshi-list-and-score.mjs",
+    "outreach:cadence": "node scripts/run-linshi-sales-cadence.mjs",
+    "outreach:cadence:dry-run": "node scripts/run-linshi-sales-cadence.mjs --dry-run",
+    "automation:runtime:verify": "node scripts/verify-automation-runtime.mjs",
+    "outreach:send": "node scripts/run-linshi-studio-3-send.mjs",
+    "outreach:send:dry-run": "node scripts/run-linshi-studio-3-send.mjs --dry-run",
+    "outreach:materialize": "node scripts/materialize-current-first-touch-queue.mjs",
+    "email:health": "node scripts/run-linshi-email-health-check.mjs",
+    "qa:release": "node scripts/ai-release-gate.mjs",
+    "release:gate": "pnpm run security:scan && pnpm run security:audit && pnpm run build:site && pnpm run qa:release"
+  },
+  "dependencies": {
+    "next": "16.3.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "wrangler": "4.123.0"
+  }
+}
