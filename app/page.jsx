@@ -1,8 +1,6 @@
-import HomepageConceptV2 from "./homepage-concept-v2/HomepageConceptV2";
+import StudioHome from "./studio-home/StudioHome";
 
 const instagramUrl = "https://www.instagram.com/designerlinshi/";
-const facebookUrl =
-  "https://www.facebook.com/profile.php?id=61592734760210";
 const emailAddress = "hello@linshistudio.com";
 
 export const metadata = {
@@ -51,7 +49,7 @@ const structuredData = {
   description:
     "Founder-led strategy, art direction and mobile-first website design for independent businesses.",
   email: emailAddress,
-  sameAs: [instagramUrl, facebookUrl],
+  sameAs: [instagramUrl],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "project enquiries",
@@ -77,7 +75,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <HomepageConceptV2 />
+      <StudioHome />
     </>
   );
 }

@@ -40,8 +40,6 @@ export const metadata = {
 };
 
 const instagramUrl = "https://www.instagram.com/designerlinshi/";
-const facebookUrl =
-  "https://www.facebook.com/profile.php?id=61592734760210";
 const emailAddress = "hello@linshistudio.com";
 const emailUrl =
   "mailto:hello@linshistudio.com?subject=Website%20project%20enquiry";
@@ -252,7 +250,7 @@ const structuredData = {
   description:
     "Mobile-first website design for independent restaurants, salons, local trades, dental practices and boutique stays in the UK.",
   email: emailAddress,
-  sameAs: [instagramUrl, facebookUrl],
+  sameAs: [instagramUrl],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "project enquiries",
@@ -764,11 +762,6 @@ export default function WorkPage() {
                 <strong>@designerlinshi</strong>
                 <Arrow />
               </a>
-              <a href={facebookUrl} target="_blank" rel="noreferrer">
-                <span>Facebook</span>
-                <strong>Shi Lin</strong>
-                <Arrow />
-              </a>
             </div>
           </div>
 
@@ -784,12 +777,14 @@ export default function WorkPage() {
               rel="noreferrer"
               aria-label="Open Linshi Studio in WhatsApp"
             >
+              <span className={styles.qrCrop}>
               <Image
-                src="/assets/studio-v2/whatsapp-qr.png"
+                src="/assets/studio-v3/whatsapp-contact-original.jpg"
                 alt="WhatsApp QR code for Linshi"
-                width={320}
-                height={320}
+                width={1279}
+                height={2774}
               />
+              </span>
             </a>
             <div className={styles.whatsappCopy}>
               <span>Scan or tap</span>
@@ -828,9 +823,6 @@ export default function WorkPage() {
           <a href="/privacy/">Privacy</a>
           <a href={instagramUrl} target="_blank" rel="noreferrer">
             Instagram <Arrow />
-          </a>
-          <a href={facebookUrl} target="_blank" rel="noreferrer">
-            Facebook <Arrow />
           </a>
           <a href={whatsappUrl} target="_blank" rel="noreferrer">
             WhatsApp <Arrow />
