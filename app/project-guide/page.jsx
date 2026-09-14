@@ -185,6 +185,7 @@ export default function ProjectGuidePage() {
           <a href={`mailto:${email}?subject=Website%20project%20enquiry`}>{email}</a>
           <a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="/privacy/">Privacy</a>
+          <a href="/provider-terms/">Provider terms</a>
         </div>
       </footer>
     </main>

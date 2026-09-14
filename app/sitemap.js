@@ -13,6 +13,7 @@ const routes = [
   ["/morrow-and-tide/", "monthly", 0.8],
   ["/the-fox-and-bramble/", "monthly", 0.8],
   ["/privacy/", "yearly", 0.3],
+  ["/provider-terms/", "yearly", 0.5],
 ];
 
 export default function sitemap() {
