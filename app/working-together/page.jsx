@@ -2,7 +2,7 @@ import styles from "../legal.module.css";
 
 export const metadata = {
   title: "Project safeguards and working terms",
-  description: "How Linshi Studio agrees scope, payment, handover, remedy and support for website projects.",
+  description: "How Linshi Studio agrees scope, payment, handover and remedy for website projects.",
   alternates: { canonical: "/working-together/" },
 };
 
@@ -44,8 +44,6 @@ export default function WorkingTogetherPage() {
           <h2>If something goes wrong</h2>
           <h3>7-day remedy period</h3>
           <p>For seven days from handover, reported faults that prevent the agreed delivered scope working as specified are reviewed and, where confirmed, repaired at no extra charge.</p>
-          <h3>30-day delivered-work defect support</h3>
-          <p>For 30 days from handover, reproducible defects in the delivered work remain supported. This is not a promise to add new features, change approved content, repair client-supplied material or resolve failures in third-party services unless those items are agreed separately in writing.</p>
           <h3>Unable to deliver an agreed part</h3>
           <p>If Linshi Studio cannot deliver an agreed part of the written scope, the project agreement provides for a proportionate refund of the payment allocated to that undelivered part. Any cancellation, refund and handover position is confirmed in writing for the specific project.</p>
         </section>
@@ -56,7 +54,7 @@ export default function WorkingTogetherPage() {
             <li>The written scope, inclusions, exclusions and delivery checklist.</li>
             <li>The agreed price, payment schedule and PayPal payment request details.</li>
             <li>Handover, ownership and account-control arrangements.</li>
-            <li>The specific cancellation, proportionate-refund, remedy and support terms.</li>
+            <li>The specific cancellation, proportionate-refund and remedy terms.</li>
             <li>Any data-access or third-party-service arrangements relevant to your project.</li>
           </ul>
         </section>

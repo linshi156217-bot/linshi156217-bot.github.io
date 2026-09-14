@@ -30,7 +30,7 @@ export default function StudioHome() {
           <h1 id="hero-title">Thoughtful<br />websites.<br /><em>Distinctly yours.</em></h1>
           <p className={styles.intro}>Your business has a character of its own.<br className={styles.desktopBreak} /> We bring it to life online—with considered design<br className={styles.desktopBreak} /> and a clear path from first look to first enquiry.</p>
           <div className={styles.actions}><a href="#work" className={styles.button}>Explore the work <Arrow /></a><a href={brief} className={styles.textLink}>Tell us your idea <Arrow /></a></div>
-          <p className={styles.heroNote}>Written scope · delivery checklist · 7-day remedy for agreed-scope faults.</p>
+          <p className={styles.heroNote}>Founder-led design · clear scope and agreed price · PayPal payment request before work begins.</p>
         </div>
         <a className={styles.heroProject} href="/alder-and-slate/" aria-label="Explore the Alder & Slate concept website">
           <div className={styles.projectCanvas}>
@@ -49,12 +49,11 @@ export default function StudioHome() {
       <section className={styles.trust} id="working-with-linshi" aria-labelledby="trust-title">
         <div><p className={styles.eyebrow}>Working with Linshi</p><h2 id="trust-title">No invented proof.<br /><em>Clear working terms.</em></h2><p>Linshi Studio is an independent, founder-led web studio operated from China and serving UK businesses remotely. It is not presented as a UK-registered company. The person discussing your brief is the person designing and building the work.</p></div>
         <div className={styles.trustGrid}>
-          <article><span>01</span><h3>Portfolio, honestly labelled</h3><p>The businesses shown here are self-initiated concepts. They demonstrate craft and customer-journey thinking; they are not claimed paid commissions.</p></article>
+          <article><span>01</span><h3>Research-led, not inflated</h3><p>Our review approach is informed by recurring website patterns studied across 12 UK local-service categories. This is research experience, not a claim of paid client work.</p></article>
           <article><span>02</span><h3>Scope before payment</h3><p>You receive the agreed pages, inclusions, price, timeline and payment milestones in writing before work begins.</p></article>
-          <article><span>03</span><h3>Direct accountability</h3><p>Shi Lin remains your direct studio contact through the brief, build, checks and handover.</p></article>
-          <article><span>04</span><h3>Your accounts stay yours</h3><p>Your domain and essential third-party accounts remain in your name wherever the service allows it.</p></article>
+          <article><span>03</span><h3>Deliverables you can check</h3><p>Each paid project has a written delivery checklist, including the agreed pages, checks, handover items and any client-owned account access.</p></article>
+          <article><span>04</span><h3>Seven-day remedy window</h3><p>Reported faults in the agreed delivered scope are reviewed for seven days after handover. If an agreed part remains undelivered and cannot be remedied, the undelivered part is refunded.</p></article>
         </div>
-        <p className={styles.paidProof}><strong>Recent paid engagement.</strong> One client engagement has been agreed and paid for. Client details remain private; the public portfolio work above remains clearly labelled as concept work.</p>
         <div className={styles.trustLinks}><a className={styles.trustLink} href="/working-together/">Read project safeguards and how we work <Arrow /></a><a className={styles.trustLink} href="/project-guide/">Read the project guide, scope and prices <Arrow /></a><a className={styles.trustLink} href="/provider-terms/">Read provider and data terms <Arrow /></a></div>
       </section>
       <section className={styles.work} id="work" aria-labelledby="work-title">

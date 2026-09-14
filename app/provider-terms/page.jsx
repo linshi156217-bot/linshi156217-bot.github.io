@@ -36,6 +36,7 @@ export default function ProviderTermsPage() {
         <section className={styles.section}>
           <h2>Before any payment</h2>
           <p>Before work begins, the client receives a written scope that identifies the agreed deliverables, fixed price, payment milestones, expected timeline, required client materials and any items quoted separately. A project starts only after that scope is accepted.</p>
+          <p>Our website-review approach is informed by recurring patterns studied across 12 UK local-service categories. This is research experience and is not presented as a count of paid client projects.</p>
           <p>Public concept websites on this site are clearly identified as concepts. They are not presented as paid client commissions.</p>
         </section>
 
@@ -43,7 +44,8 @@ export default function ProviderTermsPage() {
           <h2>Payment and delivery</h2>
           <p>After the written scope is accepted, payment is requested through PayPal in GBP. The payment request identifies Shi Lin trading as Linshi Studio, the agreed service, amount and due date.</p>
           <p>The £149 mobile enquiry sprint and £350 quarterly website and AI-search review are paid in full after scope acceptance. Standard website projects normally use a 50% booking deposit and 50% final payment before live-domain launch or transfer. Any variation is stated in the written scope.</p>
-          <p>Delivery, revisions, cancellation and refund arrangements are confirmed for the specific project in writing. No ranking, AI inclusion, citation or commercial result is promised.</p>
+          <p>Each paid project has a written delivery checklist covering the agreed pages, checks, handover items and any approved client-owned account access. Reported faults in the agreed delivered scope are reviewed for seven calendar days after handover.</p>
+          <p>If an agreed part remains undelivered and cannot be reasonably remedied, the amount allocated to that undelivered part in the written scope is refunded. Delivery, revisions and cancellation arrangements are confirmed for the specific project in writing. No ranking, AI inclusion, citation or commercial result is promised.</p>
         </section>
 
         <section className={styles.section}>
