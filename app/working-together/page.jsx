@@ -44,8 +44,16 @@ export default function WorkingTogetherPage() {
           <h2>If something goes wrong</h2>
           <h3>7-day remedy period</h3>
           <p>For seven days from handover, reported faults that prevent the agreed delivered scope working as specified are reviewed and, where confirmed, repaired at no extra charge.</p>
+          <h3>After the 7-day period</h3>
+          <p>The 7-day remedy period is not an automatic ongoing-maintenance plan. If a problem is reported later, we first identify whether it is a new request, a third-party or hosting change, or a fault in the agreed scope. Any work outside the remedy period is separately scoped, priced and agreed in writing before it begins.</p>
           <h3>Unable to deliver an agreed part</h3>
           <p>If Linshi Studio cannot deliver an agreed part of the written scope, the project agreement provides for a proportionate refund of the payment allocated to that undelivered part. Any cancellation, refund and handover position is confirmed in writing for the specific project.</p>
+        </section>
+
+        <section className={styles.section}>
+          <h2>What delivery evidence looks like</h2>
+          <p>Every paid project is documented with a written scope, delivery checklist, handover record and payment record. The checklist identifies the agreed pages, checks completed, account-access handover and any remaining agreed actions.</p>
+          <p>Public concept websites are labelled as concepts and are not presented as client projects. Client names, project details and references are shared publicly only with the client&apos;s written permission. If useful before a project, you can ask to see a redacted example of the delivery-checklist format and the exact record that will be used for your own project.</p>
         </section>
 
         <section className={styles.section}>

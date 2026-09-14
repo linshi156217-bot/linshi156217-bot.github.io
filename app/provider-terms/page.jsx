@@ -45,6 +45,7 @@ export default function ProviderTermsPage() {
           <p>After the written scope is accepted, payment is requested through PayPal in GBP. The payment request identifies Shi Lin trading as Linshi Studio, the agreed service, amount and due date.</p>
           <p>The £149 mobile enquiry sprint and £350 quarterly website and AI-search review are paid in full after scope acceptance. Standard website projects normally use a 50% booking deposit and 50% final payment before live-domain launch or transfer. Any variation is stated in the written scope.</p>
           <p>Each paid project has a written delivery checklist covering the agreed pages, checks, handover items and any approved client-owned account access. Reported faults in the agreed delivered scope are reviewed for seven calendar days after handover.</p>
+          <p>After that seven-day period, support is not automatic. A later report is assessed first to distinguish a new request, a third-party or hosting change, and a fault in the agreed delivered scope. Any out-of-period work is separately scoped, priced and agreed in writing before it starts.</p>
           <p>If an agreed part remains undelivered and cannot be reasonably remedied, the amount allocated to that undelivered part in the written scope is refunded. Delivery, revisions and cancellation arrangements are confirmed for the specific project in writing. No ranking, AI inclusion, citation or commercial result is promised.</p>
         </section>
 
@@ -57,7 +58,7 @@ export default function ProviderTermsPage() {
         <section className={styles.section}>
           <h2>Project information</h2>
           <p>We use project information only to answer the enquiry, prepare the agreed work, deliver it and keep essential service records. The <a href="/privacy/">privacy policy</a> explains the enquiry form, providers, retention and your choices in more detail.</p>
-          <p>Client names, access details and non-public project material are not published without the client&apos;s permission.</p>
+          <p>Client names, access details, references and non-public project material are not published without the client&apos;s permission. Public concept websites are clearly labelled as concepts, rather than being presented as paid client commissions. A prospective client may ask to see the delivery-checklist format that will be used for their project.</p>
         </section>
 
         <a className={styles.cta} href={`mailto:${email}?subject=Project%20question`}>
