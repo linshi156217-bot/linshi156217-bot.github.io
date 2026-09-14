@@ -54,7 +54,7 @@ export default function StudioHome() {
           <article><span>03</span><h3>Deliverables you can check</h3><p>Each paid project has a written delivery checklist, including the agreed pages, checks, handover items and any client-owned account access.</p></article>
           <article><span>04</span><h3>Seven-day remedy window</h3><p>Reported faults in the agreed delivered scope are reviewed for seven days after handover. If an agreed part remains undelivered and cannot be remedied, the undelivered part is refunded.</p></article>
         </div>
-        <div className={styles.trustLinks}><a className={styles.trustLink} href="/working-together/">Read project safeguards and how we work <Arrow /></a><a className={styles.trustLink} href="/project-guide/">Read the project guide, scope and prices <Arrow /></a><a className={styles.trustLink} href="/provider-terms/">Read provider and data terms <Arrow /></a></div>
+        <div className={styles.trustLinks}><a className={styles.trustLink} href="/working-together/">Read project safeguards and how we work <Arrow /></a><a className={styles.trustLink} href="/project-guide/">Read the project guide, scope and prices <Arrow /></a><a className={styles.trustLink} href="/provider-terms/">Read provider and data terms <Arrow /></a><a className={styles.trustLink} href="/project-agreement/">Read the business-client agreement <Arrow /></a></div>
       </section>
       <section className={styles.work} id="work" aria-labelledby="work-title">
         <div className={styles.sectionHead}><div><p className={styles.eyebrow}>01 / Selected work</p><h2 id="work-title">Different businesses.<br /><em>Distinctive worlds.</em></h2></div><p>A selection of self-initiated website concepts.<br />Fictional businesses. Real design thinking.</p></div>
@@ -71,6 +71,6 @@ export default function StudioHome() {
         <a href="mailto:hello@linshistudio.com"><small>02 / Studio email</small><span>hello@linshistudio.com <Arrow /></span><p>For projects, ideas and introductions.</p></a>
       </div></section>
     </main>
-    <footer className={styles.footer}><a className={styles.footerBrand} href="#top">linshi<span>.</span></a><p>Independent by nature.<br />Considered by design.</p><nav aria-label="Footer navigation"><a href="#contact">Contact</a><a href="/working-together/">Project safeguards</a><a href="https://www.instagram.com/designerlinshi/">Instagram <Arrow /></a><a href="/project-guide/">Project guide</a><a href="/provider-terms/">Provider terms</a><a href="/privacy/">Privacy</a></nav><span className={styles.copyright}>© 2026 Linshi Studio</span><a className={styles.backTop} href="#top">Back to top ↑</a></footer>
+    <footer className={styles.footer}><a className={styles.footerBrand} href="#top">linshi<span>.</span></a><p>Independent by nature.<br />Considered by design.</p><nav aria-label="Footer navigation"><a href="#contact">Contact</a><a href="/working-together/">Project safeguards</a><a href="https://www.instagram.com/designerlinshi/">Instagram <Arrow /></a><a href="/project-guide/">Project guide</a><a href="/project-agreement/">Project agreement</a><a href="/provider-terms/">Provider terms</a><a href="/privacy/">Privacy</a></nav><span className={styles.copyright}>© 2026 Linshi Studio</span><a className={styles.backTop} href="#top">Back to top ↑</a></footer>
   </div>;
 }

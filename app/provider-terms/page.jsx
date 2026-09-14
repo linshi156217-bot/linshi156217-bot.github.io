@@ -31,7 +31,7 @@ export default function ProviderTermsPage() {
           <h2>Service provider</h2>
           <p>Linshi Studio is an independent web studio operated by Shi Lin from China as an individual service provider. It serves businesses remotely, including businesses in the United Kingdom. It is not presented as a UK-registered company.</p>
           <p>The person who discusses the brief is the person who designs and builds the work. Contact: <a href={`mailto:${email}?subject=Project%20question`}>{email}</a>.</p>
-          <p>Before payment, the specific written agreement identifies the contracting correspondence details, the route for formal project notices and the governing-law and dispute position agreed for that project. It is the controlling document if it differs from this public summary.</p>
+          <p>Before payment, the project-specific written scope identifies the contracting correspondence details, client, work, price and any stated variation. The <a href="/project-agreement/">standard business-client project agreement</a> sets the formal project-notice route, England and Wales governing law and exclusive jurisdiction of the courts of England and Wales. The project-specific document controls only where it clearly states a change.</p>
         </section>
 
         <section className={styles.section}>
@@ -54,8 +54,8 @@ export default function ProviderTermsPage() {
           <h2>Accounts, access and security</h2>
           <p>The client keeps control of their domain, hosting and essential third-party accounts wherever the service allows it. New client-facing accounts should be created in the client&apos;s name where practical, including their billing control.</p>
           <p>Do not send passwords in an initial brief or ordinary email. Access is requested only after scope acceptance, only for the agreed work and through a client-controlled account or approved access method. Live-site changes require the client&apos;s written instruction.</p>
-          <p>At handover, the delivery checklist records the live address, agreed source-file and asset locations, account roles, transfer or access-removal steps and any known remaining actions. The client may remove access once the agreed work is complete.</p>
-          <p>For agreed live changes, a restorable backup is made before the change where the relevant platform permits and this is within the written scope. The recorded backup or rollback route is limited to that platform&apos;s available capability; it is not a guarantee of a third-party host&apos;s backup service.</p>
+          <p>After final payment, client-specific source code and editable design files expressly included in the written scope are handed to the client. At handover, the delivery checklist records the live address, agreed source-file and asset locations, account roles, transfer or access-removal steps and any known remaining actions. The client may remove access once the agreed work is complete.</p>
+          <p>The final archive is delivered to a client-controlled folder, repository or account agreed in writing. It identifies the delivered files, available content or database export, account roles, third-party licence list and platform-specific restoration route. For agreed live changes, a restorable backup is made before the change where the relevant platform permits and this is within the written scope. The recorded backup or rollback route is limited to that platform&apos;s available capability; it is not a guarantee of a third-party host&apos;s backup service or ongoing provider-held backup.</p>
         </section>
 
         <section className={styles.section}>
@@ -75,7 +75,7 @@ export default function ProviderTermsPage() {
         </a>
       </div>
 
-      <footer className={styles.footer}><div className={styles.footerInner}><span>© 2026 Linshi Studio</span><a href="/project-guide/">Project guide</a><a href="/privacy/">Privacy</a><a href={`mailto:${email}?subject=Project%20question`}>{email}</a></div></footer>
+      <footer className={styles.footer}><div className={styles.footerInner}><span>© 2026 Linshi Studio</span><a href="/project-guide/">Project guide</a><a href="/project-agreement/">Project agreement</a><a href="/privacy/">Privacy</a><a href={`mailto:${email}?subject=Project%20question`}>{email}</a></div></footer>
     </main>
   );
 }

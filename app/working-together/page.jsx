@@ -17,7 +17,7 @@ const structuredData = {
       name: "Who provides Linshi Studio services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Linshi Studio is operated by Shi Lin from China as an individual service provider, not presented as a UK-registered company. Before payment, the written agreement identifies the contracting correspondence details, project-notice route and governing-law and dispute position agreed for that project.",
+        text: "Linshi Studio is operated by Shi Lin from China as an individual service provider, not presented as a UK-registered company. Its standard business-client agreement states the formal notice route, England and Wales governing law, and exclusive jurisdiction of the courts of England and Wales. Project-specific scope is agreed in writing before payment.",
       },
     },
     {
@@ -25,7 +25,7 @@ const structuredData = {
       name: "Who controls the domain, hosting and accounts?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Where the relevant service allows it, the client keeps control of the domain, hosting, essential third-party accounts and billing control. The handover checklist records agreed source-file and asset locations, account roles and transfer or access-removal steps.",
+        text: "Where the relevant service allows it, the client keeps control of the domain, hosting, essential third-party accounts and billing control. After final payment, client-specific source code and editable design files expressly included in scope are handed over. Third-party items remain subject to their own licences and are listed in the handover record.",
       },
     },
     {
@@ -33,7 +33,7 @@ const structuredData = {
       name: "How are backups and project handover handled?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For agreed live changes, a restorable backup is made before the change where the platform permits and this is within the written scope. The handover checklist records the available backup or rollback route, live address, agreed materials, account access and any remaining actions.",
+        text: "The final handover record identifies the live URL, agreed source and design files, available content or database export, client materials, account roles, third-party licences, and platform-specific restoration route. The archive is placed in a client-controlled folder or repository. Linshi Studio is not an ongoing backup custodian unless separately agreed in writing.",
       },
     },
     {
@@ -79,20 +79,21 @@ export default function WorkingTogetherPage() {
           <h2>Before you pay</h2>
           <p>Before any payment is requested, you receive a written scope that identifies the provider, agreed pages, features, exclusions, price, timeline, delivery route and payment milestones. You can ask questions or decline before accepting the scope.</p>
           <p>For standard website projects, the PayPal request is sent only after the written scope and fixed price are accepted. It identifies Shi Lin trading as Linshi Studio, the agreed service, amount and due date.</p>
-          <p>Your written agreement also records the contracting correspondence details, the agreed route for project notices and the process for raising a concern. It states the governing-law and dispute position agreed for that specific project before payment; this public page does not replace that agreement.</p>
+          <p>Our <a href="/project-agreement/">standard business-client project agreement</a> records the contracting correspondence details, formal project-notice route, England and Wales governing law and exclusive jurisdiction of the courts of England and Wales. Your specific written scope identifies the client, work, price and any clearly stated variation before payment.</p>
         </section>
 
         <section className={styles.section}>
           <h2>What you receive</h2>
           <p>Your project agreement lists the agreed deliverables, including pages, included revision rounds, handover materials and any agreed account access. It also identifies what is outside scope or needs a separate quotation.</p>
           <p>Where the relevant service allows it, your domain, hosting, essential third-party accounts and their billing control remain in your name or are transferred to you at handover. You should not send your main password by ordinary email; separate administrator access is preferred.</p>
-          <p>At handover, the checklist records the live address, agreed source files and asset locations, account roles, transfer or revocation steps, and any known remaining actions. Third-party licences and platform features remain subject to their own terms.</p>
+          <p>After final payment, you receive the client-specific source code and editable design files expressly included in your written scope. At handover, the checklist records the live address, agreed source files and asset locations, account roles, transfer or revocation steps, and any known remaining actions. Third-party licences and platform features remain subject to their own terms.</p>
         </section>
 
         <section className={styles.section}>
           <h2>Access, backups and continuity</h2>
           <p>Access is requested only after scope acceptance, only for the agreed work and only through a client-controlled account or approved access method. Live-site changes require your written instruction. You can remove access when the agreed work is complete.</p>
-          <p>For agreed live changes, a restorable backup is made before the change where the platform permits and this is within the written scope. The handover checklist records the backup or rollback route where one is available; it does not turn a third-party host&apos;s own backup service into a Linshi Studio guarantee.</p>
+          <p>The final archive is delivered to a client-controlled folder, repository or account agreed in writing. It records the delivered source and design files, available platform export, account roles, third-party licence list and platform-specific restoration route. If a platform does not provide export or restore functionality, the checklist says so rather than implying that a backup exists.</p>
+          <p>For agreed live changes, a restorable backup is made before the change where the platform permits and this is within the written scope. The handover checklist records the backup or rollback route where one is available; it does not turn a third-party host&apos;s own backup service into a Linshi Studio guarantee or an ongoing provider-held backup service.</p>
           <p>If the project ends early, the written agreement records what has been completed, what remains, the current project materials that can be handed over, and any proportionate-refund position for genuinely undelivered agreed work.</p>
         </section>
 
@@ -129,6 +130,7 @@ export default function WorkingTogetherPage() {
             <li>The agreed price, payment schedule and PayPal payment request details.</li>
             <li>Handover, ownership and account-control arrangements.</li>
             <li>The specific cancellation, proportionate-refund and remedy terms.</li>
+            <li>The business-client <a href="/project-agreement/">project agreement template</a>, including ownership, backup, notices and dispute terms.</li>
             <li>Any data-access or third-party-service arrangements relevant to your project.</li>
           </ul>
         </section>
@@ -145,6 +147,7 @@ export default function WorkingTogetherPage() {
           <a href={`mailto:${email}?subject=Project%20safeguards%20question`}>{email}</a>
           <a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="/project-guide/">Project guide</a>
+          <a href="/project-agreement/">Project agreement</a>
           <a href="/privacy/">Privacy</a>
         </div>
       </footer>
