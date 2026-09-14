@@ -65,6 +65,7 @@ export default function PrivacyPage() {
           <h2>Your choices</h2>
           <p>You may ask what information we hold about you, request a correction or ask us to delete information that no longer needs to be retained.</p>
           <p>You can withdraw optional marketing consent at any time by replying “unsubscribe” to an email or contacting the address below. Withdrawing marketing consent does not affect a project enquiry or an agreed service.</p>
+          <p>For the identity of the service provider, payment sequence, account access and delivery boundaries, read the <a href="/provider-terms/">provider and data terms</a>.</p>
           <p>Email <a href={`mailto:${email}?subject=Privacy%20request`}>{email}</a> with the subject “Privacy request”. We may need to verify that the request relates to you before acting.</p>
         </section>
 
@@ -86,6 +87,7 @@ export default function PrivacyPage() {
           <a href={`mailto:${email}?subject=Privacy%20request`}>{email}</a>
           <a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="/project-guide/">Project guide</a>
+          <a href="/provider-terms/">Provider terms</a>
         </div>
       </footer>
     </main>

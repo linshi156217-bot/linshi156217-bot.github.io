@@ -822,6 +822,7 @@ export default function WorkPage() {
           <a href="#work">Selected work</a>
           <a href="/project-guide/">Project guide</a>
           <a href="/privacy/">Privacy</a>
+          <a href="/provider-terms/">Provider terms</a>
           <a href={instagramUrl} target="_blank" rel="noreferrer">
             Instagram <Arrow />
           </a>
