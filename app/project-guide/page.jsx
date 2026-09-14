@@ -188,6 +188,7 @@ export default function ProjectGuidePage() {
           <a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="/privacy/">Privacy</a>
           <a href="/provider-terms/">Provider terms</a>
+          <a href="/working-together/">Project safeguards</a>
         </div>
       </footer>
     </main>
