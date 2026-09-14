@@ -4,7 +4,7 @@ import styles from "./work.module.css";
 
 export const metadata = {
   metadataBase: new URL("https://linshistudio.com"),
-  title: "Linshi Studio | Mobile enquiry journeys for UK businesses",
+  title: "Mobile enquiry journeys for UK businesses",
   description:
     "Founder-led mobile website design for independent UK businesses. Request a £350 quarterly website and AI-search review, start with a £149 mobile sprint or commission a complete website.",
   alternates: {

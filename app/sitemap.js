@@ -18,7 +18,7 @@ const routes = [
 ];
 
 export default function sitemap() {
-  const lastModified = new Date("2026-09-14T00:00:00.000Z");
+  const lastModified = new Date("2026-09-15T00:00:00.000Z");
   return routes.map(([path, changeFrequency, priority]) => ({
     url: `https://linshistudio.com${path}`,
     lastModified,

@@ -1,7 +1,7 @@
 import styles from "../legal.module.css";
 
 export const metadata = {
-  title: "Website prices, payment and timelines | Linshi Studio",
+  title: "Website prices, payment and timelines",
   description:
     "Public website prices, payment milestones, timelines and provider details from Linshi Studio: £149 sprint, £350 quarterly review, websites from £650.",
   alternates: { canonical: "/project-guide/" },
@@ -47,6 +47,7 @@ const structuredData = [
       { "@type": "Question", name: "What are the public starting prices?", acceptedAnswer: { "@type": "Answer", text: "The mobile enquiry sprint is £149, the one-off quarterly website and AI-search review is £350, Essential websites start at £650, Signature websites are £950, and bespoke websites start from £1,350. Scope is agreed in writing before payment." } },
       { "@type": "Question", name: "When is payment requested?", acceptedAnswer: { "@type": "Answer", text: "For standard website projects, a 50% booking deposit is requested through PayPal after written scope and price are accepted. The remaining 50% is due after final approval and before launch or transfer. The £149 sprint and £350 quarterly review are paid in full after written scope is accepted." } },
       { "@type": "Question", name: "How long do standard websites take?", acceptedAnswer: { "@type": "Answer", text: "Essential projects usually take 7–10 working days and Signature projects 10–15 working days after approved content is received." } },
+      { "@type": "Question", name: "What happens if a problem is found after the seven-day remedy period?", acceptedAnswer: { "@type": "Answer", text: "The seven-day remedy period is not an automatic ongoing-maintenance plan. A later report is assessed to distinguish a new request, a third-party or hosting change, and a fault in the agreed delivered scope. Any out-of-period work is separately scoped, priced and agreed in writing before it begins." } },
     ],
   },
 ];
@@ -89,6 +90,10 @@ export default function ProjectGuidePage() {
           <p>Essential projects usually take 7–10 working days and Signature projects 10–15 working days after approved content is received.</p>
           <h3>How are delivery issues handled?</h3>
           <p>Each paid project has a written delivery checklist. Reported faults in the agreed delivered scope are reviewed for seven calendar days after handover. If an agreed part remains undelivered and cannot be reasonably remedied, the amount allocated to that undelivered part in the written scope is refunded.</p>
+          <h3>What if I find a problem after day seven?</h3>
+          <p>The 7-day remedy period is not automatic ongoing maintenance. We first assess whether the report is a new request, a third-party or hosting change, or a fault in the agreed scope. Any work outside that period is separately scoped, priced and agreed in writing before it begins.</p>
+          <h3>Can I see evidence of the delivery process?</h3>
+          <p>You can ask for the written delivery-checklist format before you commit. Public concept websites are labelled as concepts; client names or project details are shared only with the client&apos;s written permission.</p>
         </section>
 
         <section className={styles.sprintPanel}>
