@@ -20,7 +20,7 @@ from reportlab.platypus import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "output" / "pdf" / "linshi-studio-sample-website-ai-search-review.pdf"
+OUTPUT = ROOT / "public" / "downloads" / "linshi-studio-sample-website-ai-search-review.pdf"
 
 INK = colors.HexColor("#0A0B0E")
 BLUE = colors.HexColor("#315DFF")
@@ -104,7 +104,7 @@ def header_footer(canvas, doc):
     canvas.line(18 * mm, 14 * mm, width - 18 * mm, 14 * mm)
     canvas.setFillColor(MUTED)
     canvas.setFont("Helvetica", 6.8)
-    canvas.drawString(18 * mm, 9 * mm, "Annual website + AI-search discoverability review")
+    canvas.drawString(18 * mm, 9 * mm, "Quarterly website + AI-search discoverability review")
     canvas.drawRightString(width - 18 * mm, 9 * mm, f"{doc.page}")
     canvas.restoreState()
 
@@ -188,9 +188,9 @@ def build_story():
             "coverclient", fontName="Helvetica-Bold", fontSize=13, leading=16,
             textColor=WHITE, spaceAfter=8,
         )),
-        Paragraph("Prepared to demonstrate the structure and standard of a Linshi Studio annual review. All business details, findings and scores are fictional examples; this is not a claimed client result.", styles["CoverBody"]),
+        Paragraph("Prepared to demonstrate the structure and standard of a Linshi Studio quarterly review. All business details, findings and scores are fictional examples; this is not a claimed client result.", styles["CoverBody"]),
         Spacer(1, 17 * mm),
-        Table([[Paragraph("£350", ParagraphStyle("coverprice", fontName="Helvetica-Bold", fontSize=28, textColor=WHITE)), Paragraph("One annual review<br/>No UK VAT charged", styles["CoverBody"]) ]], colWidths=[56*mm, 87*mm], style=TableStyle([
+        Table([[Paragraph("£350", ParagraphStyle("coverprice", fontName="Helvetica-Bold", fontSize=28, textColor=WHITE)), Paragraph("One quarterly review<br/>Not automatically renewed", styles["CoverBody"]) ]], colWidths=[56*mm, 87*mm], style=TableStyle([
             ("BACKGROUND", (0,0), (-1,-1), BLUE),
             ("VALIGN", (0,0), (-1,-1), "MIDDLE"),
             ("LEFTPADDING", (0,0), (-1,-1), 12),
@@ -377,7 +377,7 @@ def build_story():
     story += [
         Spacer(1, 9 * mm),
         Paragraph("Included in the fixed £350 review", styles["CardTitle"]),
-        Paragraph("One annual review of the agreed public website; main website and mobile journey; navigation, wording and obvious usability; OAI-SearchBot access and AI-search clarity; a concise prioritised report and short handover email.", styles["BodySmall"]),
+        Paragraph("One quarterly review of the agreed public website; main website and mobile journey; navigation, wording and obvious usability; OAI-SearchBot access and AI-search clarity; a concise prioritised report and short handover email.", styles["BodySmall"]),
         Paragraph("Not included", styles["CardTitle"]),
         Paragraph("Live website changes; chatbot or API integration; directory submission; ongoing monitoring; paid media; professional legal or accessibility certification; guarantee of inclusion, citation or ranking. Any implementation requires separate written scope and approval.", styles["BodySmall"]),
         Spacer(1, 9 * mm),
