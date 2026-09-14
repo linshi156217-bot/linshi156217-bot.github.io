@@ -46,6 +46,7 @@ const structuredData = [
       { "@type": "Question", name: "Who provides the service?", acceptedAnswer: { "@type": "Answer", text: "Linshi Studio is operated by Shi Lin from China as an individual service provider. It is not presented as a UK-registered company." } },
       { "@type": "Question", name: "What are the public starting prices?", acceptedAnswer: { "@type": "Answer", text: "The mobile enquiry sprint is £149, the one-off quarterly website and AI-search review is £350, Essential websites start at £650, Signature websites are £950, and bespoke websites start from £1,350. Scope is agreed in writing before payment." } },
       { "@type": "Question", name: "When is payment requested?", acceptedAnswer: { "@type": "Answer", text: "For standard website projects, a 50% booking deposit is requested through PayPal after written scope and price are accepted. The remaining 50% is due after final approval and before launch or transfer. The £149 sprint and £350 quarterly review are paid in full after written scope is accepted." } },
+      { "@type": "Question", name: "What support is included?", acceptedAnswer: { "@type": "Answer", text: "Reported faults that prevent the agreed delivered scope working as specified are reviewed during a 7-day remedy period from handover. Separate support for reproducible defects in the delivered work is included for 30 days from handover. Neither period includes new features, content changes or third-party service problems unless agreed in writing." } },
       { "@type": "Question", name: "How long do standard websites take?", acceptedAnswer: { "@type": "Answer", text: "Essential projects usually take 7–10 working days and Signature projects 10–15 working days after approved content is received." } },
     ],
   },
@@ -155,7 +156,9 @@ export default function ProjectGuidePage() {
           <p>PayPal may offer payment by PayPal Wallet, debit card or credit card depending on the client&apos;s location and account eligibility. Any PayPal processing or currency-conversion information is shown by PayPal before payment.</p>
           <p>Cancellation and refund terms are confirmed in the written project agreement; they are not changed through chat messages.</p>
           <p>Essential projects usually take 7–10 working days and Signature projects 10–15 working days after all approved content is received.</p>
-          <p>The business keeps control of its domain and approved content. Handover notes are included, together with 30 days of support for defects in the delivered work.</p>
+          <p><strong>7-day remedy period:</strong> from handover, reported faults that prevent the agreed delivered scope working as specified are reviewed and, where confirmed, repaired at no extra charge.</p>
+          <p><strong>30-day delivered-work defect support:</strong> after the initial remedy period, reproducible defects in the delivered work are still supported for 30 days from handover. This does not include new features, content changes, client-supplied material or failures in third-party services unless separately agreed in writing.</p>
+          <p>The business keeps control of its domain and approved content. Handover notes are included. <a href="/working-together/">Read the project safeguards and agreement checklist.</a></p>
         </section>
 
         <section className={styles.section}>

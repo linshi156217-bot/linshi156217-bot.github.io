@@ -7,6 +7,7 @@ next-env.d.ts
 .DS_Store
 playwright-report/
 test-results/
+qa/
 output/
 public/assets/*.png
 
@@ -27,3 +28,5 @@ outputs/
 tmp/
 .playwright-cli/
 .wrangler/
+AGENTS.md
+CLAUDE.md
