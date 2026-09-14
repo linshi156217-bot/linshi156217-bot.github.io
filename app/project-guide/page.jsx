@@ -48,7 +48,7 @@ const structuredData = [
       { "@type": "Question", name: "When is payment requested?", acceptedAnswer: { "@type": "Answer", text: "For standard website projects, a 50% booking deposit is requested through PayPal after written scope and price are accepted. The remaining 50% is due after final approval and before launch or transfer. The £149 sprint and £350 quarterly review are paid in full after written scope is accepted." } },
       { "@type": "Question", name: "How long do standard websites take?", acceptedAnswer: { "@type": "Answer", text: "Essential projects usually take 7–10 working days and Signature projects 10–15 working days after approved content is received." } },
       { "@type": "Question", name: "What happens if a problem is found after the seven-day remedy period?", acceptedAnswer: { "@type": "Answer", text: "The seven-day remedy period is not an automatic ongoing-maintenance plan. A later report is assessed to distinguish a new request, a third-party or hosting change, and a fault in the agreed delivered scope. Any out-of-period work is separately scoped, priced and agreed in writing before it begins." } },
-      { "@type": "Question", name: "Who controls the domain, hosting and project files?", acceptedAnswer: { "@type": "Answer", text: "Where the relevant service allows it, the business keeps control of its domain, hosting and essential third-party accounts, including billing control. The handover checklist records agreed source-file and asset locations, account roles and transfer or access-removal steps." } },
+      { "@type": "Question", name: "Who controls the domain, hosting and project files?", acceptedAnswer: { "@type": "Answer", text: "Where the relevant service allows it, the business keeps control of its domain, hosting and essential third-party accounts, including billing control. After final payment, client-specific source code and editable design files expressly included in scope are handed over. The handover checklist records the available export, account roles, third-party licences and restoration route." } },
     ],
   },
 ];
@@ -96,7 +96,7 @@ export default function ProjectGuidePage() {
           <h3>Can I see evidence of the delivery process?</h3>
           <p>You can ask for the written delivery-checklist format before you commit. Public concept websites are labelled as concepts; client names or project details are shared only with the client&apos;s written permission.</p>
           <h3>Who controls the website after handover?</h3>
-          <p>Where the relevant service allows it, the business keeps control of its domain, hosting and essential third-party accounts, including billing control. The handover checklist records agreed source-file and asset locations, account roles, transfer or access-removal steps and any known remaining actions.</p>
+          <p>Where the relevant service allows it, the business keeps control of its domain, hosting and essential third-party accounts, including billing control. After final payment, client-specific source code and editable design files expressly included in scope are handed over. The handover checklist records available export, account roles, third-party licences and the restoration route. Read the <a href="/project-agreement/">business-client agreement template</a>.</p>
         </section>
 
         <section className={styles.sprintPanel}>
@@ -164,7 +164,7 @@ export default function ProjectGuidePage() {
           <p>PayPal may offer payment by PayPal Wallet, debit card or credit card depending on the client&apos;s location and account eligibility. Any PayPal processing or currency-conversion information is shown by PayPal before payment.</p>
           <p>Cancellation and refund terms are confirmed in the written project agreement; they are not changed through chat messages.</p>
           <p>Essential projects usually take 7–10 working days and Signature projects 10–15 working days after all approved content is received.</p>
-          <p>The business keeps control of its domain, hosting and approved content wherever the relevant service allows it. Handover notes and a written delivery checklist record agreed source-file and asset locations, account roles, transfer or access-removal steps and any known remaining actions. For agreed live changes, a restorable backup is made before the change where the platform permits and this is within scope. Reported faults in the agreed delivered scope are reviewed for seven calendar days after handover. If an agreed part remains undelivered and cannot be reasonably remedied, the amount allocated to that undelivered part in the written scope is refunded.</p>
+          <p>The business keeps control of its domain, hosting and approved content wherever the relevant service allows it. After final payment, client-specific source code and editable design files expressly included in scope are handed over. The final archive is delivered to a client-controlled folder, repository or account agreed in writing and records available export, access roles, third-party licences and the platform-specific restoration route. For agreed live changes, a restorable backup is made before the change where the platform permits and this is within scope. Reported faults in the agreed delivered scope are reviewed for seven calendar days after handover. If an agreed part remains undelivered and cannot be reasonably remedied, the amount allocated to that undelivered part in the written scope is refunded. Read the <a href="/project-agreement/">business-client agreement template</a>.</p>
         </section>
 
         <section className={styles.section}>
@@ -196,6 +196,7 @@ export default function ProjectGuidePage() {
           <a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="/privacy/">Privacy</a>
           <a href="/provider-terms/">Provider terms</a>
+          <a href="/project-agreement/">Project agreement</a>
           <a href="/working-together/">Project safeguards</a>
         </div>
       </footer>
