@@ -1,9 +1,9 @@
 import styles from "../legal.module.css";
 
 export const metadata = {
-  title: "Project guide and prices",
+  title: "Website prices, payment and timelines | Linshi Studio",
   description:
-    "Fixed website packages, payment terms, timelines and project requirements from Linshi Studio.",
+    "Public website prices, payment milestones, timelines and provider details from Linshi Studio: £149 sprint, £350 quarterly review, websites from £650.",
   alternates: { canonical: "/project-guide/" },
 };
 
@@ -19,9 +19,42 @@ const packages = [
   { name: "Bespoke", price: "From £1,350", copy: "For custom scope or integrations", items: ["Written scope before work", "Advanced content organisation", "Custom enquiry journeys", "Fixed quotation", "Two revision rounds"] },
 ];
 
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Linshi Studio",
+    url: "https://linshistudio.com/project-guide/",
+    email,
+    areaServed: { "@type": "Country", name: "United Kingdom" },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Linshi Studio public services",
+      itemListElement: [
+        { "@type": "Offer", name: "Mobile enquiry sprint", price: "149", priceCurrency: "GBP", url: "https://linshistudio.com/project-guide/" },
+        { "@type": "Offer", name: "Quarterly website and AI-search review", price: "350", priceCurrency: "GBP", url: "https://linshistudio.com/website-review/" },
+        { "@type": "Offer", name: "Essential website", price: "650", priceCurrency: "GBP", url: "https://linshistudio.com/project-guide/" },
+        { "@type": "Offer", name: "Signature website", price: "950", priceCurrency: "GBP", url: "https://linshistudio.com/project-guide/" },
+        { "@type": "Offer", name: "Bespoke website", price: "1350", priceCurrency: "GBP", url: "https://linshistudio.com/project-guide/" },
+      ],
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Who provides the service?", acceptedAnswer: { "@type": "Answer", text: "Linshi Studio is operated by Shi Lin from China as an individual service provider. It is not presented as a UK-registered company." } },
+      { "@type": "Question", name: "What are the public starting prices?", acceptedAnswer: { "@type": "Answer", text: "The mobile enquiry sprint is £149, the one-off quarterly website and AI-search review is £350, Essential websites start at £650, Signature websites are £950, and bespoke websites start from £1,350. Scope is agreed in writing before payment." } },
+      { "@type": "Question", name: "When is payment requested?", acceptedAnswer: { "@type": "Answer", text: "For standard website projects, a 50% booking deposit is requested through PayPal after written scope and price are accepted. The remaining 50% is due after final approval and before launch or transfer. The £149 sprint and £350 quarterly review are paid in full after written scope is accepted." } },
+      { "@type": "Question", name: "How long do standard websites take?", acceptedAnswer: { "@type": "Answer", text: "Essential projects usually take 7–10 working days and Signature projects 10–15 working days after approved content is received." } },
+    ],
+  },
+];
+
 export default function ProjectGuidePage() {
   return (
     <main className={styles.page}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
       <header className={styles.header}>
         <a className={styles.brand} href="/"><span className={styles.mark}>L.</span>Linshi Studio</a>
         <a className={styles.back} href="/">Back to studio</a>
@@ -42,6 +75,18 @@ export default function ProjectGuidePage() {
           <h2>Who you are working with</h2>
           <p>Linshi Studio is an independent web studio operated by Shi Lin from China as an individual service provider. It is not presented as a UK-registered company.</p>
           <p>Before payment, the written scope and payment request identify the provider as Shi Lin trading as Linshi Studio, the agreed service, price, payment milestones and delivery route. If the studio&apos;s legal structure changes in future, this page and new client documents will be updated before they are used.</p>
+        </section>
+
+        <section className={styles.section} aria-labelledby="quick-facts-title">
+          <h2 id="quick-facts-title">Quick facts before you enquire</h2>
+          <h3>Who provides the work?</h3>
+          <p>Shi Lin operates Linshi Studio from China as an individual service provider. The studio is not presented as a UK-registered company.</p>
+          <h3>What are the published prices?</h3>
+          <p>£149 for one mobile enquiry sprint; £350 for one quarterly website and AI-search review; websites from £650. The exact scope and fixed price are agreed in writing before payment.</p>
+          <h3>When is payment requested?</h3>
+          <p>Standard website projects use a 50% booking deposit and 50% final-payment structure through PayPal. The £149 sprint and £350 quarterly review are paid in full only after their written scope is accepted.</p>
+          <h3>How long do standard websites take?</h3>
+          <p>Essential projects usually take 7–10 working days and Signature projects 10–15 working days after approved content is received.</p>
         </section>
 
         <section className={styles.sprintPanel}>
@@ -66,7 +111,7 @@ export default function ProjectGuidePage() {
 
         <section className={styles.sprintPanel}>
           <div>
-            <p className={styles.eyebrow}>One-off annual check</p>
+            <p className={styles.eyebrow}>One-off quarterly check</p>
             <h2>Website &amp; AI-search review</h2>
             <strong>£350</strong>
             <p>A fixed-scope review of an agreed public website, its mobile customer journey and AI-search clarity.</p>
@@ -97,7 +142,7 @@ export default function ProjectGuidePage() {
 
         <section className={styles.section}>
           <h2>Payment and delivery</h2>
-          <p>The £149 mobile enquiry sprint and the £350 one-off annual review are each paid in full after their written fixed scope is accepted. Standard website projects use the 50% deposit and 50% final-payment structure below.</p>
+          <p>The £149 mobile enquiry sprint and the £350 one-off quarterly review are each paid in full after their written fixed scope is accepted. Standard website projects use the 50% deposit and 50% final-payment structure below.</p>
           <p>After the written scope and fixed price are accepted, payment is requested through PayPal in GBP. The PayPal payment request identifies Shi Lin trading as Linshi Studio, the agreed service, the amount and the due date.</p>
           <ol>
             <li>A written scope and fixed price are agreed first.</li>

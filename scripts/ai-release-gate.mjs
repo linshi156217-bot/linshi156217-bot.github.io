@@ -147,7 +147,7 @@ try {
           const text = document.body.textContent || "";
           return !text.includes("£350") || !/one review, not an automatically renewing subscription/i.test(text);
         });
-        if (pricingGuideProblem) recordFailure(route, width, "project guide does not explain the £350 one-off review");
+        if (pricingGuideProblem) recordFailure(route, width, "project guide does not explain the £350 one-off quarterly review");
       }
 
       results.push({ route, width, httpStatus: response?.status() ?? null, ...audit, brokenImages, consoleErrors });
