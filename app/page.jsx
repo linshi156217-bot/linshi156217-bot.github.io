@@ -7,7 +7,7 @@ export const metadata = {
   metadataBase: new URL("https://linshistudio.com"),
   title: "Linshi Studio | Distinctive mobile-first websites",
   description:
-    "Founder-led strategy, art direction and mobile-first website design for independent businesses. Public portfolio work is clearly labelled as original concept work; project scope and pricing are agreed in writing.",
+    "China-based independent web studio serving UK businesses remotely. Founder-led strategy, art direction and mobile-first website design; public portfolio work is clearly labelled as original concept work.",
   alternates: {
     canonical: "/",
   },
@@ -47,7 +47,7 @@ const structuredData = {
   name: "Linshi Studio",
   url: "https://linshistudio.com",
   description:
-    "Founder-led strategy, art direction and mobile-first website design for independent businesses. Public portfolio work is clearly labelled as original concept work.",
+    "China-based independent web studio serving UK businesses remotely. Founder-led strategy, art direction and mobile-first website design; public portfolio work is clearly labelled as original concept work.",
   email: emailAddress,
   founder: { "@type": "Person", name: "Shi Lin" },
   sameAs: [instagramUrl],

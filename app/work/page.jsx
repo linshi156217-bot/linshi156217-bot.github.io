@@ -6,7 +6,7 @@ export const metadata = {
   metadataBase: new URL("https://linshistudio.com"),
   title: "Linshi Studio | Mobile enquiry journeys for UK businesses",
   description:
-    "Founder-led mobile website design for independent UK businesses. Request a £350 annual website and AI-search review, start with a £149 mobile sprint or commission a complete website.",
+    "Founder-led mobile website design for independent UK businesses. Request a £350 quarterly website and AI-search review, start with a £149 mobile sprint or commission a complete website.",
   alternates: {
     canonical: "/work/",
   },
@@ -148,7 +148,7 @@ const starterOffer = {
 
 const packages = [
   {
-    name: "Annual review",
+    name: "Quarterly review",
     price: "£350",
     note: "Website, mobile journey and AI-search clarity",
     href: "/website-review/",
@@ -301,7 +301,7 @@ export default function WorkPage() {
         </a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
-          <a href="/website-review/">Annual review</a>
+          <a href="/website-review/">Quarterly review</a>
           <a href="#starter">Start small</a>
           <a href="#approach">Approach</a>
           <a href="#pricing">Pricing</a>
@@ -310,7 +310,7 @@ export default function WorkPage() {
           className={styles.headerCta}
           href="/website-review/"
         >
-          Annual review · £350 <Arrow />
+          Quarterly review · £350 <Arrow />
         </a>
       </header>
 
@@ -343,7 +343,7 @@ export default function WorkPage() {
             </p>
             <div className={styles.heroActions}>
               <a className={styles.primaryButton} href="/website-review/">
-                See the £350 annual review <Arrow />
+                See the £350 quarterly review <Arrow />
               </a>
               <a
                 className={styles.ghostButton}
@@ -367,7 +367,7 @@ export default function WorkPage() {
             design.
           </p>
           <div>
-            <span>Annual website + AI-search review · £350</span>
+            <span>Quarterly website + AI-search review · £350</span>
             <span>Start with one problem · £149</span>
             <span>Complete websites from £650</span>
             <span>Concept work clearly labelled</span>
@@ -725,7 +725,7 @@ export default function WorkPage() {
               <em>One honest first look.</em>
             </h2>
             <p>
-              Choose the £350 annual review, the £149 sprint or a complete
+              Choose the £350 quarterly review, the £149 sprint or a complete
               website. No account or sales call is required; the brief is saved
               securely and given a reference number.
             </p>

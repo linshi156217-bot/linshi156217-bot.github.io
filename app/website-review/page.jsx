@@ -1,13 +1,13 @@
 import styles from "./review.module.css";
 
 export const metadata = {
-  title: "£350 Annual Website & AI Search Review",
+  title: "£350 Quarterly Website & AI Search Review",
   description:
-    "A fixed-scope annual review of your website, mobile customer journey and AI-search discoverability, delivered as a prioritised action list.",
+    "A fixed-scope quarterly review of your website, mobile customer journey and AI-search discoverability, delivered as a prioritised action list.",
   alternates: { canonical: "/website-review/" },
   openGraph: {
-    title: "£350 Annual Website & AI Search Review | Linshi Studio",
-    description: "A clear annual review for independent UK businesses: website, mobile journey and AI-search discoverability.",
+    title: "£350 Quarterly Website & AI Search Review | Linshi Studio",
+    description: "A clear quarterly review for independent UK businesses: website, mobile journey and AI-search discoverability.",
     url: "/website-review/",
     type: "website",
     images: [{ url: "/assets/studio-v2/renovation-case-v2.webp", width: 1536, height: 1024 }],
@@ -25,7 +25,7 @@ const reviewAreas = [
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Annual Website and AI Search Discoverability Review",
+  name: "Quarterly Website and AI Search Discoverability Review",
   provider: {
     "@type": "ProfessionalService",
     name: "Linshi Studio",
@@ -33,7 +33,7 @@ const structuredData = {
     email: "hello@linshistudio.com",
   },
   areaServed: { "@type": "Country", name: "United Kingdom" },
-  description: "A fixed-scope annual review of a business website, mobile customer journey and AI-search discoverability, delivered as a prioritised action list.",
+  description: "A fixed-scope quarterly review of a business website, mobile customer journey and AI-search discoverability, delivered as a prioritised action list.",
   offers: {
     "@type": "Offer",
     price: "350",
@@ -54,14 +54,14 @@ export default function WebsiteReviewPage() {
 
       <section className={styles.hero}>
         <div>
-          <p className={styles.eyebrow}>Fixed scope · Annual clarity</p>
+          <p className={styles.eyebrow}>Fixed scope · Quarterly clarity</p>
           <h1>Website &amp;<br /><em>AI search review.</em></h1>
-          <p className={styles.heroCopy}>A practical annual check for an established business that already has a website but wants to know what is costing clarity, trust or discoverability on a phone.</p>
+          <p className={styles.heroCopy}>A practical quarterly check for an established business that already has a website but wants to know what is costing clarity, trust or discoverability on a phone.</p>
         </div>
         <aside className={styles.priceCard}>
-          <span>One annual review</span>
+          <span>One quarterly review</span>
           <strong>£350</strong>
-          <p>GBP · one-off annual check</p>
+          <p>GBP · one-off quarterly check</p>
           <ul>
             <li>Main website and priority pages</li>
             <li>Mobile customer journey</li>
@@ -76,7 +76,7 @@ export default function WebsiteReviewPage() {
         <p className={styles.eyebrow}>Who it is for</p>
         <div>
           <h2>Keep the website.<br /><em>Find the next useful change.</em></h2>
-          <p>This is for an independent business with a live site, real services and enough customer value to justify a careful annual review. It is especially useful when the site has grown over time, works on desktop but feels uncertain on mobile, or describes the business less clearly than the team does in person.</p>
+          <p>This is for an independent business with a live site, real services and enough customer value to justify a careful quarterly review. It is especially useful when the site has grown over time, works on desktop but feels uncertain on mobile, or describes the business less clearly than the team does in person.</p>
         </div>
       </section>
 
@@ -115,7 +115,7 @@ export default function WebsiteReviewPage() {
           <p className={styles.eyebrow}>Included</p>
           <h2>Review and recommendations.</h2>
           <ul>
-            <li>One annual review of the agreed public website</li>
+            <li>One quarterly review of the agreed public website</li>
             <li>Main mobile journey and priority navigation</li>
             <li>Obvious usability, wording and trust issues</li>
             <li>OAI-SearchBot access and AI-search clarity</li>
@@ -147,7 +147,7 @@ export default function WebsiteReviewPage() {
       <section className={styles.finalCta}>
         <p>Already have a website?</p>
         <h2>Find the next useful change.</h2>
-        <a href="/work/#project-brief"><span>Request a fit check</span><strong>£350 annual review ↗</strong></a>
+        <a href="/work/#project-brief"><span>Request a fit check</span><strong>£350 quarterly review ↗</strong></a>
       </section>
 
       <footer className={styles.footer}>
