@@ -12,6 +12,7 @@ const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
 const reviewUrl = "/website-review/";
 const startUrl = `mailto:${email}?subject=Website%20project%20enquiry&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AMain%20services%3A%0AIdeal%20launch%20date%3A`;
 const sprintUrl = `mailto:${email}?subject=%C2%A3149%20mobile%20enquiry%20sprint&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AThe%20mobile%20step%20that%20may%20be%20causing%20friction%3A`;
+const reviewUrl = "/website-review/";
 
 const packages = [
   { name: "Essential", price: "£650", copy: "A focused one-page website", items: ["Up to 6 considered sections", "Services or menu highlights", "Gallery and contact routes", "Domain connection", "Two revision rounds"] },
