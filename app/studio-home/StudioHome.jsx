@@ -30,7 +30,7 @@ export default function StudioHome() {
           <h1 id="hero-title">Thoughtful<br />websites.<br /><em>Distinctly yours.</em></h1>
           <p className={styles.intro}>Your business has a character of its own.<br className={styles.desktopBreak} /> We bring it to life online—with considered design<br className={styles.desktopBreak} /> and a clear path from first look to first enquiry.</p>
           <div className={styles.actions}><a href="#work" className={styles.button}>Explore the work <Arrow /></a><a href={brief} className={styles.textLink}>Tell us your idea <Arrow /></a></div>
-          <p className={styles.heroNote}>Led by Shi Lin · direct studio contact · written scope before payment.</p>
+          <p className={styles.heroNote}>Led by Shi Lin in China · serving UK businesses remotely · written scope before payment.</p>
         </div>
         <a className={styles.heroProject} href="/alder-and-slate/" aria-label="Explore the Alder & Slate concept website">
           <div className={styles.projectCanvas}>
@@ -47,7 +47,7 @@ export default function StudioHome() {
       </section>
       <div className={styles.disciplines}><span>Good design. Clear purpose.</span><p>Strategy <i>/</i> Art direction <i>/</i> Website design <i>/</i> Development</p></div>
       <section className={styles.trust} id="working-with-linshi" aria-labelledby="trust-title">
-        <div><p className={styles.eyebrow}>Working with Linshi</p><h2 id="trust-title">No invented proof.<br /><em>Clear working terms.</em></h2><p>Linshi Studio is an independent, founder-led web studio. The person discussing your brief is the person designing and building the work.</p></div>
+        <div><p className={styles.eyebrow}>Working with Linshi</p><h2 id="trust-title">No invented proof.<br /><em>Clear working terms.</em></h2><p>Linshi Studio is an independent, founder-led web studio operated from China and serving UK businesses remotely. It is not presented as a UK-registered company. The person discussing your brief is the person designing and building the work.</p></div>
         <div className={styles.trustGrid}>
           <article><span>01</span><h3>Portfolio, honestly labelled</h3><p>The businesses shown here are self-initiated concepts. They demonstrate craft and customer-journey thinking; they are not claimed paid commissions.</p></article>
           <article><span>02</span><h3>Scope before payment</h3><p>You receive the agreed pages, inclusions, price, timeline and payment milestones in writing before work begins.</p></article>
