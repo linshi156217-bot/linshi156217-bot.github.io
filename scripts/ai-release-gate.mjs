@@ -133,7 +133,7 @@ try {
       if (audit.unlabeledControls.length) recordFailure(route, width, `unlabelled controls: ${audit.unlabeledControls.join(", ")}`);
       if (consoleErrors.length) recordFailure(route, width, `console errors: ${consoleErrors.join(" | ")}`);
 
-      if (route === "/website-review/") {
+        if (route === "/website-review/") {
         const reviewCtaProblem = await page.evaluate(() =>
           [...document.querySelectorAll("a")]
             .filter((link) => /request the review|ask if your site fits|request a fit check/i.test(link.textContent || ""))
@@ -147,8 +147,8 @@ try {
           const text = document.body.textContent || "";
           return !text.includes("£350") || !/one review, not an automatically renewing subscription/i.test(text);
         });
-        if (pricingGuideProblem) recordFailure(route, width, "project guide does not explain the £350 one-off quarterly review");
-      }
+         if (pricingGuideProblem) recordFailure(route, width, "project guide does not explain the £350 one-off quarterly review");
+        }
 
       results.push({ route, width, httpStatus: response?.status() ?? null, ...audit, brokenImages, consoleErrors });
       await page.close();

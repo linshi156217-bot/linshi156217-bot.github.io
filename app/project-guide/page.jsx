@@ -110,9 +110,9 @@ export default function ProjectGuidePage() {
           </div>
         </section>
 
-        <section className={styles.sprintPanel}>
-          <div>
-            <p className={styles.eyebrow}>One-off quarterly check</p>
+          <section className={styles.sprintPanel}>
+           <div>
+             <p className={styles.eyebrow}>One-off quarterly check</p>
             <h2>Website &amp; AI-search review</h2>
             <strong>£350</strong>
             <p>A fixed-scope review of an agreed public website, its mobile customer journey and AI-search clarity.</p>
@@ -127,8 +127,7 @@ export default function ProjectGuidePage() {
             <p>This is one review, not an automatically renewing subscription. It does not include live changes or any promise of AI inclusion, citation or ranking.</p>
             <a href={reviewUrl}>Read the full £350 review scope ↗</a>
           </div>
-        </section>
-
+          </section>
         <section className={styles.section}>
           <h2>Website packages</h2>
           <div className={styles.priceGrid}>
@@ -189,6 +188,8 @@ export default function ProjectGuidePage() {
           <a href={`mailto:${email}?subject=Website%20project%20enquiry`}>{email}</a>
           <a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="/privacy/">Privacy</a>
+          <a href="/provider-terms/">Provider terms</a>
+          <a href="/working-together/">Project safeguards</a>
         </div>
       </footer>
     </main>
