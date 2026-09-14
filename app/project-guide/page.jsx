@@ -9,6 +9,7 @@ export const metadata = {
 
 const email = "hello@linshistudio.com";
 const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
+const reviewUrl = "/website-review/";
 const startUrl = `mailto:${email}?subject=Website%20project%20enquiry&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AMain%20services%3A%0AIdeal%20launch%20date%3A`;
 const sprintUrl = `mailto:${email}?subject=%C2%A3149%20mobile%20enquiry%20sprint&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AThe%20mobile%20step%20that%20may%20be%20causing%20friction%3A`;
 
@@ -63,6 +64,25 @@ export default function ProjectGuidePage() {
           </div>
         </section>
 
+        <section className={styles.sprintPanel}>
+          <div>
+            <p className={styles.eyebrow}>One-off annual check</p>
+            <h2>Website &amp; AI-search review</h2>
+            <strong>£350</strong>
+            <p>A fixed-scope review of an agreed public website, its mobile customer journey and AI-search clarity.</p>
+          </div>
+          <div>
+            <ul>
+              <li>Main website and priority pages</li>
+              <li>Mobile journey, wording and trust signals</li>
+              <li>Indexing basics and relevant crawler access</li>
+              <li>A concise prioritised action list</li>
+            </ul>
+            <p>This is one review, not an automatically renewing subscription. It does not include live changes or any promise of AI inclusion, citation or ranking.</p>
+            <a href={reviewUrl}>Read the full £350 review scope ↗</a>
+          </div>
+        </section>
+
         <section className={styles.section}>
           <h2>Website packages</h2>
           <div className={styles.priceGrid}>
@@ -77,7 +97,7 @@ export default function ProjectGuidePage() {
 
         <section className={styles.section}>
           <h2>Payment and delivery</h2>
-          <p>The £149 mobile enquiry sprint is paid in full after its written fixed scope is accepted. Standard website projects use the 50% deposit and 50% final-payment structure below.</p>
+          <p>The £149 mobile enquiry sprint and the £350 one-off annual review are each paid in full after their written fixed scope is accepted. Standard website projects use the 50% deposit and 50% final-payment structure below.</p>
           <p>After the written scope and fixed price are accepted, payment is requested through PayPal in GBP. The PayPal payment request identifies Shi Lin trading as Linshi Studio, the agreed service, the amount and the due date.</p>
           <ol>
             <li>A written scope and fixed price are agreed first.</li>

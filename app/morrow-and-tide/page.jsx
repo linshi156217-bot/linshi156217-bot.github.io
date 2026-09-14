@@ -5,16 +5,19 @@ export const metadata = {
   title: "Morrow & Tide | Fire, Fish & Good Things",
   description:
     "A fictional contemporary seafood bar concept in Margate, Kent, created as a mobile-first website demonstration.",
+  alternates: {
+    canonical: "/morrow-and-tide/",
+  },
   openGraph: {
     title: "Morrow & Tide | Fire, Fish & Good Things",
     description:
       "A fictional contemporary seafood bar concept on the Margate seafront.",
-    url: "https://linshi156217-bot.github.io/morrow-and-tide/",
+    url: "/morrow-and-tide/",
     siteName: "Morrow & Tide",
     type: "website",
     images: [
       {
-        url: "https://linshi156217-bot.github.io/social/morrow-tide-og.webp",
+        url: "/social/morrow-tide-og.webp",
         width: 1200,
         height: 630,
         alt: "Morrow & Tide contemporary seafood bar concept",
@@ -24,7 +27,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     images: [
-      "https://linshi156217-bot.github.io/social/morrow-tide-og.webp",
+      "/social/morrow-tide-og.webp",
     ],
   },
 };
