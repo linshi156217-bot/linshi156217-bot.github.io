@@ -30,7 +30,7 @@ export default function StudioHome() {
           <h1 id="hero-title">Thoughtful<br />websites.<br /><em>Distinctly yours.</em></h1>
           <p className={styles.intro}>Your business has a character of its own.<br className={styles.desktopBreak} /> We bring it to life online—with considered design<br className={styles.desktopBreak} /> and a clear path from first look to first enquiry.</p>
           <div className={styles.actions}><a href="#work" className={styles.button}>Explore the work <Arrow /></a><a href={brief} className={styles.textLink}>Tell us your idea <Arrow /></a></div>
-          <p className={styles.heroNote}>Led by Shi Lin in China · serving UK businesses remotely · written scope before payment.</p>
+          <p className={styles.heroNote}>Founder-led design · clear scope and agreed price · PayPal payment request before work begins.</p>
         </div>
         <a className={styles.heroProject} href="/alder-and-slate/" aria-label="Explore the Alder & Slate concept website">
           <div className={styles.projectCanvas}>
