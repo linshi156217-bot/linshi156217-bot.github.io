@@ -10,6 +10,8 @@ const routes = [
   ["/aster-house-hair/", "monthly", 0.8],
   ["/marlowe-dental/", "monthly", 0.8],
   ["/gable-and-mere/", "monthly", 0.8],
+  ["/morrow-and-tide/", "monthly", 0.8],
+  ["/the-fox-and-bramble/", "monthly", 0.8],
   ["/privacy/", "yearly", 0.3],
 ];
 

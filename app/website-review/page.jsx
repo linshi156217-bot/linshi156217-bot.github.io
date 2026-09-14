@@ -49,7 +49,7 @@ export default function WebsiteReviewPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <header className={styles.header}>
         <a href="/" className={styles.brand}><span>L.</span> Linshi Studio</a>
-        <a href="/#project-brief" className={styles.headerCta}>Request the review ↗</a>
+        <a href="/work/#project-brief" className={styles.headerCta}>Request the review ↗</a>
       </header>
 
       <section className={styles.hero}>
@@ -61,14 +61,14 @@ export default function WebsiteReviewPage() {
         <aside className={styles.priceCard}>
           <span>One annual review</span>
           <strong>£350</strong>
-          <p>GBP · No UK VAT charged</p>
+          <p>GBP · one-off annual check</p>
           <ul>
             <li>Main website and priority pages</li>
             <li>Mobile customer journey</li>
             <li>AI-search discoverability signals</li>
             <li>Prioritised written action list</li>
           </ul>
-          <a href="/#project-brief">Ask if your site fits ↗</a>
+          <a href="/work/#project-brief">Ask if your site fits ↗</a>
         </aside>
       </section>
 
@@ -147,7 +147,7 @@ export default function WebsiteReviewPage() {
       <section className={styles.finalCta}>
         <p>Already have a website?</p>
         <h2>Find the next useful change.</h2>
-        <a href="/#project-brief"><span>Request a fit check</span><strong>£350 annual review ↗</strong></a>
+        <a href="/work/#project-brief"><span>Request a fit check</span><strong>£350 annual review ↗</strong></a>
       </section>
 
       <footer className={styles.footer}>

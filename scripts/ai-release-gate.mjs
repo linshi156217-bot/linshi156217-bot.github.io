@@ -21,7 +21,7 @@ const routes = [
   "/morrow-and-tide/",
   "/salt-and-hawthorn/",
 ];
-const mobileWidths = [320, 375, 390, 440];
+const viewportWidths = [320, 375, 390, 440, 768, 1440];
 const failures = [];
 const results = [];
 
@@ -58,7 +58,7 @@ try {
   browser = await chromium.launch({ headless: true, executablePath: systemChrome || undefined });
 
   for (const route of routes) {
-    for (const width of mobileWidths) {
+    for (const width of viewportWidths) {
       const page = await browser.newPage({ viewport: { width, height: 844 } });
       const consoleErrors = [];
       await page.route("https://cloudflareinsights.com/**", async (route) => {
@@ -132,6 +132,23 @@ try {
       if (audit.missingHashTargets.length) recordFailure(route, width, `missing hash targets: ${audit.missingHashTargets.join(", ")}`);
       if (audit.unlabeledControls.length) recordFailure(route, width, `unlabelled controls: ${audit.unlabeledControls.join(", ")}`);
       if (consoleErrors.length) recordFailure(route, width, `console errors: ${consoleErrors.join(" | ")}`);
+
+      if (route === "/website-review/") {
+        const reviewCtaProblem = await page.evaluate(() =>
+          [...document.querySelectorAll("a")]
+            .filter((link) => /request the review|ask if your site fits|request a fit check/i.test(link.textContent || ""))
+            .some((link) => link.getAttribute("href") !== "/work/#project-brief"),
+        );
+        if (reviewCtaProblem) recordFailure(route, width, "review CTA does not reach the project brief");
+      }
+
+      if (route === "/project-guide/") {
+        const pricingGuideProblem = await page.evaluate(() => {
+          const text = document.body.textContent || "";
+          return !text.includes("£350") || !/one review, not an automatically renewing subscription/i.test(text);
+        });
+        if (pricingGuideProblem) recordFailure(route, width, "project guide does not explain the £350 one-off review");
+      }
 
       results.push({ route, width, httpStatus: response?.status() ?? null, ...audit, brokenImages, consoleErrors });
       await page.close();
@@ -215,7 +232,7 @@ try {
 const report = {
   generatedAt: new Date().toISOString(),
   routes,
-  mobileWidths,
+  viewportWidths,
   checks: results.length,
   failures,
   result: failures.length ? "FAIL" : "PASS",
@@ -227,4 +244,4 @@ if (failures.length) {
   console.error(JSON.stringify({ result: report.result, failures }, null, 2));
   process.exit(1);
 }
-console.log(`AI release gate passed: ${results.length} mobile page checks and the server-confirmed enquiry journey validated.`);
+console.log(`AI release gate passed: ${results.length} viewport checks and the mocked server-confirmed enquiry journey validated.`);
