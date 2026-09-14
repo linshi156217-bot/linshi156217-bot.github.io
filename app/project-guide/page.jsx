@@ -87,6 +87,8 @@ export default function ProjectGuidePage() {
           <p>Standard website projects use a 50% booking deposit and 50% final-payment structure through PayPal. The £149 sprint and £350 quarterly review are paid in full only after their written scope is accepted.</p>
           <h3>How long do standard websites take?</h3>
           <p>Essential projects usually take 7–10 working days and Signature projects 10–15 working days after approved content is received.</p>
+          <h3>How are delivery issues handled?</h3>
+          <p>Each paid project has a written delivery checklist. Reported faults in the agreed delivered scope are reviewed for seven calendar days after handover. If an agreed part remains undelivered and cannot be reasonably remedied, the amount allocated to that undelivered part in the written scope is refunded.</p>
         </section>
 
         <section className={styles.sprintPanel}>
@@ -154,7 +156,7 @@ export default function ProjectGuidePage() {
           <p>PayPal may offer payment by PayPal Wallet, debit card or credit card depending on the client&apos;s location and account eligibility. Any PayPal processing or currency-conversion information is shown by PayPal before payment.</p>
           <p>Cancellation and refund terms are confirmed in the written project agreement; they are not changed through chat messages.</p>
           <p>Essential projects usually take 7–10 working days and Signature projects 10–15 working days after all approved content is received.</p>
-          <p>The business keeps control of its domain and approved content. Handover notes are included, together with 30 days of support for defects in the delivered work.</p>
+          <p>The business keeps control of its domain and approved content. Handover notes and a written delivery checklist are included. Reported faults in the agreed delivered scope are reviewed for seven calendar days after handover. If an agreed part remains undelivered and cannot be reasonably remedied, the amount allocated to that undelivered part in the written scope is refunded.</p>
         </section>
 
         <section className={styles.section}>
