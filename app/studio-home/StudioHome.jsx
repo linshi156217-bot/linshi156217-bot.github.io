@@ -19,9 +19,9 @@ export default function StudioHome() {
     <a className={styles.skip} href="#main">Skip to content</a>
     <header className={styles.header}>
       <a href="#top" className={styles.brand} aria-label="Linshi Studio home">linshi<span className={styles.brandDot}>.</span><small>Independent web studio</small></a>
-      <nav className={styles.desktopNav} aria-label="Main navigation"><a href="#work">Selected work</a><a href="#studio">The studio</a><a href="/project-guide/">Pricing</a></nav>
+      <nav className={styles.desktopNav} aria-label="Main navigation"><a href="#work">Selected work</a><a href="#studio">The studio</a><a href="#working-with-linshi">How we work</a><a href="/project-guide/">Pricing</a></nav>
       <a href={brief} className={styles.headerCta}>Let’s talk <Arrow /></a>
-      <details className={styles.mobileMenu}><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="#work">Selected work</a><a href="#studio">The studio</a><a href="/project-guide/">Pricing & project guide</a><a href={brief}>Start a project <Arrow /></a></nav></details>
+      <details className={styles.mobileMenu}><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="#work">Selected work</a><a href="#studio">The studio</a><a href="#working-with-linshi">How we work</a><a href="/project-guide/">Pricing & project guide</a><a href={brief}>Start a project <Arrow /></a></nav></details>
     </header>
     <main id="main">
       <section className={styles.hero} aria-labelledby="hero-title">
@@ -30,7 +30,7 @@ export default function StudioHome() {
           <h1 id="hero-title">Thoughtful<br />websites.<br /><em>Distinctly yours.</em></h1>
           <p className={styles.intro}>Your business has a character of its own.<br className={styles.desktopBreak} /> We bring it to life online—with considered design<br className={styles.desktopBreak} /> and a clear path from first look to first enquiry.</p>
           <div className={styles.actions}><a href="#work" className={styles.button}>Explore the work <Arrow /></a><a href={brief} className={styles.textLink}>Tell us your idea <Arrow /></a></div>
-          <p className={styles.heroNote}>Founder-led. Designed for mobile. Made for your business.</p>
+          <p className={styles.heroNote}>Led by Shi Lin · direct studio contact · written scope before payment.</p>
         </div>
         <a className={styles.heroProject} href="/alder-and-slate/" aria-label="Explore the Alder & Slate concept website">
           <div className={styles.projectCanvas}>
@@ -46,6 +46,16 @@ export default function StudioHome() {
         </a>
       </section>
       <div className={styles.disciplines}><span>Good design. Clear purpose.</span><p>Strategy <i>/</i> Art direction <i>/</i> Website design <i>/</i> Development</p></div>
+      <section className={styles.trust} id="working-with-linshi" aria-labelledby="trust-title">
+        <div><p className={styles.eyebrow}>Working with Linshi</p><h2 id="trust-title">No invented proof.<br /><em>Clear working terms.</em></h2><p>Linshi Studio is an independent, founder-led web studio. The person discussing your brief is the person designing and building the work.</p></div>
+        <div className={styles.trustGrid}>
+          <article><span>01</span><h3>Portfolio, honestly labelled</h3><p>The businesses shown here are self-initiated concepts. They demonstrate craft and customer-journey thinking; they are not claimed paid commissions.</p></article>
+          <article><span>02</span><h3>Scope before payment</h3><p>You receive the agreed pages, inclusions, price, timeline and payment milestones in writing before work begins.</p></article>
+          <article><span>03</span><h3>Direct accountability</h3><p>Shi Lin remains your direct studio contact through the brief, build, checks and handover.</p></article>
+          <article><span>04</span><h3>Your accounts stay yours</h3><p>Your domain and essential third-party accounts remain in your name wherever the service allows it.</p></article>
+        </div>
+        <a className={styles.trustLink} href="/project-guide/">Read the project guide, scope and prices <Arrow /></a>
+      </section>
       <section className={styles.work} id="work" aria-labelledby="work-title">
         <div className={styles.sectionHead}><div><p className={styles.eyebrow}>01 / Selected work</p><h2 id="work-title">Different businesses.<br /><em>Distinctive worlds.</em></h2></div><p>A selection of self-initiated website concepts.<br />Fictional businesses. Real design thinking.</p></div>
         <div className={styles.projectGrid}>{projects.map((p, i) => <article className={`${styles.project} ${styles[p.className]}`} key={p.name}>
@@ -54,14 +64,13 @@ export default function StudioHome() {
         </article>)}</div>
         <div className={styles.moreWork}><p className={styles.eyebrow}>More to explore <span>03</span></p>{more.map(([name,type,href]) => <a href={href} key={name}><span>{name}<small>{type} · Concept project</small></span><Arrow /></a>)}</div>
       </section>
-      <section className={styles.studio} id="studio" aria-labelledby="studio-title"><p className={styles.eyebrow}>02 / The studio</p><div><h2 id="studio-title">A small studio.<br /><em>A considered approach.</em></h2><p className={styles.studioIntro}>We work with independent businesses to make their next chapter feel like them.</p><p className={styles.studioBody}>From a neighbourhood restaurant to a beautifully crafted home, the details tell the story. We bring together art direction, thoughtful content and responsive development to make those details count.</p><div className={styles.services}><article><span>01</span><h3>Find the direction</h3><p>Your audience, your character and what your website needs to do.</p></article><article><span>02</span><h3>Design the experience</h3><p>Considered typography, imagery and a journey that feels natural.</p></article><article><span>03</span><h3>Build it beautifully</h3><p>Responsive pages, useful details and a clear handover at launch.</p></article></div></div></section>
+      <section className={styles.studio} id="studio" aria-labelledby="studio-title"><p className={styles.eyebrow}>02 / The studio</p><div><h2 id="studio-title">A small studio.<br /><em>A considered approach.</em></h2><p className={styles.studioIntro}>Led by Shi Lin, Linshi Studio works directly with independent businesses that need a clearer website and enquiry journey.</p><p className={styles.studioBody}>There is no account-management layer or anonymous production team. We bring together art direction, thoughtful content and responsive development, then hand over a site the business can understand and control.</p><div className={styles.services}><article><span>01</span><h3>Find the direction</h3><p>Your audience, your character and what your website needs to do.</p></article><article><span>02</span><h3>Design the experience</h3><p>Considered typography, imagery and a journey that feels natural.</p></article><article><span>03</span><h3>Build it beautifully</h3><p>Responsive pages, useful details and a clear handover at launch.</p></article></div></div></section>
       <section className={styles.start} aria-labelledby="start-title"><div><p className={styles.eyebrow}>03 / Working together</p><h2 id="start-title">A clear beginning.<br /><em>No guesswork.</em></h2></div><div><p>From a focused one-page website to a fuller digital home. We agree the scope, timeline and price before work begins.</p><p className={styles.price}>Websites from <strong>£650</strong></p><a className={styles.textLink} href="/project-guide/">Explore packages & the project guide <Arrow /></a><p className={styles.startNote}>One-off build fee. Domain renewals and optional services are separate.</p></div></section>
       <section className={styles.contact} id="contact"><p className={styles.eyebrow}>Have something in mind?</p><h2>Let’s make<br /><em>something yours.</em></h2><div className={styles.contactRow}><a className={styles.button} href={brief}>Tell us about your project <Arrow /></a></div><div className={styles.contactChannels}>
         <div className={styles.whatsappChannel}><a className={styles.whatsappDirect} href="https://wa.me/qr/NFHKON7S4RKEO1"><small>01 / WhatsApp</small><span>Message the studio <Arrow /></span></a><a className={styles.qrLink} href="/assets/studio-v3/whatsapp-contact-original.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open original Linshi WhatsApp QR code"><span className={styles.qrFrame}><Image src="/assets/studio-v3/whatsapp-contact-original.jpg" alt="Scan this QR code with WhatsApp to add Linshi as a contact" width={1279} height={2774} sizes="460px" /></span></a><p>Scan with WhatsApp, or tap the code to enlarge.</p></div>
         <a href="mailto:hello@linshistudio.com"><small>02 / Studio email</small><span>hello@linshistudio.com <Arrow /></span><p>For projects, ideas and introductions.</p></a>
-        <a href="mailto:linshi156217@gmail.com"><small>03 / Alternative email</small><span>linshi156217@gmail.com <Arrow /></span><p>Another way to reach us directly.</p></a>
       </div></section>
     </main>
-    <footer className={styles.footer}><a className={styles.footerBrand} href="#top">linshi<span>.</span></a><p>Independent by nature.<br />Considered by design.</p><nav aria-label="Footer navigation"><a href="#contact">Contact</a><a href="https://www.instagram.com/designerlinshi/">Instagram <Arrow /></a><a href="/project-guide/">Project guide</a><a href="/privacy/">Privacy</a></nav><span className={styles.copyright}>© 2026 Linshi Studio</span><a className={styles.backTop} href="#top">Back to top ↑</a></footer>
+    <footer className={styles.footer}><a className={styles.footerBrand} href="#top">linshi<span>.</span></a><p>Independent by nature.<br />Considered by design.</p><nav aria-label="Footer navigation"><a href="#contact">Contact</a><a href="#working-with-linshi">How we work</a><a href="https://www.instagram.com/designerlinshi/">Instagram <Arrow /></a><a href="/project-guide/">Project guide</a><a href="/privacy/">Privacy</a></nav><span className={styles.copyright}>© 2026 Linshi Studio</span><a className={styles.backTop} href="#top">Back to top ↑</a></footer>
   </div>;
 }

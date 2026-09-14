@@ -8,13 +8,13 @@ export const metadata = {
   description:
     "Founder-led mobile website design for independent UK businesses. Request a £350 annual website and AI-search review, start with a £149 mobile sprint or commission a complete website.",
   alternates: {
-    canonical: "/",
+    canonical: "/work/",
   },
   openGraph: {
     title: "Linshi Studio | Turn mobile visits into clearer enquiries",
     description:
       "A founder-led studio fixing the point where a mobile visitor gets stuck.",
-    url: "/",
+    url: "/work/",
     siteName: "Linshi Studio",
     type: "website",
     images: [
@@ -250,6 +250,7 @@ const structuredData = {
   description:
     "Mobile-first website design for independent restaurants, salons, local trades, dental practices and boutique stays in the UK.",
   email: emailAddress,
+  founder: { "@type": "Person", name: "Shi Lin" },
   sameAs: [instagramUrl],
   contactPoint: {
     "@type": "ContactPoint",
@@ -287,7 +288,7 @@ export default function WorkPage() {
     <main className={styles.site}>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
 
       <a className={styles.skipLink} href="#content">

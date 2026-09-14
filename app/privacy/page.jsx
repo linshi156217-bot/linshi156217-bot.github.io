@@ -29,7 +29,7 @@ export default function PrivacyPage() {
       </section>
 
       <div className={styles.content}>
-        <p className={styles.notice}>Last updated: 17 August 2026. Linshi Studio is an independent web studio serving businesses in the United Kingdom.</p>
+        <p className={styles.notice}>Last updated: 14 September 2026. Linshi Studio is an independent web studio operated by Shi Lin from China as an individual service provider. It serves businesses remotely, including businesses in the United Kingdom.</p>
 
         <section className={styles.section}>
           <h2>Information we receive</h2>
