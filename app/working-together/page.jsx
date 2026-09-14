@@ -57,6 +57,14 @@ export default function WorkingTogetherPage() {
         </section>
 
         <section className={styles.section}>
+          <h2>A recent paid website-review engagement</h2>
+          <p>Linshi Studio has undertaken a paid engagement for an independent UK service business. The work was agreed in writing before payment and focused on reviewing key website pages and the customer journey.</p>
+          <p>The client receives a concise, prioritised list of practical recommendations and keeps full control over whether and how to make changes.</p>
+          <p>To protect client privacy, we do not publish the client&apos;s name, website, correspondence or project materials without written permission.</p>
+          <p>Every paid project uses a written scope, delivery checklist and handover process. Agreed-scope delivery faults reported within 7 calendar days are corrected without an additional fee.</p>
+        </section>
+
+        <section className={styles.section}>
           <h2>Before paying, ask for these documents</h2>
           <ul>
             <li>The written scope, inclusions, exclusions and delivery checklist.</li>
