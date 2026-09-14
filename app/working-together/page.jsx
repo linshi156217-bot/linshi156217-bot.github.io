@@ -2,16 +2,63 @@ import styles from "../legal.module.css";
 
 export const metadata = {
   title: "Project safeguards and working terms",
-  description: "How Linshi Studio agrees scope, payment, handover and remedy for website projects.",
+  description: "How Linshi Studio handles written scope, payment, client-controlled accounts, handover, backups, 7-day remedy and proportionate refunds for website projects.",
   alternates: { canonical: "/working-together/" },
 };
 
 const email = "hello@linshistudio.com";
 const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Who provides Linshi Studio services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Linshi Studio is operated by Shi Lin from China as an individual service provider, not presented as a UK-registered company. Before payment, the written agreement identifies the contracting correspondence details, project-notice route and governing-law and dispute position agreed for that project.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who controls the domain, hosting and accounts?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Where the relevant service allows it, the client keeps control of the domain, hosting, essential third-party accounts and billing control. The handover checklist records agreed source-file and asset locations, account roles and transfer or access-removal steps.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How are backups and project handover handled?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "For agreed live changes, a restorable backup is made before the change where the platform permits and this is within the written scope. The handover checklist records the available backup or rollback route, live address, agreed materials, account access and any remaining actions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What happens if agreed work cannot be delivered?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Reported faults in agreed delivered scope are reviewed for seven calendar days after handover. If an agreed part remains undelivered and cannot be reasonably remedied, the written agreement provides for a proportionate refund of the payment allocated to that undelivered part.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Has Linshi Studio undertaken paid website-review work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Linshi Studio states that it has undertaken a paid website-review engagement for an independent UK service business. The work was agreed in writing before payment and focused on key website pages and the customer journey. Client identity and materials are not published without written permission.",
+      },
+    },
+  ],
+};
 
 export default function WorkingTogetherPage() {
   return (
     <main className={styles.page}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
       <header className={styles.header}>
         <a className={styles.brand} href="/"><span className={styles.mark}>L.</span>Linshi Studio</a>
         <a className={styles.back} href="/">Back to studio</a>
@@ -32,12 +79,21 @@ export default function WorkingTogetherPage() {
           <h2>Before you pay</h2>
           <p>Before any payment is requested, you receive a written scope that identifies the provider, agreed pages, features, exclusions, price, timeline, delivery route and payment milestones. You can ask questions or decline before accepting the scope.</p>
           <p>For standard website projects, the PayPal request is sent only after the written scope and fixed price are accepted. It identifies Shi Lin trading as Linshi Studio, the agreed service, amount and due date.</p>
+          <p>Your written agreement also records the contracting correspondence details, the agreed route for project notices and the process for raising a concern. It states the governing-law and dispute position agreed for that specific project before payment; this public page does not replace that agreement.</p>
         </section>
 
         <section className={styles.section}>
           <h2>What you receive</h2>
           <p>Your project agreement lists the agreed deliverables, including pages, included revision rounds, handover materials and any agreed account access. It also identifies what is outside scope or needs a separate quotation.</p>
-          <p>Where the relevant service allows it, your domain and essential third-party accounts remain in your name or are transferred to you at handover. You should not send your main password by ordinary email; separate administrator access is preferred.</p>
+          <p>Where the relevant service allows it, your domain, hosting, essential third-party accounts and their billing control remain in your name or are transferred to you at handover. You should not send your main password by ordinary email; separate administrator access is preferred.</p>
+          <p>At handover, the checklist records the live address, agreed source files and asset locations, account roles, transfer or revocation steps, and any known remaining actions. Third-party licences and platform features remain subject to their own terms.</p>
+        </section>
+
+        <section className={styles.section}>
+          <h2>Access, backups and continuity</h2>
+          <p>Access is requested only after scope acceptance, only for the agreed work and only through a client-controlled account or approved access method. Live-site changes require your written instruction. You can remove access when the agreed work is complete.</p>
+          <p>For agreed live changes, a restorable backup is made before the change where the platform permits and this is within the written scope. The handover checklist records the backup or rollback route where one is available; it does not turn a third-party host&apos;s own backup service into a Linshi Studio guarantee.</p>
+          <p>If the project ends early, the written agreement records what has been completed, what remains, the current project materials that can be handed over, and any proportionate-refund position for genuinely undelivered agreed work.</p>
         </section>
 
         <section className={styles.section}>
@@ -48,6 +104,8 @@ export default function WorkingTogetherPage() {
           <p>The 7-day remedy period is not an automatic ongoing-maintenance plan. If a problem is reported later, we first identify whether it is a new request, a third-party or hosting change, or a fault in the agreed scope. Any work outside the remedy period is separately scoped, priced and agreed in writing before it begins.</p>
           <h3>Unable to deliver an agreed part</h3>
           <p>If Linshi Studio cannot deliver an agreed part of the written scope, the project agreement provides for a proportionate refund of the payment allocated to that undelivered part. Any cancellation, refund and handover position is confirmed in writing for the specific project.</p>
+          <h3>How to raise a concern</h3>
+          <p>Send the concern and relevant evidence to <a href={`mailto:${email}?subject=Project%20concern`}>{email}</a>. We compare it with the written scope and delivery checklist, explain whether it is an agreed-scope fault, a new request or a third-party change, and confirm the next step in writing. This process does not remove any rights available through the agreed contract or PayPal&apos;s own procedures.</p>
         </section>
 
         <section className={styles.section}>
