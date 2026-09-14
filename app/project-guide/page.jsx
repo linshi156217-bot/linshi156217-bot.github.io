@@ -37,6 +37,12 @@ export default function ProjectGuidePage() {
       <div className={styles.content}>
         <p className={styles.notice}>Prices are one-off build fees. Domain renewals and optional third-party services remain the client&apos;s responsibility and are agreed before purchase.</p>
 
+        <section className={styles.section}>
+          <h2>Who you are working with</h2>
+          <p>Linshi Studio is an independent web studio operated by Shi Lin from China as an individual service provider. It is not presented as a UK-registered company.</p>
+          <p>Before payment, the written scope and payment request identify the provider as Shi Lin trading as Linshi Studio, the agreed service, price, payment milestones and delivery route. If the studio&apos;s legal structure changes in future, this page and new client documents will be updated before they are used.</p>
+        </section>
+
         <section className={styles.sprintPanel}>
           <div>
             <p className={styles.eyebrow}>Low-risk first project</p>
@@ -72,17 +78,17 @@ export default function ProjectGuidePage() {
         <section className={styles.section}>
           <h2>Payment and delivery</h2>
           <p>The £149 mobile enquiry sprint is paid in full after its written fixed scope is accepted. Standard website projects use the 50% deposit and 50% final-payment structure below.</p>
-          <p>Payments are requested by a formal PayPal invoice in GBP after the written scope and fixed price have been accepted. The invoice identifies Linshi Studio, the agreed service, the amount and the due date.</p>
+          <p>After the written scope and fixed price are accepted, payment is requested through PayPal in GBP. The PayPal payment request identifies Shi Lin trading as Linshi Studio, the agreed service, the amount and the due date.</p>
           <ol>
             <li>A written scope and fixed price are agreed first.</li>
-            <li>A PayPal invoice for the 50% booking deposit is issued to the client&apos;s confirmed billing email.</li>
+            <li>A PayPal payment request for the 50% booking deposit is issued to the client&apos;s confirmed billing email.</li>
             <li>The deposit confirms the booking; production starts after both the cleared deposit and required content are received.</li>
             <li>The client supplies approved text, images and business details.</li>
             <li>Two consolidated revision rounds are included.</li>
-            <li>A separate PayPal invoice for the remaining 50% is due after final approval and before live-domain launch or transfer.</li>
+            <li>A separate PayPal payment request for the remaining 50% is due after final approval and before live-domain launch or transfer.</li>
           </ol>
           <p>PayPal may offer payment by PayPal Wallet, debit card or credit card depending on the client&apos;s location and account eligibility. Any PayPal processing or currency-conversion information is shown by PayPal before payment.</p>
-          <p>No VAT is added unless a quotation and invoice display a valid VAT registration number. Cancellation and refund terms are confirmed in the written project agreement; they are not changed through chat messages.</p>
+          <p>Cancellation and refund terms are confirmed in the written project agreement; they are not changed through chat messages.</p>
           <p>Essential projects usually take 7–10 working days and Signature projects 10–15 working days after all approved content is received.</p>
           <p>The business keeps control of its domain and approved content. Handover notes are included, together with 30 days of support for defects in the delivered work.</p>
         </section>

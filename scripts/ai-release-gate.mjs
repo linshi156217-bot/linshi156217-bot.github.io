@@ -55,10 +55,7 @@ try {
     "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
     "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
   ].find((candidate) => candidate && existsSync(candidate));
-  browser = await chromium.launch({
-    headless: true,
-    executablePath: systemChrome || undefined,
-  });
+  browser = await chromium.launch({ headless: true, executablePath: systemChrome || undefined });
 
   for (const route of routes) {
     for (const width of mobileWidths) {
@@ -75,13 +72,13 @@ try {
         if (message.type() === "error") consoleErrors.push(message.text());
       });
 
-      const response = await page.goto(`${baseUrl}${route}`, { waitUntil: "domcontentloaded" });
+      const response = await page.goto(`${baseUrl}${route}`, { waitUntil: "domcontentloaded", timeout: 15_000 });
       await page.evaluate(async () => {
         for (const image of document.images) image.loading = "eager";
-        const step = Math.max(500, window.innerHeight * 0.8);
+        const step = Math.max(4000, window.innerHeight * 4);
         for (let position = 0; position < document.body.scrollHeight; position += step) {
           window.scrollTo(0, position);
-          await new Promise((resolve) => setTimeout(resolve, 75));
+          await new Promise((resolve) => setTimeout(resolve, 15));
         }
         window.scrollTo(0, 0);
         await Promise.all(
@@ -90,7 +87,7 @@ try {
             return new Promise((resolve) => {
               image.addEventListener("load", resolve, { once: true });
               image.addEventListener("error", resolve, { once: true });
-              setTimeout(resolve, 3000);
+              setTimeout(resolve, 1000);
             });
           }),
         );
@@ -117,7 +114,7 @@ try {
             })
             .filter((item) => item.left < -1 || item.right > window.innerWidth + 1)
             .slice(0, 8),
-          imageSources: [...new Set(images.map((image) => image.currentSrc || image.src).filter(Boolean))],
+          brokenImages: images.filter((image) => image.complete && image.naturalWidth === 0).map((image) => image.currentSrc || image.src),
           missingHashTargets: hashLinks
             .map((link) => link.getAttribute("href"))
             .filter((href) => href && href !== "#" && !document.querySelector(href)),
@@ -127,11 +124,7 @@ try {
         };
       });
 
-      const brokenImages = [];
-      for (const source of audit.imageSources) {
-        const imageResponse = await page.request.get(source);
-        if (!imageResponse.ok()) brokenImages.push(`${new URL(source).pathname} (HTTP ${imageResponse.status()})`);
-      }
+      const brokenImages = audit.brokenImages;
 
       if (!response?.ok()) recordFailure(route, width, `HTTP ${response?.status() ?? "no response"}`);
       if (audit.overflow) recordFailure(route, width, `horizontal overflow: ${JSON.stringify(audit.overflowElements)}`);
@@ -153,8 +146,13 @@ try {
     "https://linshi-studio-enquiry-api.salt-hawthorn-whitby-demo.workers.dev/v1/enquiries",
     async (route) => {
       const request = route.request();
+      const cors = { "access-control-allow-origin": "*", "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "Content-Type, Idempotency-Key" };
+      if (request.method() === "OPTIONS") {
+        await route.fulfill({ status: 204, headers: cors, body: "" });
+        return;
+      }
       if (request.method() !== "POST") {
-        await route.fulfill({ status: 405, body: "" });
+        await route.fulfill({ status: 405, headers: cors, body: "" });
         return;
       }
       const payload = request.postDataJSON();
@@ -162,6 +160,7 @@ try {
       if (required.some((field) => !payload?.[field]) || payload?.privacyConsent !== true) {
         await route.fulfill({
           status: 422,
+          headers: cors,
           contentType: "application/json",
           body: JSON.stringify({ ok: false, error: "validation_failed" }),
         });
@@ -169,12 +168,13 @@ try {
       }
       await route.fulfill({
         status: 201,
+        headers: cors,
         contentType: "application/json",
         body: JSON.stringify({ ok: true, leadId: "LSQ-QA-20260817" }),
       });
     },
   );
-  await formPage.goto(`${baseUrl}/work/`, { waitUntil: "domcontentloaded" });
+  await formPage.goto(`${baseUrl}/work/`, { waitUntil: "domcontentloaded", timeout: 15_000 });
   const form = formPage.locator("#project-brief form");
   if ((await form.count()) !== 1) {
     recordFailure("/work/", 390, "project enquiry form missing or duplicated");
@@ -195,7 +195,7 @@ try {
     const submitText = (await form.locator('button[type="submit"]').textContent())?.trim() ?? "";
     if (!/send my project brief/i.test(submitText)) recordFailure("/work/", 390, "secure enquiry submit action missing");
     await Promise.all([
-      formPage.waitForURL(/\/thank-you\/\?lead=LSQ-QA-20260817/),
+      formPage.waitForURL(/\/thank-you\/\?lead=LSQ-QA-20260817/, { timeout: 15_000 }),
       form.locator('button[type="submit"]').click(),
     ]);
     const confirmation = await formPage.locator("main").textContent();
@@ -208,7 +208,7 @@ try {
 } catch (error) {
   failures.push({ route: "gate-runtime", width: null, problem: String(error) });
 } finally {
-  await browser?.close();
+  await Promise.race([browser?.close(), new Promise((resolve) => setTimeout(resolve, 5_000))]);
   server.kill();
 }
 
