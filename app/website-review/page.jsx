@@ -63,7 +63,7 @@ export default function WebsiteReviewPage() {
           <strong>£350</strong>
           <p>GBP · one-off quarterly check</p>
           <ul>
-            <li>Main website and priority pages</li>
+            <li>Homepage + up to 2 agreed priority pages</li>
             <li>Mobile customer journey</li>
             <li>AI-search discoverability signals</li>
             <li>Prioritised written action list</li>
@@ -117,7 +117,7 @@ export default function WebsiteReviewPage() {
           <p className={styles.eyebrow}>Included</p>
           <h2>Review and recommendations.</h2>
           <ul>
-            <li>One quarterly review of the agreed public website</li>
+            <li>One quarterly review: homepage + up to 2 agreed priority pages</li>
             <li>Main mobile journey and priority navigation</li>
             <li>Obvious usability, wording and trust issues</li>
             <li>OAI-SearchBot access and AI-search clarity</li>
