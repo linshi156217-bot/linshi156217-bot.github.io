@@ -52,6 +52,13 @@
 .process article > span { color: #214fe6; font-size: .62rem; font-weight: 900; }
 .process h3 { margin: auto 0 0; font-size: 1.35rem; text-transform: uppercase; }
 .process article p { margin: 13px 0 0; color: #5d5f66; font-size: .7rem; line-height: 1.6; }
+.assurance { padding: 90px 18px; background: #f7f5ef; }
+.assurance h2 { margin: 24px 0 0; font-size: clamp(3rem, 12vw, 7rem); font-weight: 900; letter-spacing: -.08em; line-height: .84; text-transform: uppercase; }
+.assurance h2 em { color: #214fe6; font-family: "Iowan Old Style", Georgia, serif; font-weight: 400; text-transform: none; }
+.assurance > div { margin-top: 42px; display: grid; gap: 1px; border: 1px solid rgba(10,11,14,.2); background: rgba(10,11,14,.2); }
+.assurance article { padding: 25px 22px; background: #f7f5ef; }
+.assurance h3 { margin: 0; font-size: 1rem; text-transform: uppercase; }
+.assurance article p { margin: 14px 0 0; max-width: 510px; color: #5d5f66; font-size: .73rem; line-height: 1.7; }
 .finalCta { padding: 95px 18px; background: #0a0b0e; color: #fff; }
 .finalCta > p { margin: 0; color: #89a3ff; font-size: .56rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
 .finalCta h2 { font-size: clamp(3rem, 13vw, 7.4rem); }
@@ -69,8 +76,9 @@
   .deliverable { grid-template-columns: 1fr 1fr; align-items: center; }
   .boundaries { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .boundaries > div { padding: 85px 36px; }
-  .process, .finalCta { padding: 120px 36px; }
+  .process, .assurance, .finalCta { padding: 120px 36px; }
   .process > div { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .assurance > div { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .finalCta > a { grid-template-columns: 1fr auto; align-items: center; }
   .footer { padding: 38px 36px; }
 }
