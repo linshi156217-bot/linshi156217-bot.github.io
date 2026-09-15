@@ -144,6 +144,15 @@ export default function WebsiteReviewPage() {
         </div>
       </section>
 
+      <section className={styles.process} aria-labelledby="guides-title">
+        <p className={styles.eyebrow}>Useful reading</p>
+        <div>
+          <article><span>01</span><h3 id="guides-title">Website handover</h3><p><a href="/website-handover-checklist/">A practical checklist for files, accounts, backups and restoration notes ↗</a></p></article>
+          <article><span>02</span><h3>AI-search clarity</h3><p><a href="/ai-search-visibility/">What a local website can control, and what it cannot promise ↗</a></p></article>
+          <article><span>03</span><h3>Review framework</h3><p><a href="/website-review-framework/">How evidence becomes a prioritised action list ↗</a></p></article>
+        </div>
+      </section>
+
       <section className={styles.finalCta}>
         <p>Already have a website?</p>
         <h2>Find the next useful change.</h2>
