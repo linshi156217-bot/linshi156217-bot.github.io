@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./studio-home.module.css";
 
 const brief = "/work/#project-brief";
+const linkedinUrl = "https://www.linkedin.com/in/%E6%96%BD-%E6%9E%97-950241437/";
 const projects = [
   { name: "Salt & Hawthorn", category: "Hospitality", description: "A little restaurant. A whole coastal world.", href: "/salt-and-hawthorn/", image: "/assets/hero-exterior.webp", alt: "Salt & Hawthorn concept restaurant on a warmly lit Whitby street", className: "restaurant" },
   { name: "Alder & Slate", category: "Homes & interiors", description: "Considered spaces, confidently presented.", href: "/alder-and-slate/", image: "/assets/alder-slate/kitchen.webp", alt: "Oak and stone kitchen from the Alder & Slate renovation concept", className: "homes" },
@@ -71,6 +72,6 @@ export default function StudioHome() {
         <a href="mailto:hello@linshistudio.com"><small>02 / Studio email</small><span>hello@linshistudio.com <Arrow /></span><p>For projects, ideas and introductions.</p></a>
       </div></section>
     </main>
-    <footer className={styles.footer}><a className={styles.footerBrand} href="#top">linshi<span>.</span></a><p>Independent by nature.<br />Considered by design.</p><nav aria-label="Footer navigation"><a href="#contact">Contact</a><a href="/working-together/">Project safeguards</a><a href="https://www.instagram.com/designerlinshi/">Instagram <Arrow /></a><a href="/project-guide/">Project guide</a><a href="/project-agreement/">Project agreement</a><a href="/provider-terms/">Provider terms</a><a href="/privacy/">Privacy</a></nav><span className={styles.copyright}>© 2026 Linshi Studio</span><a className={styles.backTop} href="#top">Back to top ↑</a></footer>
+    <footer className={styles.footer}><a className={styles.footerBrand} href="#top">linshi<span>.</span></a><p>Independent by nature.<br />Considered by design.</p><nav aria-label="Footer navigation"><a href="#contact">Contact</a><a href="/working-together/">Project safeguards</a><a href="https://www.instagram.com/designerlinshi/">Instagram <Arrow /></a><a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn <Arrow /></a><a href="/project-guide/">Project guide</a><a href="/project-agreement/">Project agreement</a><a href="/provider-terms/">Provider terms</a><a href="/privacy/">Privacy</a></nav><span className={styles.copyright}>© 2026 Linshi Studio</span><a className={styles.backTop} href="#top">Back to top ↑</a></footer>
   </div>;
 }

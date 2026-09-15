@@ -1,6 +1,7 @@
 import StudioHome from "./studio-home/StudioHome";
 
 const instagramUrl = "https://www.instagram.com/designerlinshi/";
+const linkedinUrl = "https://www.linkedin.com/in/%E6%96%BD-%E6%9E%97-950241437/";
 const emailAddress = "hello@linshistudio.com";
 
 export const metadata = {
@@ -50,7 +51,7 @@ const structuredData = {
     "China-based independent web studio serving UK businesses remotely. Founder-led strategy, art direction and mobile-first website design; public portfolio work is clearly labelled as original concept work.",
   email: emailAddress,
   founder: { "@type": "Person", name: "Shi Lin" },
-  sameAs: [instagramUrl],
+  sameAs: [instagramUrl, linkedinUrl],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "project enquiries",
