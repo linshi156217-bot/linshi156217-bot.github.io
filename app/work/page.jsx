@@ -39,7 +39,7 @@ export const metadata = {
   },
 };
 
-const instagramUrl = "https://www.instagram.com/designerlinshi/";
+const instagramUrl = "https://www.instagram.com/linshistudio/";
 const linkedinUrl = "https://www.linkedin.com/in/%E6%96%BD-%E6%9E%97-950241437/";
 const emailAddress = "hello@linshistudio.com";
 const emailUrl =
@@ -239,7 +239,7 @@ const faqs = [
   {
     question: "What happens after launch?",
     answer:
-      "Every standard project includes 30 days of support for defects in the delivered work. Future content changes or new features can then be quoted clearly before any work begins.",
+      "Reported defects in the delivered work are reviewed for seven calendar days after handover. Future content changes or new features can then be quoted clearly before any work begins.",
   },
 ];
 
@@ -558,8 +558,8 @@ export default function WorkPage() {
             </article>
             <article>
               <span>04</span>
-              <h3>Defects are covered for 30 days</h3>
-              <p>Problems in the delivered work are corrected during the included post-launch support period.</p>
+              <h3>Seven-day remedy window</h3>
+              <p>Reported defects in the agreed delivered scope are reviewed for seven calendar days after handover. Confirmed delivery faults are corrected without an additional fee.</p>
             </article>
           </div>
         </section>
@@ -670,7 +670,7 @@ export default function WorkPage() {
                 <li>Image optimisation and technical checks</li>
                 <li>Secure HTTPS launch and domain connection</li>
                 <li>Two rounds of consolidated revisions</li>
-                <li>30 days of support for delivered-work defects</li>
+                <li>Seven calendar days to report agreed-scope delivery faults</li>
               </ul>
             </section>
             <section>
@@ -761,7 +761,7 @@ export default function WorkPage() {
             <div className={styles.socialLinks}>
               <a href={instagramUrl} target="_blank" rel="noreferrer">
                 <span>Instagram</span>
-                <strong>@designerlinshi</strong>
+                <strong>@linshistudio</strong>
                 <Arrow />
               </a>
             </div>

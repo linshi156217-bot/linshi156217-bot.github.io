@@ -138,13 +138,13 @@ export default function HomepageConceptV2() {
         <MotionFieldV2 className={styles.contactMotion} />
         <p className={styles.sectionLabel} data-reveal>05 / Start something distinctive</p>
         <h2 data-reveal>Your business already<br />has a story. <em>Let&apos;s make it visible.</em></h2>
-        <div className={styles.contactBottom} data-reveal><a href="mailto:hello@linshistudio.com?subject=New%20website%20project">Tell us about the project <Arrow /></a><p>hello@linshistudio.com<br />Instagram · @designerlinshi</p></div>
+        <div className={styles.contactBottom} data-reveal><a href="mailto:hello@linshistudio.com?subject=New%20website%20project">Tell us about the project <Arrow /></a><p>hello@linshistudio.com<br />Instagram · @linshistudio</p></div>
       </section>
 
       <footer>
         <span>Linshi Studio © 2026</span>
         <span className={styles.footerLinks}>
-          <a href="https://www.instagram.com/designerlinshi/">Instagram</a>
+          <a href="https://www.instagram.com/linshistudio/">Instagram</a>
           <a href="/privacy/">Privacy</a>
         </span>
         <a href="#top">Back to top ↑</a>

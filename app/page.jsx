@@ -1,6 +1,6 @@
 import StudioHome from "./studio-home/StudioHome";
 
-const instagramUrl = "https://www.instagram.com/designerlinshi/";
+const instagramUrl = "https://www.instagram.com/linshistudio/";
 const linkedinUrl = "https://www.linkedin.com/in/%E6%96%BD-%E6%9E%97-950241437/";
 const emailAddress = "hello@linshistudio.com";
 
