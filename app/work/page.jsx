@@ -154,7 +154,7 @@ const packages = [
     note: "Website, mobile journey and AI-search clarity",
     href: "/website-review/",
     features: [
-      "Main website and priority pages",
+      "Homepage + up to 2 agreed priority pages",
       "Mobile customer journey review",
       "Navigation, wording and trust signals",
       "OAI-SearchBot access and AI-search clarity",

@@ -77,7 +77,7 @@ export default function WebsiteReviewFrameworkPage() {
 
         <section className={styles.section}>
           <h2>How Linshi Studio applies it</h2>
-          <p>The <a href="/website-review/">£350 quarterly website and AI-search review</a> uses this framework for the agreed public website and priority pages. The deliverable is a prioritised written action list. Live implementation, ongoing monitoring and any commercial outcome are outside that review unless separately agreed.</p>
+          <p>The <a href="/website-review/">£350 quarterly website and AI-search review</a> uses this framework for the homepage and up to two agreed priority pages of a public website. The deliverable is a prioritised written action list. Live implementation, ongoing monitoring and any commercial outcome are outside that review unless separately agreed.</p>
         </section>
 
         <a className={styles.cta} href="/website-review/"><span><small>Review scope</small><strong>See what the quarterly review includes</strong></span><b aria-hidden="true">↗</b></a>

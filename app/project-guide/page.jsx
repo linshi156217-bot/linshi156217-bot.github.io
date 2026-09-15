@@ -124,11 +124,11 @@ export default function ProjectGuidePage() {
              <p className={styles.eyebrow}>One-off quarterly check</p>
             <h2>Website &amp; AI-search review</h2>
             <strong>£350</strong>
-            <p>A fixed-scope review of an agreed public website, its mobile customer journey and AI-search clarity.</p>
+            <p>A fixed-scope review of an agreed public website: its homepage, up to two agreed priority pages, mobile customer journey and AI-search clarity.</p>
           </div>
           <div>
             <ul>
-              <li>Main website and priority pages</li>
+              <li>Homepage + up to 2 agreed priority pages</li>
               <li>Mobile journey, wording and trust signals</li>
               <li>Indexing basics and relevant crawler access</li>
               <li>A concise prioritised action list</li>
