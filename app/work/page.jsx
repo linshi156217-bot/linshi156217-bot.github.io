@@ -40,6 +40,7 @@ export const metadata = {
 };
 
 const instagramUrl = "https://www.instagram.com/designerlinshi/";
+const linkedinUrl = "https://www.linkedin.com/in/%E6%96%BD-%E6%9E%97-950241437/";
 const emailAddress = "hello@linshistudio.com";
 const emailUrl =
   "mailto:hello@linshistudio.com?subject=Website%20project%20enquiry";
@@ -251,7 +252,7 @@ const structuredData = {
     "Mobile-first website design for independent restaurants, salons, local trades, dental practices and boutique stays in the UK.",
   email: emailAddress,
   founder: { "@type": "Person", name: "Shi Lin" },
-  sameAs: [instagramUrl],
+  sameAs: [instagramUrl, linkedinUrl],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "project enquiries",
@@ -825,6 +826,9 @@ export default function WorkPage() {
           <a href="/provider-terms/">Provider terms</a>
           <a href={instagramUrl} target="_blank" rel="noreferrer">
             Instagram <Arrow />
+          </a>
+          <a href={linkedinUrl} target="_blank" rel="noreferrer">
+            LinkedIn <Arrow />
           </a>
           <a href={whatsappUrl} target="_blank" rel="noreferrer">
             WhatsApp <Arrow />
