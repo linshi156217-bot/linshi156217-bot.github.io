@@ -67,6 +67,7 @@ export default function WebsiteReviewPage() {
             <li>Mobile customer journey</li>
             <li>AI-search discoverability signals</li>
             <li>Prioritised written action list</li>
+            <li>Delivery date agreed in writing before payment</li>
           </ul>
           <a href="/work/#project-brief">Ask if your site fits ↗</a>
         </aside>
@@ -141,6 +142,16 @@ export default function WebsiteReviewPage() {
           <article><span>01</span><h3>Fit check</h3><p>Send the current website, business name and the main action customers should take.</p></article>
           <article><span>02</span><h3>Written confirmation</h3><p>We confirm the reviewed pages, scope, price and expected delivery date before payment.</p></article>
           <article><span>03</span><h3>Review and handover</h3><p>You receive the report and a short email explaining the first three actions worth considering.</p></article>
+        </div>
+      </section>
+
+      <section className={styles.assurance} aria-labelledby="assurance-title">
+        <p className={styles.eyebrow}>Before you commit</p>
+        <h2 id="assurance-title">Clear scope.<br /><em>Clear next step.</em></h2>
+        <div>
+          <article><h3>Written first</h3><p>The pages reviewed, fixed £350 price and delivery date are confirmed in writing before payment. This is one review, not an automatically renewing subscription.</p></article>
+          <article><h3>Payment and delivery</h3><p>The review is paid in full after that written scope is accepted. You receive the agreed prioritised report and a short handover email; implementation is optional and quoted separately.</p></article>
+          <article><h3>If the agreed scope cannot be delivered</h3><p>Any uncompleted part of the agreed scope is refunded. The review does not promise rankings, AI citations, leads or sales outcomes.</p></article>
         </div>
       </section>
 
