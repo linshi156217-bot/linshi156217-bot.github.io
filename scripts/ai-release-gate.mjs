@@ -11,6 +11,7 @@ const routes = [
   "/",
   "/work/",
   "/website-review/",
+  "/mobile-enquiry-check/",
   "/thank-you/?lead=LSQ-QA-20260817&source=release_gate",
   "/project-guide/",
   "/working-together/",

@@ -10,7 +10,7 @@ export const metadata = {
     template: "%s | Linshi Studio",
   },
   description:
-    "Founder-led mobile website design for independent UK businesses. Request a £350 quarterly website and AI-search review, start with a £149 mobile sprint or commission a complete website.",
+    "Founder-led mobile website design for independent UK businesses. Start with a £79 mobile enquiry check, request a £350 quarterly website and AI-search review, or commission a complete website.",
   applicationName: "Linshi Studio",
   openGraph: {
     siteName: "Linshi Studio",

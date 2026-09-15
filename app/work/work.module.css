@@ -325,6 +325,13 @@
   text-transform: uppercase;
 }
 
+.signal > div a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
 .work {
   background: var(--ivory);
   color: var(--black);

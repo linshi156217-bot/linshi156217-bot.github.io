@@ -6,7 +6,7 @@ export const metadata = {
   metadataBase: new URL("https://linshistudio.com"),
   title: "Mobile enquiry journeys for UK businesses",
   description:
-    "Founder-led mobile website design for independent UK businesses. Request a £350 quarterly website and AI-search review, start with a £149 mobile sprint or commission a complete website.",
+    "Founder-led mobile website design for independent UK businesses. Start with a £79 mobile enquiry check, request a £350 quarterly website and AI-search review, or commission a complete website.",
   alternates: {
     canonical: "/work/",
   },
@@ -28,9 +28,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Linshi Studio | Mobile enquiry journeys",
-    description:
-      "Start with one fixed-scope mobile enquiry sprint or commission a complete website.",
+  title: "Linshi Studio | Mobile enquiry journeys",
+  description:
+      "Start with a fixed-scope £79 mobile enquiry check, then choose the right level of implementation.",
     images: ["/assets/studio-v2/hero-campaign-v2.webp"],
   },
   robots: {
@@ -147,6 +147,14 @@ const starterOffer = {
   ],
 };
 
+const checkOffer = {
+  name: "24-hour mobile enquiry check",
+  price: "£79",
+  href: "/mobile-enquiry-check/",
+  copy:
+    "A concise, evidence-led review of a public website's homepage, contact route and one main booking or enquiry path.",
+};
+
 const packages = [
   {
     name: "Quarterly review",
@@ -207,6 +215,11 @@ const faqs = [
       "Mobile, tablet and desktop design, approved content formatting, image optimisation, basic technical SEO, secure launch, domain connection and two revision rounds are included in every standard package.",
   },
   {
+    question: "What is the £79 mobile enquiry check?",
+    answer:
+      "It is a fixed-scope 24-hour written check of one public website: homepage, contact route and one agreed booking or enquiry path. You receive three evidence-led priorities. It does not include live changes, a redesign, login testing, form submission or any promise of commercial results.",
+  },
+  {
     question: "What is the £149 mobile enquiry sprint?",
     answer:
       "It is a fixed-scope first project: one verified mobile problem, one redesigned priority screen or section, a private before-and-after preview and a written recommendation. It is not a complete website. If an Essential or larger website is booked within 30 days, the full £149 is credited against that project.",
@@ -259,7 +272,7 @@ const structuredData = {
     email: emailAddress,
     availableLanguage: ["English"],
   },
-  priceRange: "£149-£1,350+",
+  priceRange: "£79-£1,350+",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
@@ -369,7 +382,7 @@ export default function WorkPage() {
           </p>
           <div>
             <span>Quarterly website + AI-search review · £350</span>
-            <span>Start with one problem · £149</span>
+            <a href={checkOffer.href}>Start with a 24-hour mobile check · £79</a>
             <span>Complete websites from £650</span>
             <span>Concept work clearly labelled</span>
           </div>
@@ -726,8 +739,8 @@ export default function WorkPage() {
               <em>One honest first look.</em>
             </h2>
             <p>
-              Choose the £350 quarterly review, the £149 sprint or a complete
-              website. No account or sales call is required; the brief is saved
+              Choose the £79 mobile enquiry check, £149 sprint, £350 quarterly
+              review or a complete website. No account or sales call is required; the brief is saved
               securely and given a reference number.
             </p>
           </div>
