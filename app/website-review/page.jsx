@@ -70,6 +70,7 @@ export default function WebsiteReviewPage() {
             <li>Delivery date agreed in writing before payment</li>
           </ul>
           <a href="/work/#project-brief">Ask if your site fits ↗</a>
+          <a className={styles.sampleCta} href="/downloads/linshi-studio-sample-website-ai-search-review.pdf" target="_blank" rel="noreferrer">See the fictional sample report ↗</a>
         </aside>
       </section>
 

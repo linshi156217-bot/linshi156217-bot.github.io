@@ -16,6 +16,7 @@
 .priceCard li, .boundaries li { padding: 12px 0 12px 21px; position: relative; border-top: 1px solid rgba(255,255,255,.14); color: rgba(255,255,255,.66); font-size: .67rem; line-height: 1.5; }
 .priceCard li::before, .boundaries li::before { content: "↗"; position: absolute; left: 0; color: #89a3ff; }
 .priceCard > a { min-height: 55px; margin-top: 28px; padding: 0 17px; display: flex; align-items: center; background: #315dff; color: #fff; font-size: .59rem; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
+.priceCard > .sampleCta { min-height: auto; margin-top: 15px; padding: 0; display: inline-flex; background: transparent; color: #b8c6ff; font-size: .54rem; text-decoration: underline; text-underline-offset: 4px; }
 .fit { padding: 90px 18px; display: grid; gap: 35px; }
 .fit h2 { margin-top: 0; font-size: clamp(3rem, 12vw, 7rem); }
 .fit h2 em, .deliverable h2 em { color: #214fe6; }
