@@ -44,7 +44,7 @@ const linkedinUrl = "https://www.linkedin.com/in/%E6%96%BD-%E6%9E%97-950241437/"
 const emailAddress = "hello@linshistudio.com";
 const emailUrl =
   "mailto:hello@linshistudio.com?subject=Website%20project%20enquiry";
-const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
+const whatsappUrl = "https://wa.me/8618559108509";
 
 const projects = [
   {
