@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 const email = "hello@linshistudio.com";
-const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
+const whatsappUrl = "https://wa.me/8618559108509";
 
 export default function PrivacyPage() {
   return (
