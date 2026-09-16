@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 const email = "hello@linshistudio.com";
-const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
+const whatsappUrl = "https://wa.me/8618559108509";
 const reviewUrl = "/website-review/";
 const checkUrl = "/mobile-enquiry-check/";
 const startUrl = `mailto:${email}?subject=Website%20project%20enquiry&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AMain%20services%3A%0AIdeal%20launch%20date%3A`;
