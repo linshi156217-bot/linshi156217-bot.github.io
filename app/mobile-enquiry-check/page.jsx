@@ -4,12 +4,12 @@ const email = "hello@linshistudio.com";
 const requestUrl = `mailto:${email}?subject=%C2%A379%20mobile%20enquiry%20check&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20URL%3A%0AMain%20action%20you%20want%20a%20mobile%20visitor%20to%20take%3A`;
 
 export const metadata = {
-  title: "£79 mobile enquiry check in 24 hours",
+  title: "£79 mobile enquiry check",
   description:
-    "A fixed-scope 24-hour review of a public service-business website: homepage, contact route and one main booking or enquiry path, with three prioritised findings.",
+    "A fixed-scope review of a public service-business website: homepage, contact route and one main booking or enquiry path, with three prioritised findings.",
   alternates: { canonical: "/mobile-enquiry-check/" },
   openGraph: {
-    title: "£79 mobile enquiry check in 24 hours | Linshi Studio",
+    title: "£79 mobile enquiry check | Linshi Studio",
     description:
       "Three evidence-led priorities for a service-business website's homepage, contact route and main enquiry path.",
     url: "/mobile-enquiry-check/",
@@ -20,7 +20,7 @@ export const metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "24-hour mobile enquiry check",
+  name: "Mobile enquiry check",
   provider: {
     "@type": "ProfessionalService",
     name: "Linshi Studio",
@@ -61,7 +61,7 @@ export default function MobileEnquiryCheckPage() {
 
         <section className={styles.sprintPanel} aria-labelledby="check-title">
           <div>
-            <p className={styles.eyebrow}>24-hour mobile enquiry check</p>
+          <p className={styles.eyebrow}>Mobile enquiry check</p>
             <h2 id="check-title">Three priorities.<br />One clear next step.</h2>
             <strong>£79</strong>
             <p>GBP · fixed scope · one public website</p>
@@ -71,7 +71,7 @@ export default function MobileEnquiryCheckPage() {
               <li>Homepage, main contact route and one agreed booking or enquiry path</li>
               <li>Mobile layout, clarity and obvious trust friction</li>
               <li>Three evidence-led priorities in a concise written note</li>
-              <li>Delivery within 24 hours after the URL, main action and written scope are confirmed on a working day</li>
+              <li>Delivery within two working days after the URL, main action and written scope are confirmed</li>
               <li>Optional repair work is separately scoped and priced</li>
             </ul>
             <a href={requestUrl}>Request the £79 check ↗</a>
@@ -82,6 +82,7 @@ export default function MobileEnquiryCheckPage() {
           <h2>What you receive</h2>
           <p>A short, practical note—not a generic automated score. Each of the three findings states the page or path observed, what creates friction, why it can matter to an enquiry, and the next action worth considering.</p>
           <p>The check can identify a problem; it does not promise more leads, rankings, AI citations or sales.</p>
+          <p><a href="/downloads/linshi-mobile-enquiry-check-sample.pdf" target="_blank" rel="noreferrer">Open the fictional sample report ↗</a></p>
         </section>
 
         <section className={styles.section}>
@@ -98,14 +99,14 @@ export default function MobileEnquiryCheckPage() {
           <ul>
             <li>One public website; no logged-in areas, customer accounts or checkout testing.</li>
             <li>No form submission, no security penetration test and no access to private business systems.</li>
-            <li>No live changes are included. If you want a priority screen redesigned, see the <a href="/project-guide/">£149 mobile enquiry sprint</a>.</li>
+            <li>No live changes or redesign are included. Implementation is optional and separately scoped.</li>
             <li>Scope and delivery timing are confirmed in writing before a PayPal payment request is issued.</li>
           </ul>
         </section>
 
         <section className={styles.section}>
           <h2>What happens next</h2>
-          <p>If the check identifies a worthwhile repair, you can ask for a separate fixed quotation. You can also move to the £149 mobile enquiry sprint for one redesigned priority screen, or the £350 website and AI-search review for a broader prioritised assessment.</p>
+          <p>If the check identifies a worthwhile repair, you can ask for a separate fixed quotation. A small fix sprint is normally £250–£450; a focused landing page starts at £650; a small brochure site starts at £1,250. The £350 website and AI-search review is available for a broader prioritised assessment.</p>
         </section>
 
         <a className={styles.cta} href={requestUrl}>
