@@ -143,11 +143,11 @@ export default function ProjectGuidePage() {
           <div>
             <ul>
               <li>£499 Local AI Visibility Diagnostic, fully credited when the 90-day foundation begins</li>
-              <li>Up to three service or area pages, evidence-led FAQ and case-study framework</li>
-              <li>Business and service structured-data foundations plus core public-profile consistency</li>
-              <li>Monthly public-site checks, prioritised actions and delivery evidence</li>
+              <li>Up to three new service-or-area pages, 15 factual FAQs and one client-supplied case-study template</li>
+              <li>Appropriate structured-data foundations, Google Business Profile plus up to five named directories, and up to 10 approved factual updates</li>
+              <li>Monthly public-site and public-information checks plus the same 30-question AI-search baseline</li>
             </ul>
-            <p>This is not a promise of ChatGPT recommendations, citations, rankings, enquiries or revenue. It does not include a website rebuild, advertising, photography, paid directories, media placement or third-party subscriptions.</p>
+            <p>This is not a promise of ChatGPT recommendations, citations, rankings, enquiries or revenue. It does not include a website rebuild, unlimited changes, advertising, directory verification, photography, paid directories, media placement or third-party subscriptions. Client facts, case material and required account access are needed before implementation.</p>
             <a href={aiVisibilityUrl}>Read the 90-day scope and limits ↗</a>
           </div>
         </section>
@@ -156,7 +156,7 @@ export default function ProjectGuidePage() {
             <p className={styles.eyebrow}>90-day new website route</p>
             <h2>New Website + Visibility</h2>
             <strong>£3,997</strong>
-            <p>New or rebuilt website of up to five public pages plus the same 90-day website, local-search and AI-search foundation.</p>
+            <p>New or rebuilt website of up to five public pages plus the same 90-day website, local-search and AI-search foundation. Client-approved content, images, legal details and account access are required; two consolidated revision rounds are included.</p>
           </div>
           <div>
             <ul>

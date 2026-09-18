@@ -43,7 +43,7 @@ export default function AiVisibilityPage() {
       </section>
 
       <div className={styles.content}>
-        <p className={styles.notice}>We guarantee the agreed website, content, public-information, tracking and reporting work is completed to scope. We do not guarantee rankings, AI recommendations, citations, enquiries, sales or revenue.</p>
+        <p className={styles.notice}>We guarantee the agreed website, content, public-information, tracking and reporting work is completed to scope. This programme improves the factual, technical and evidence foundations that AI-assisted search systems may use. It does not purchase, control or guarantee inclusion in any AI answer, ranking, citation, enquiry, sale or revenue outcome.</p>
 
         <section className={styles.sprintPanel}>
           <div>
@@ -54,7 +54,7 @@ export default function AiVisibilityPage() {
           </div>
           <div>
             <ul>
-              <li>30 locally relevant customer questions</li>
+              <li>A fixed baseline of 30 locally relevant customer questions</li>
               <li>Five comparable competitors</li>
               <li>Website, map-profile, review and third-party evidence gaps</li>
               <li>A prioritised 90-day route with clear exclusions</li>
@@ -68,18 +68,19 @@ export default function AiVisibilityPage() {
           <p>Paid in three monthly payments of £999. For one business, one city and up to three core services. We repair and strengthen the existing public website rather than rebuild it from scratch.</p>
           <h3>Included in both 90-day routes</h3>
           <ul>
-            <li>Repair of agreed priority pages and enquiry paths: forms, links, mobile issues, calls, WhatsApp, booking or quote routes.</li>
+            <li>Repair of one agreed priority page or enquiry path: forms, links, mobile issues, calls, WhatsApp, booking or quote routes.</li>
             <li>Audit-led corrections to core public business facts, services, locations and contact information.</li>
-            <li>Up to three service or area pages, FAQ and real case-study framework using client-approved facts.</li>
-            <li>Business and service structured-data foundations, crawl-access and indexability checks.</li>
-            <li>Google Business Profile and relevant-directory consistency audit; updates only where client access is approved.</li>
-            <li>Review-request workflow, response templates, tracking plan and monthly public-site check with delivery evidence.</li>
+            <li>Up to three new public pages, each covering one agreed service or one agreed area topic; up to 15 FAQs based only on client-confirmed facts.</li>
+            <li>One case-study page template. Real case text, images, prices and permission to publish are supplied and approved by the client.</li>
+            <li>Organisation or LocalBusiness, Service and FAQPage structured data only where appropriate to the actual business, plus a validation record.</li>
+            <li>Google Business Profile plus up to five named public directories audited; with client-approved access, up to 10 factual consistency changes are completed.</li>
+            <li>Each month: one public-site and public-information check, the same 30-question baseline rechecked, and a record of publicly visible sampled mentions, citations or changes.</li>
           </ul>
         </section>
 
         <section className={styles.section}>
           <h2>New Website + Visibility — £3,997</h2>
-          <p>Paid in three instalments. This includes the same 90-day foundation plus a new or rebuilt website of up to five core public pages. Client-approved text, services, images, legal information and account access are required before build work begins.</p>
+          <p>Paid in three instalments. This includes the same 90-day foundation plus a new or rebuilt website of up to five core public pages. Client-approved text, services, images, legal information and account access are required before build work begins; two consolidated revision rounds are included.</p>
           <h3>Additional build deliverables</h3>
           <ul>
             <li>Mobile-first website design and build for up to five agreed public pages.</li>
@@ -92,9 +93,9 @@ export default function AiVisibilityPage() {
         <section className={styles.section}>
           <h2>What is not included</h2>
           <ul>
-          <li>Unlimited pages, additional cities or services, e-commerce, custom booking, CRM, payment or software development.</li>
-          <li>Advertising, paid directories, media placement, PR, photography or video production.</li>
-          <li>Third-party tools, subscriptions or platform fees.</li>
+          <li>Unlimited pages, additional cities or services, unlimited amendments, e-commerce, custom booking, CRM, payment or software development.</li>
+          <li>Advertising, paid directories, directory verification, media placement, PR, photography or video production.</li>
+          <li>Third-party tools, subscriptions, platform fees or changes where the client does not provide the required access.</li>
             <li>Invented case studies, reviews, citations, links or business facts.</li>
             <li>Any guarantee of a recommendation, citation, ranking, enquiry or revenue outcome.</li>
           </ul>
@@ -102,7 +103,7 @@ export default function AiVisibilityPage() {
 
         <section className={styles.section}>
           <h2>How the work is measured</h2>
-          <p>Each month records the agreed pages, public information checked, actions completed and unresolved dependencies. Search and AI systems can change independently of the work, so the contractual delivery is the agreed website and foundation work with evidence — not a placement in any system&apos;s answer.</p>
+          <p>Each month records the agreed pages, public information checked, the same question baseline, actions completed and unresolved dependencies. AI-assisted answers can differ by platform, date, location and account; the record observes publicly visible samples, not a controlled ranking. The contractual delivery is the agreed website and foundation work with evidence — not a placement in any system&apos;s answer.</p>
         </section>
 
         <a className={styles.cta} href={diagnosticUrl}>
