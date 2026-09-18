@@ -172,7 +172,7 @@ const packages = [
     linkLabel: "View diagnostic scope",
     lane: "entry",
     features: [
-      "30 locally relevant customer questions",
+      "30 fixed local customer questions as the baseline",
       "Five comparable competitors",
       "Public evidence and entity-clarity gaps",
       "Prioritised 90-day action route",
@@ -227,9 +227,9 @@ const packages = [
     lane: "growth",
     features: [
       "Repair of one agreed priority page or enquiry path",
-      "Up to three service or area pages, FAQ and case-study framework",
-      "Structured data and public-profile consistency foundations",
-      "Monthly public-site checks and delivery evidence",
+      "Up to three new service-or-area pages, 15 FAQs and one client-supplied case template",
+      "Appropriate structured data, five named directories and up to 10 approved factual updates",
+      "Monthly site checks plus the same 30-question baseline",
       "No guarantee of AI recommendations, rankings or enquiries",
     ],
   },
