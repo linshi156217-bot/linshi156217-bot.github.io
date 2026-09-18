@@ -17,6 +17,7 @@ const routes = [
   "/provider-terms/",
   "/project-agreement/",
   "/website-handover-checklist/",
+  "/ai-visibility/",
   "/ai-search-visibility/",
   "/website-review-framework/",
   "/privacy/",
@@ -127,6 +128,9 @@ try {
           unlabeledControls: controls
             .filter((control) => !control.closest("label") && !control.getAttribute("aria-label") && !control.getAttribute("aria-labelledby"))
             .map((control) => control.getAttribute("name") || control.tagName),
+          invalidWhatsAppLinks: [...document.querySelectorAll('a[href*="wa.me"]')]
+            .map((link) => link.getAttribute("href") || "")
+            .filter((href) => href.includes("wa.me/qr/") || !href.startsWith("https://wa.me/8618559108509")),
         };
       });
 
@@ -137,6 +141,7 @@ try {
       if (brokenImages.length) recordFailure(route, width, `broken images: ${brokenImages.join(", ")}`);
       if (audit.missingHashTargets.length) recordFailure(route, width, `missing hash targets: ${audit.missingHashTargets.join(", ")}`);
       if (audit.unlabeledControls.length) recordFailure(route, width, `unlabelled controls: ${audit.unlabeledControls.join(", ")}`);
+      if (audit.invalidWhatsAppLinks.length) recordFailure(route, width, `invalid WhatsApp links: ${audit.invalidWhatsAppLinks.join(", ")}`);
       if (consoleErrors.length) recordFailure(route, width, `console errors: ${consoleErrors.join(" | ")}`);
 
         if (route === "/website-review/") {

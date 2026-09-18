@@ -86,6 +86,87 @@ async function rateLimited(env, ipHash, since) {
   return Number(result?.total || 0) >= RATE_LIMIT_PER_HOUR;
 }
 
+function escapeHtml(value) {
+  return String(value || "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function notificationConfiguration(env) {
+  const required = [
+    "ZOHO_CLIENT_ID",
+    "ZOHO_CLIENT_SECRET",
+    "ZOHO_REFRESH_TOKEN",
+    "ZOHO_ACCOUNT_ID",
+    "ZOHO_NOTIFY_TO",
+  ];
+  return required.every((name) => clean(env[name], 500));
+}
+
+async function sendZohoNotification(enquiry, id, env) {
+  if (!notificationConfiguration(env)) {
+    return { state: "not_configured" };
+  }
+
+  const tokenBody = new URLSearchParams({
+    refresh_token: env.ZOHO_REFRESH_TOKEN,
+    grant_type: "refresh_token",
+    client_id: env.ZOHO_CLIENT_ID,
+    client_secret: env.ZOHO_CLIENT_SECRET,
+  });
+  const tokenResponse = await fetch("https://accounts.zoho.com/oauth/v2/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: tokenBody,
+  });
+  const tokenPayload = await tokenResponse.json().catch(() => ({}));
+  if (!tokenResponse.ok || !tokenPayload.access_token) {
+    throw new Error("zoho_token_refresh_failed");
+  }
+
+  const rows = [
+    ["Reference", id],
+    ["Business", enquiry.business],
+    ["Contact", enquiry.contactName],
+    ["Email", enquiry.email],
+    ["Project type", enquiry.projectType],
+    ["Town / service area", enquiry.town],
+    ["Website", enquiry.currentLink || "Not supplied"],
+    ["Goal", enquiry.goal || "Not supplied"],
+  ];
+  const content = "<h2>New Linshi Studio website enquiry</h2><table>" + rows
+    .map(([label, value]) => "<tr><th align=\"left\">" + escapeHtml(label) + "</th><td>" + escapeHtml(value) + "</td></tr>")
+    .join("") + "</table><p>This email is a notification. The D1 enquiry record is the source of truth.</p>";
+  const messageResponse = await fetch(
+    "https://mail.zoho.com/api/accounts/" + encodeURIComponent(env.ZOHO_ACCOUNT_ID) + "/messages",
+    {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: "Zoho-oauthtoken " + tokenPayload.access_token,
+      },
+      body: JSON.stringify({
+        fromAddress: clean(env.ZOHO_FROM_EMAIL, 254) || env.ZOHO_NOTIFY_TO,
+        toAddress: env.ZOHO_NOTIFY_TO,
+        subject: "[New website enquiry] " + id + " — " + enquiry.business,
+        content,
+        mailFormat: "html",
+      }),
+    },
+  );
+  const messagePayload = await messageResponse.json().catch(() => ({}));
+  const statusCode = Number(messagePayload?.status?.code || 0);
+  if (!messageResponse.ok || (statusCode && statusCode >= 300)) {
+    throw new Error("zoho_notification_send_failed");
+  }
+
+  return { state: "sent" };
+}
+
 async function handleEnquiry(request, env, origin) {
   const cors = corsHeaders(origin, env);
   if (!origin || !allowedOrigins(env).has(origin)) {
@@ -234,6 +315,23 @@ async function handleEnquiry(request, env, origin) {
         source: clean(attribution.source, 120) || "direct",
         campaign: clean(attribution.campaign, 160) || "website_enquiry",
       }),
+    )
+    .run();
+
+  let notification;
+  try {
+    notification = await sendZohoNotification(enquiry, id, env);
+  } catch {
+    notification = { state: "failed" };
+  }
+  await env.DB.prepare(
+    "INSERT INTO enquiry_events (enquiry_id, event_type, occurred_at, metadata) VALUES (?, ?, ?, ?)",
+  )
+    .bind(
+      id,
+      "notification_" + notification.state,
+      new Date().toISOString(),
+      JSON.stringify({ provider: "zoho_mail" }),
     )
     .run();
 

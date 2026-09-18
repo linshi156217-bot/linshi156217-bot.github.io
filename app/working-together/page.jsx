@@ -1,4 +1,5 @@
 import styles from "../legal.module.css";
+import { whatsappUrl } from "../contact-links";
 
 export const metadata = {
   title: "Project safeguards and working terms",
@@ -7,7 +8,6 @@ export const metadata = {
 };
 
 const email = "hello@linshistudio.com";
-const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "FAQPage",

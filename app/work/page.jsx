@@ -1,6 +1,7 @@
 import Image from "next/image";
 import EnquiryComposer from "./EnquiryComposer";
 import styles from "./work.module.css";
+import { whatsappUrl } from "../contact-links";
 
 export const metadata = {
   metadataBase: new URL("https://linshistudio.com"),
@@ -43,7 +44,6 @@ const instagramUrl = "https://www.instagram.com/linshistudio/";
 const emailAddress = "hello@linshistudio.com";
 const emailUrl =
   "mailto:hello@linshistudio.com?subject=Website%20project%20enquiry";
-const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
 
 const projects = [
   {
@@ -811,28 +811,11 @@ export default function WorkPage() {
               <span className={styles.liveDot} />
               <p>WhatsApp · Real contact</p>
             </div>
-            <a
-              className={styles.qrFrame}
-              href={whatsappUrl}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Open Linshi Studio in WhatsApp"
-            >
-              <span className={styles.qrCrop}>
-              <Image
-                src="/assets/studio-v3/whatsapp-contact-original.jpg"
-                alt="WhatsApp QR code for Linshi"
-                width={1279}
-                height={2774}
-              />
-              </span>
-            </a>
             <div className={styles.whatsappCopy}>
-              <span>Scan or tap</span>
+              <span>Direct message</span>
               <h3>Linshi on WhatsApp</h3>
               <p>
-                On the same phone, tap the button below. On another device,
-                scan the verified contact code.
+                Open the verified direct contact in WhatsApp. No QR scan is required.
               </p>
               <a
                 className={styles.whatsappButton}
