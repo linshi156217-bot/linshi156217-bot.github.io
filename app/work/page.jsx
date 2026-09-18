@@ -4,14 +4,14 @@ import styles from "./work.module.css";
 
 export const metadata = {
   metadataBase: new URL("https://linshistudio.com"),
-  title: "Mobile enquiry journeys for UK businesses",
+  title: "Linshi Studio | Website growth systems for UK businesses",
   description:
-    "Founder-led mobile website design for independent UK businesses. Start with a £79 mobile enquiry check, request a £350 quarterly website and AI-search review, or commission a complete website.",
+    "Founder-led mobile website design and bounded local AI-visibility foundations for independent UK businesses. Start with a £99 enquiry-path fix, a £499 diagnostic, or a fixed 90-day programme.",
   alternates: {
     canonical: "/work/",
   },
   openGraph: {
-    title: "Linshi Studio | Turn mobile visits into clearer enquiries",
+    title: "Linshi Studio | Websites built to turn visits into enquiries",
     description:
       "A founder-led studio fixing the point where a mobile visitor gets stuck.",
     url: "/work/",
@@ -28,9 +28,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-  title: "Linshi Studio | Mobile enquiry journeys",
-  description:
-      "Start with a fixed-scope £79 mobile enquiry check, then choose the right level of implementation.",
+    title: "Linshi Studio | Website growth systems",
+    description:
+      "Start with one £99 enquiry-path fix, a fixed 90-day programme or a complete website.",
     images: ["/assets/studio-v2/hero-campaign-v2.webp"],
   },
   robots: {
@@ -40,11 +40,10 @@ export const metadata = {
 };
 
 const instagramUrl = "https://www.instagram.com/linshistudio/";
-const linkedinUrl = "https://www.linkedin.com/in/%E6%96%BD-%E6%9E%97-950241437/";
 const emailAddress = "hello@linshistudio.com";
 const emailUrl =
   "mailto:hello@linshistudio.com?subject=Website%20project%20enquiry";
-const whatsappUrl = "https://wa.me/8618559108509";
+const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
 
 const projects = [
   {
@@ -133,36 +132,32 @@ const process = [
 ];
 
 const starterOffer = {
-  name: "Mobile enquiry sprint",
-  price: "£149",
-  timeline: "Private preview in 3 working days",
-  copy:
-    "A low-risk first project for a business that knows its mobile journey is losing clarity but is not ready to commission a complete rebuild.",
+  name: "Enquiry-path fix",
+  price: "£99",
+  note: "One confirmed fault · one working day",
+  href: "#project-brief",
+  linkLabel: "Ask about the £99 fix",
+  lane: "entry",
   features: [
-    "One verified mobile enquiry problem",
-    "One redesigned priority screen or section",
-    "Private before-and-after preview",
-    "A written implementation recommendation",
-    "The full £149 credited against an Essential or larger website booked within 30 days",
+    "One reproducible form, link, button, call, WhatsApp or booking-route fault",
+    "Problem confirmed before payment",
+    "One agreed repair on the existing public website",
+    "A written completion record or a clear third-party-access dependency",
+    "The full £99 credited against a 90-day programme booked within 30 days",
   ],
 };
 
-const checkOffer = {
-  name: "24-hour mobile enquiry check",
-  price: "£79",
-  href: "/mobile-enquiry-check/",
-  copy:
-    "A concise, evidence-led review of a public website's homepage, contact route and one main booking or enquiry path.",
-};
-
 const packages = [
+  starterOffer,
   {
     name: "Quarterly review",
     price: "£350",
     note: "Website, mobile journey and AI-search clarity",
     href: "/website-review/",
+    linkLabel: "View the full review scope",
+    lane: "entry",
     features: [
-      "Homepage + up to 2 agreed priority pages",
+      "Main website and priority pages",
       "Mobile customer journey review",
       "Navigation, wording and trust signals",
       "OAI-SearchBot access and AI-search clarity",
@@ -170,9 +165,25 @@ const packages = [
     ],
   },
   {
+    name: "Local AI Visibility Diagnostic",
+    price: "£499",
+    note: "One-off audit · fully credited against a 90-day programme",
+    href: "/ai-visibility/",
+    linkLabel: "View diagnostic scope",
+    lane: "entry",
+    features: [
+      "30 locally relevant customer questions",
+      "Five comparable competitors",
+      "Public evidence and entity-clarity gaps",
+      "Prioritised 90-day action route",
+      "No promise of a platform recommendation",
+    ],
+  },
+  {
     name: "Essential",
     price: "£650",
     note: "A focused one-page website",
+    lane: "website",
     features: [
       "Up to 6 considered content sections",
       "Services or menu highlights",
@@ -185,7 +196,7 @@ const packages = [
     name: "Signature",
     price: "£950",
     note: "A fuller multi-page brand experience",
-    featured: true,
+    lane: "website",
     features: [
       "Up to 5 pages or an equivalent long-form site",
       "Full menu, services or treatment presentation",
@@ -198,6 +209,7 @@ const packages = [
     name: "Bespoke",
     price: "From £1,350",
     note: "For additional pages or custom integrations",
+    lane: "website",
     features: [
       "Scope agreed before work begins",
       "Advanced content organisation",
@@ -205,6 +217,55 @@ const packages = [
       "Fixed written quotation",
       "Two consolidated revision rounds",
     ],
+  },
+  {
+    name: "Existing website + visibility",
+    price: "£2,997",
+    note: "Three £999 payments · one business, one city, three core services",
+    href: "/ai-visibility/",
+    linkLabel: "View the 90-day scope",
+    lane: "growth",
+    features: [
+      "Repair of one agreed priority page or enquiry path",
+      "Up to three service or area pages, FAQ and case-study framework",
+      "Structured data and public-profile consistency foundations",
+      "Monthly public-site checks and delivery evidence",
+      "No guarantee of AI recommendations, rankings or enquiries",
+    ],
+  },
+  {
+    name: "New website + visibility",
+    price: "£3,997",
+    note: "Fixed 90-day programme · new or rebuilt website up to five public pages",
+    href: "/ai-visibility/",
+    linkLabel: "View the 90-day scope",
+    lane: "growth",
+    featured: true,
+    features: [
+      "A new or rebuilt mobile-first website",
+      "The same local-search and AI-search foundations",
+      "Service, project-proof, location and enquiry-page structure",
+      "One business, one city and three core services",
+      "No guarantee of AI recommendations, rankings or enquiries",
+    ],
+  },
+];
+
+const pricingLanes = [
+  {
+    key: "entry",
+    label: "Start with one clear problem",
+    copy: "A quick repair, a practical review or evidence before a larger decision.",
+  },
+  {
+    key: "website",
+    label: "Build the website",
+    copy: "Fixed-scope website work for the public pages customers actually use.",
+  },
+  {
+    key: "growth",
+    label: "Website Growth System",
+    copy: "The 90-day website, local-search and AI-search foundation.",
   },
 ];
 
@@ -215,14 +276,9 @@ const faqs = [
       "Mobile, tablet and desktop design, approved content formatting, image optimisation, basic technical SEO, secure launch, domain connection and two revision rounds are included in every standard package.",
   },
   {
-    question: "What is the £79 mobile enquiry check?",
+    question: "What is the £99 enquiry-path fix?",
     answer:
-      "It is a fixed-scope 24-hour written check of one public website: homepage, contact route and one agreed booking or enquiry path. You receive three evidence-led priorities. It does not include live changes, a redesign, login testing, form submission or any promise of commercial results.",
-  },
-  {
-    question: "What is the £149 mobile enquiry sprint?",
-    answer:
-      "It is a fixed-scope first project: one verified mobile problem, one redesigned priority screen or section, a private before-and-after preview and a written recommendation. It is not a complete website. If an Essential or larger website is booked within 30 days, the full £149 is credited against that project.",
+      "It is a fixed-scope first project for one reproducible fault in a form, link, button, call, WhatsApp or booking path. The issue is confirmed before payment. The £99 is credited against a 90-day programme booked within 30 days. It is not a website redesign or a free audit.",
   },
   {
     question: "How does payment work?",
@@ -252,7 +308,7 @@ const faqs = [
   {
     question: "What happens after launch?",
     answer:
-      "Reported defects in the delivered work are reviewed for seven calendar days after handover. Future content changes or new features can then be quoted clearly before any work begins.",
+      "Every standard project includes 30 days of support for defects in the delivered work. Future content changes or new features can then be quoted clearly before any work begins.",
   },
 ];
 
@@ -265,14 +321,14 @@ const structuredData = {
     "Mobile-first website design for independent restaurants, salons, local trades, dental practices and boutique stays in the UK.",
   email: emailAddress,
   founder: { "@type": "Person", name: "Shi Lin" },
-  sameAs: [instagramUrl, linkedinUrl],
+  sameAs: [instagramUrl],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "project enquiries",
     email: emailAddress,
     availableLanguage: ["English"],
   },
-  priceRange: "£79-£1,350+",
+  priceRange: "£99-£3,997",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
@@ -316,7 +372,7 @@ export default function WorkPage() {
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
           <a href="/website-review/">Quarterly review</a>
-          <a href="#starter">Start small</a>
+          <a href="#project-brief">Start a project</a>
           <a href="#approach">Approach</a>
           <a href="#pricing">Pricing</a>
         </nav>
@@ -382,7 +438,7 @@ export default function WorkPage() {
           </p>
           <div>
             <span>Quarterly website + AI-search review · £350</span>
-            <a href={checkOffer.href}>Start with a 24-hour mobile check · £79</a>
+            <span>Fix one enquiry fault · £99</span>
             <span>Complete websites from £650</span>
             <span>Concept work clearly labelled</span>
           </div>
@@ -477,47 +533,9 @@ export default function WorkPage() {
           </div>
         </section>
 
-        <section
-          className={styles.starter}
-          id="starter"
-          aria-labelledby="starter-title"
-        >
-          <div className={styles.starterIntro}>
-            <p className={styles.sectionLabel}>03 · A smaller first decision</p>
-            <span className={styles.starterBadge}>Fixed-scope starter</span>
-            <h2 id="starter-title">
-              Fix one moment.
-              <br />
-              <em>Prove the value.</em>
-            </h2>
-            <p>{starterOffer.copy}</p>
-          </div>
-          <article className={styles.starterCard}>
-            <div className={styles.starterPriceRow}>
-              <div>
-                <span>{starterOffer.name}</span>
-                <strong>{starterOffer.price}</strong>
-              </div>
-              <p>{starterOffer.timeline}</p>
-            </div>
-            <ul>
-              {starterOffer.features.map((feature) => (
-                <li key={feature}>{feature}</li>
-              ))}
-            </ul>
-            <a href="#project-brief">
-              Ask about one mobile problem <Arrow />
-            </a>
-            <small>
-              No live-site access is needed for the private preview. Any live
-              implementation is agreed separately in writing.
-            </small>
-          </article>
-        </section>
-
         <section className={styles.process} aria-labelledby="process-title">
           <div className={styles.processTitle}>
-            <p className={styles.sectionLabel}>04 · A focused process</p>
+            <p className={styles.sectionLabel}>03 · A focused process</p>
             <h2 id="process-title">
               From first look
               <br />
@@ -542,7 +560,7 @@ export default function WorkPage() {
           aria-labelledby="ownership-title"
         >
           <div className={styles.ownershipIntro}>
-            <p className={styles.sectionLabel}>05 · Built to hand over</p>
+            <p className={styles.sectionLabel}>04 · Built to hand over</p>
             <h2 id="ownership-title">
               Your website.
               <br />
@@ -571,8 +589,8 @@ export default function WorkPage() {
             </article>
             <article>
               <span>04</span>
-              <h3>Seven-day remedy window</h3>
-              <p>Reported defects in the agreed delivered scope are reviewed for seven calendar days after handover. Confirmed delivery faults are corrected without an additional fee.</p>
+              <h3>Defects are covered for 30 days</h3>
+              <p>Problems in the delivered work are corrected during the included post-launch support period.</p>
             </article>
           </div>
         </section>
@@ -588,7 +606,7 @@ export default function WorkPage() {
             <span>Shi Lin · Founder-led</span>
           </div>
           <div className={styles.founderCopy}>
-            <p className={styles.sectionLabel}>06 · A real person behind the work</p>
+            <p className={styles.sectionLabel}>05 · A real person behind the work</p>
             <h2 id="founder-title">
               One studio.
               <br />
@@ -635,7 +653,7 @@ export default function WorkPage() {
           aria-labelledby="pricing-title"
         >
           <div className={styles.offerIntro}>
-            <p className={styles.sectionLabel}>07 · Clear scope, clear price</p>
+            <p className={styles.sectionLabel}>06 · Clear scope, clear price</p>
             <h2 id="pricing-title">
               Know the scope.
               <br />
@@ -649,28 +667,36 @@ export default function WorkPage() {
           </div>
 
           <div className={styles.priceGrid}>
-            {packages.map((item) => (
-              <article
-                className={item.featured ? styles.priceFeatured : ""}
-                key={item.name}
-              >
-                <div className={styles.priceHead}>
-                  <p>{item.name}</p>
-                  {item.featured && <span>Most complete</span>}
+            {pricingLanes.map((lane) => (
+              <section className={styles.priceLane} key={lane.key} aria-label={lane.label}>
+                <div className={styles.priceLaneHead}>
+                  <p>{lane.label}</p>
+                  <span>{lane.copy}</span>
                 </div>
-                <strong>{item.price}</strong>
-                <p className={styles.priceNote}>{item.note}</p>
-                <ul>
-                  {item.features.map((feature) => (
-                    <li key={feature}>{feature}</li>
-                  ))}
-                </ul>
-                {item.href && (
-                  <a className={styles.priceLearn} href={item.href}>
-                    View the full review scope <Arrow />
-                  </a>
-                )}
-              </article>
+                {packages.filter((item) => item.lane === lane.key).map((item) => (
+                  <article
+                    className={item.featured ? styles.priceFeatured : ""}
+                    key={item.name}
+                  >
+                    <div className={styles.priceHead}>
+                      <p>{item.name}</p>
+                      {item.featured && <span>Most complete</span>}
+                    </div>
+                    <strong>{item.price}</strong>
+                    <p className={styles.priceNote}>{item.note}</p>
+                    <ul>
+                      {item.features.map((feature) => (
+                        <li key={feature}>{feature}</li>
+                      ))}
+                    </ul>
+                    {item.href && (
+                      <a className={styles.priceLearn} href={item.href}>
+                        {item.linkLabel || "View the scope"} <Arrow />
+                      </a>
+                    )}
+                  </article>
+                ))}
+              </section>
             ))}
           </div>
 
@@ -683,7 +709,7 @@ export default function WorkPage() {
                 <li>Image optimisation and technical checks</li>
                 <li>Secure HTTPS launch and domain connection</li>
                 <li>Two rounds of consolidated revisions</li>
-                <li>Seven calendar days to report agreed-scope delivery faults</li>
+                <li>30 days of support for delivered-work defects</li>
               </ul>
             </section>
             <section>
@@ -732,15 +758,15 @@ export default function WorkPage() {
           aria-labelledby="brief-title"
         >
           <div className={styles.briefIntro}>
-            <p className={styles.sectionLabel}>08 · A useful first message</p>
+            <p className={styles.sectionLabel}>07 · A useful first message</p>
             <h2 id="brief-title">
               Five details.
               <br />
               <em>One honest first look.</em>
             </h2>
             <p>
-              Choose the £79 mobile enquiry check, £149 sprint, £350 quarterly
-              review or a complete website. No account or sales call is required; the brief is saved
+              Choose the £99 enquiry-path fix, the £499 AI Visibility Diagnostic, the £350 quarterly review or a complete
+              website. No account or sales call is required; the brief is saved
               securely and given a reference number.
             </p>
           </div>
@@ -753,7 +779,7 @@ export default function WorkPage() {
           aria-labelledby="contact-title"
         >
           <div className={styles.contactIntro}>
-            <p className={styles.sectionLabel}>09 · Direct contact</p>
+            <p className={styles.sectionLabel}>08 · Direct contact</p>
             <h2 id="contact-title">
               Show us the business.
               <br />
@@ -840,9 +866,6 @@ export default function WorkPage() {
           <a href={instagramUrl} target="_blank" rel="noreferrer">
             Instagram <Arrow />
           </a>
-          <a href={linkedinUrl} target="_blank" rel="noreferrer">
-            LinkedIn <Arrow />
-          </a>
           <a href={whatsappUrl} target="_blank" rel="noreferrer">
             WhatsApp <Arrow />
           </a>
@@ -852,12 +875,6 @@ export default function WorkPage() {
         </small>
       </footer>
 
-      <div className={styles.mobileCta} aria-label="Quick contact">
-        <a href="/website-review/">£350 review</a>
-        <a href={whatsappUrl} target="_blank" rel="noreferrer">
-          WhatsApp <Arrow />
-        </a>
-      </div>
     </main>
   );
 }
