@@ -1,7 +1,7 @@
 import styles from "../legal.module.css";
 
 export const metadata = {
-  title: "Website prices, payment and timelines | Linshi Studio",
+  title: "Website prices, payment and timelines",
   description:
     "Public website prices, payment milestones, timelines and provider details from Linshi Studio: £99 enquiry-path fix, £350 quarterly review and fixed 90-day website growth programmes.",
   alternates: { canonical: "/project-guide/" },
