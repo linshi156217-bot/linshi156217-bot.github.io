@@ -110,9 +110,11 @@ export default function EnquiryComposer() {
           <span>Preferred starting point *</span>
           <select name="projectType" defaultValue="" required aria-invalid={Boolean(fieldErrors.projectType)}>
             <option value="" disabled>Select one</option>
-            <option>£79 24-hour mobile enquiry check</option>
+            <option>£499 Local AI Visibility Diagnostic</option>
+            <option>£2,997 Existing Website + Visibility</option>
+            <option>£3,997 New Website + Visibility</option>
             <option>£350 quarterly website + AI-search review</option>
-            <option>£149 mobile enquiry sprint</option>
+            <option>£99 enquiry-path fix</option>
             <option>Complete website from £650</option>
             <option>I would like your recommendation</option>
           </select>

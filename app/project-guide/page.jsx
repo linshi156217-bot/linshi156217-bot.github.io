@@ -1,18 +1,18 @@
 import styles from "../legal.module.css";
 
 export const metadata = {
-  title: "Website prices, payment and timelines",
+  title: "Website prices, payment and timelines | Linshi Studio",
   description:
-    "Public website prices, payment milestones, timelines and provider details from Linshi Studio: £79 mobile enquiry check, £149 sprint, £350 quarterly review, websites from £650.",
+    "Public website prices, payment milestones, timelines and provider details from Linshi Studio: £99 enquiry-path fix, £350 quarterly review and fixed 90-day website growth programmes.",
   alternates: { canonical: "/project-guide/" },
 };
 
 const email = "hello@linshistudio.com";
-const whatsappUrl = "https://wa.me/8618559108509";
+const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
 const reviewUrl = "/website-review/";
-const checkUrl = "/mobile-enquiry-check/";
 const startUrl = `mailto:${email}?subject=Website%20project%20enquiry&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AMain%20services%3A%0AIdeal%20launch%20date%3A`;
 const sprintUrl = `mailto:${email}?subject=%C2%A3149%20mobile%20enquiry%20sprint&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AThe%20mobile%20step%20that%20may%20be%20causing%20friction%3A`;
+const aiVisibilityUrl = "/ai-visibility/";
 
 const packages = [
   { name: "Essential", price: "£650", copy: "A focused one-page website", items: ["Up to 6 considered sections", "Services or menu highlights", "Gallery and contact routes", "Domain connection", "Two revision rounds"] },
@@ -32,9 +32,10 @@ const structuredData = [
       "@type": "OfferCatalog",
       name: "Linshi Studio public services",
       itemListElement: [
-        { "@type": "Offer", name: "24-hour mobile enquiry check", price: "79", priceCurrency: "GBP", url: "https://linshistudio.com/mobile-enquiry-check/" },
-        { "@type": "Offer", name: "Mobile enquiry sprint", price: "149", priceCurrency: "GBP", url: "https://linshistudio.com/project-guide/" },
+        { "@type": "Offer", name: "Enquiry-path fix", price: "99", priceCurrency: "GBP", url: "https://linshistudio.com/project-guide/" },
         { "@type": "Offer", name: "Quarterly website and AI-search review", price: "350", priceCurrency: "GBP", url: "https://linshistudio.com/website-review/" },
+        { "@type": "Offer", name: "Existing Website + Visibility", price: "2997", priceCurrency: "GBP", url: "https://linshistudio.com/ai-visibility/" },
+        { "@type": "Offer", name: "New Website + Visibility", price: "3997", priceCurrency: "GBP", url: "https://linshistudio.com/ai-visibility/" },
         { "@type": "Offer", name: "Essential website", price: "650", priceCurrency: "GBP", url: "https://linshistudio.com/project-guide/" },
         { "@type": "Offer", name: "Signature website", price: "950", priceCurrency: "GBP", url: "https://linshistudio.com/project-guide/" },
         { "@type": "Offer", name: "Bespoke website", price: "1350", priceCurrency: "GBP", url: "https://linshistudio.com/project-guide/" },
@@ -46,11 +47,9 @@ const structuredData = [
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "Who provides the service?", acceptedAnswer: { "@type": "Answer", text: "Linshi Studio is operated by Shi Lin from China as an individual service provider. It is not presented as a UK-registered company." } },
-      { "@type": "Question", name: "What are the public starting prices?", acceptedAnswer: { "@type": "Answer", text: "The 24-hour mobile enquiry check is £79, the mobile enquiry sprint is £149, the one-off quarterly website and AI-search review is £350, Essential websites start at £650, Signature websites are £950, and bespoke websites start from £1,350. Scope is agreed in writing before payment." } },
-      { "@type": "Question", name: "When is payment requested?", acceptedAnswer: { "@type": "Answer", text: "For standard website projects, a 50% booking deposit is requested through PayPal after written scope and price are accepted. The remaining 50% is due after final approval and before launch or transfer. The £79 check, £149 sprint and £350 quarterly review are paid in full after written scope is accepted." } },
+      { "@type": "Question", name: "What are the public starting prices?", acceptedAnswer: { "@type": "Answer", text: "The enquiry-path fix is £99, the one-off quarterly website and AI-search review is £350, the Local AI Visibility Diagnostic is £499, the existing-website 90-day route is £2,997, and the New Website + Visibility 90-day route is £3,997. Essential websites start at £650, Signature websites are £950, and bespoke websites start from £1,350. Scope is agreed in writing before payment." } },
+      { "@type": "Question", name: "When is payment requested?", acceptedAnswer: { "@type": "Answer", text: "For standard website projects, a 50% booking deposit is requested through PayPal after written scope and price are accepted. The remaining 50% is due after final approval and before launch or transfer. The £99 enquiry-path fix and £350 quarterly review are paid in full after written scope is accepted." } },
       { "@type": "Question", name: "How long do standard websites take?", acceptedAnswer: { "@type": "Answer", text: "Essential projects usually take 7–10 working days and Signature projects 10–15 working days after approved content is received." } },
-      { "@type": "Question", name: "What happens if a problem is found after the seven-day remedy period?", acceptedAnswer: { "@type": "Answer", text: "The seven-day remedy period is not an automatic ongoing-maintenance plan. A later report is assessed to distinguish a new request, a third-party or hosting change, and a fault in the agreed delivered scope. Any out-of-period work is separately scoped, priced and agreed in writing before it begins." } },
-      { "@type": "Question", name: "Who controls the domain, hosting and project files?", acceptedAnswer: { "@type": "Answer", text: "Where the relevant service allows it, the business keeps control of its domain, hosting and essential third-party accounts, including billing control. After final payment, client-specific source code and editable design files expressly included in scope are handed over. The handover checklist records the available export, account roles, third-party licences and restoration route." } },
     ],
   },
 ];
@@ -86,58 +85,32 @@ export default function ProjectGuidePage() {
           <h3>Who provides the work?</h3>
           <p>Shi Lin operates Linshi Studio from China as an individual service provider. The studio is not presented as a UK-registered company.</p>
           <h3>What are the published prices?</h3>
-          <p>£79 for one 24-hour mobile enquiry check; £149 for one mobile enquiry sprint; £350 for one quarterly website and AI-search review; websites from £650. The exact scope and fixed price are agreed in writing before payment.</p>
+          <p>£99 for one enquiry-path fix; £350 for one quarterly website and AI-search review; £499 for a Local AI Visibility Diagnostic; £2,997 for the existing-website 90-day route; £3,997 for the new-website 90-day route; websites from £650. The exact scope and fixed price are agreed in writing before payment.</p>
           <h3>When is payment requested?</h3>
-          <p>Standard website projects use a 50% booking deposit and 50% final-payment structure through PayPal. The £79 check, £149 sprint and £350 quarterly review are paid in full only after their written scope is accepted.</p>
+          <p>Standard website projects use a 50% booking deposit and 50% final-payment structure through PayPal. The £99 enquiry-path fix and £350 quarterly review are paid in full only after their written scope is accepted.</p>
           <h3>How long do standard websites take?</h3>
           <p>Essential projects usually take 7–10 working days and Signature projects 10–15 working days after approved content is received.</p>
           <h3>How are delivery issues handled?</h3>
           <p>Each paid project has a written delivery checklist. Reported faults in the agreed delivered scope are reviewed for seven calendar days after handover. If an agreed part remains undelivered and cannot be reasonably remedied, the amount allocated to that undelivered part in the written scope is refunded.</p>
-          <h3>What if I find a problem after day seven?</h3>
-          <p>The 7-day remedy period is not automatic ongoing maintenance. We first assess whether the report is a new request, a third-party or hosting change, or a fault in the agreed scope. Any work outside that period is separately scoped, priced and agreed in writing before it begins.</p>
-          <h3>Can I see evidence of the delivery process?</h3>
-          <p>You can ask for the written delivery-checklist format before you commit. Public concept websites are labelled as concepts; client names or project details are shared only with the client&apos;s written permission.</p>
-          <h3>Who controls the website after handover?</h3>
-          <p>Where the relevant service allows it, the business keeps control of its domain, hosting and essential third-party accounts, including billing control. After final payment, client-specific source code and editable design files expressly included in scope are handed over. The handover checklist records available export, account roles, third-party licences and the restoration route. Read the <a href="/project-agreement/">business-client agreement template</a>.</p>
-        </section>
-
-        <section className={styles.sprintPanel}>
-          <div>
-            <p className={styles.eyebrow}>Fast, low-commitment first check</p>
-            <h2>24-hour mobile enquiry check</h2>
-            <strong>£79</strong>
-            <p>A concise review for a live service-business website: homepage, contact route and one main booking or enquiry path.</p>
-          </div>
-          <div>
-            <ul>
-              <li>Three evidence-led priorities</li>
-              <li>Mobile layout, clarity and obvious trust friction</li>
-              <li>Written note within 24 hours after the working-day scope is confirmed</li>
-              <li>No login, form submission or live-site changes</li>
-              <li>Optional repair work is quoted separately</li>
-            </ul>
-            <p>It is a review, not a redesign. If you want one priority screen redesigned, the £149 mobile enquiry sprint is the next fixed-scope option.</p>
-            <a href={checkUrl}>Read the full £79 check scope ↗</a>
-          </div>
         </section>
 
         <section className={styles.sprintPanel}>
           <div>
             <p className={styles.eyebrow}>Low-risk first project</p>
-            <h2>Mobile enquiry sprint</h2>
-            <strong>£149</strong>
-            <p>A private, fixed-scope way to test the value before commissioning a complete rebuild.</p>
+            <h2>Enquiry-path fix</h2>
+            <strong>£99</strong>
+            <p>A fixed-scope repair for one confirmed fault between a visitor and the next action.</p>
           </div>
           <div>
             <ul>
-              <li>One verified mobile enquiry problem</li>
-              <li>One redesigned priority screen or section</li>
-              <li>Private before-and-after preview within 3 working days</li>
-              <li>Written implementation recommendation</li>
-              <li>Full £149 credited to an Essential or larger website booked within 30 days</li>
+              <li>One reproducible form, link, button, call, WhatsApp or booking-route fault</li>
+              <li>Problem confirmed before payment</li>
+              <li>One agreed repair on the existing public website</li>
+              <li>Written completion record or a clear third-party-access dependency</li>
+              <li>Full £99 credited to a 90-day programme booked within 30 days</li>
             </ul>
-            <p>No live-site access is required for the private preview. Live implementation is outside this starter scope unless confirmed separately in writing.</p>
-            <a href={sprintUrl}>Ask about one mobile problem ↗</a>
+            <p>This is not a free audit, website redesign or multi-page change. Any required third-party access must be approved by the client.</p>
+            <a href={sprintUrl}>Ask about a £99 fix ↗</a>
           </div>
         </section>
 
@@ -146,11 +119,11 @@ export default function ProjectGuidePage() {
              <p className={styles.eyebrow}>One-off quarterly check</p>
             <h2>Website &amp; AI-search review</h2>
             <strong>£350</strong>
-            <p>A fixed-scope review of an agreed public website: its homepage, up to two agreed priority pages, mobile customer journey and AI-search clarity.</p>
+            <p>A fixed-scope review of an agreed public website, its mobile customer journey and AI-search clarity.</p>
           </div>
           <div>
             <ul>
-              <li>Homepage + up to 2 agreed priority pages</li>
+              <li>Main website and priority pages</li>
               <li>Mobile journey, wording and trust signals</li>
               <li>Indexing basics and relevant crawler access</li>
               <li>A concise prioritised action list</li>
@@ -159,6 +132,43 @@ export default function ProjectGuidePage() {
             <a href={reviewUrl}>Read the full £350 review scope ↗</a>
           </div>
           </section>
+
+        <section className={styles.sprintPanel}>
+          <div>
+            <p className={styles.eyebrow}>90-day fixed foundation</p>
+            <h2>Existing Website + Visibility</h2>
+            <strong>£2,997</strong>
+            <p>Three monthly payments of £999 for one business, one city and up to three core services.</p>
+          </div>
+          <div>
+            <ul>
+              <li>£499 Local AI Visibility Diagnostic, fully credited when the 90-day foundation begins</li>
+              <li>Up to three service or area pages, evidence-led FAQ and case-study framework</li>
+              <li>Business and service structured-data foundations plus core public-profile consistency</li>
+              <li>Monthly public-site checks, prioritised actions and delivery evidence</li>
+            </ul>
+            <p>This is not a promise of ChatGPT recommendations, citations, rankings, enquiries or revenue. It does not include a website rebuild, advertising, photography, paid directories, media placement or third-party subscriptions.</p>
+            <a href={aiVisibilityUrl}>Read the 90-day scope and limits ↗</a>
+          </div>
+        </section>
+        <section className={styles.sprintPanel}>
+          <div>
+            <p className={styles.eyebrow}>90-day new website route</p>
+            <h2>New Website + Visibility</h2>
+            <strong>£3,997</strong>
+            <p>New or rebuilt website of up to five public pages plus the same 90-day website, local-search and AI-search foundation.</p>
+          </div>
+          <div>
+            <ul>
+              <li>Mobile-first website design and build for up to five agreed public pages</li>
+              <li>Service, project-proof, location and enquiry-page structure</li>
+              <li>Quote, telephone, WhatsApp, booking or existing-platform links</li>
+              <li>Monthly checks, delivery evidence and 30 days of delivered-work defect support</li>
+            </ul>
+            <p>This route does not include unlimited pages, advertising, paid directories, photography, custom CRM, booking, payment or software development.</p>
+            <a href={aiVisibilityUrl}>Read the 90-day scope and limits ↗</a>
+          </div>
+        </section>
         <section className={styles.section}>
           <h2>Website packages</h2>
           <div className={styles.priceGrid}>
@@ -173,7 +183,7 @@ export default function ProjectGuidePage() {
 
         <section className={styles.section}>
           <h2>Payment and delivery</h2>
-          <p>The £79 mobile enquiry check, £149 mobile enquiry sprint and £350 one-off quarterly review are each paid in full after their written fixed scope is accepted. Standard website projects use the 50% deposit and 50% final-payment structure below.</p>
+          <p>The £99 enquiry-path fix and the £350 one-off quarterly review are each paid in full after their written fixed scope is accepted. Standard website projects use the 50% deposit and 50% final-payment structure below.</p>
           <p>After the written scope and fixed price are accepted, payment is requested through PayPal in GBP. The PayPal payment request identifies Shi Lin trading as Linshi Studio, the agreed service, the amount and the due date.</p>
           <ol>
             <li>A written scope and fixed price are agreed first.</li>
@@ -186,7 +196,7 @@ export default function ProjectGuidePage() {
           <p>PayPal may offer payment by PayPal Wallet, debit card or credit card depending on the client&apos;s location and account eligibility. Any PayPal processing or currency-conversion information is shown by PayPal before payment.</p>
           <p>Cancellation and refund terms are confirmed in the written project agreement; they are not changed through chat messages.</p>
           <p>Essential projects usually take 7–10 working days and Signature projects 10–15 working days after all approved content is received.</p>
-          <p>The business keeps control of its domain, hosting and approved content wherever the relevant service allows it. After final payment, client-specific source code and editable design files expressly included in scope are handed over. The final archive is delivered to a client-controlled folder, repository or account agreed in writing and records available export, access roles, third-party licences and the platform-specific restoration route. For agreed live changes, a restorable backup is made before the change where the platform permits and this is within scope. Reported faults in the agreed delivered scope are reviewed for seven calendar days after handover. If an agreed part remains undelivered and cannot be reasonably remedied, the amount allocated to that undelivered part in the written scope is refunded. Read the <a href="/project-agreement/">business-client agreement template</a>.</p>
+          <p>The business keeps control of its domain and approved content. Handover notes and a written delivery checklist are included. Reported faults in the agreed delivered scope are reviewed for seven calendar days after handover. If an agreed part remains undelivered and cannot be reasonably remedied, the amount allocated to that undelivered part in the written scope is refunded.</p>
         </section>
 
         <section className={styles.section}>
@@ -218,8 +228,6 @@ export default function ProjectGuidePage() {
           <a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="/privacy/">Privacy</a>
           <a href="/provider-terms/">Provider terms</a>
-          <a href="/project-agreement/">Project agreement</a>
-          <a href="/working-together/">Project safeguards</a>
         </div>
       </footer>
     </main>

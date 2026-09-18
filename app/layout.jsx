@@ -1,16 +1,17 @@
 import "./globals.css";
 import Script from "next/script";
+import ContactLauncher from "./ContactLauncher";
 
 const cloudflareAnalyticsToken = "bfd3b6308f63424980ba769e9e3aaea1";
 
 export const metadata = {
   metadataBase: new URL("https://linshistudio.com"),
   title: {
-    default: "Linshi Studio | Mobile enquiry journeys for UK businesses",
+    default: "Linshi Studio | Website growth systems for UK businesses",
     template: "%s | Linshi Studio",
   },
   description:
-    "Founder-led mobile website design for independent UK businesses. Start with a £79 mobile enquiry check, request a £350 quarterly website and AI-search review, or commission a complete website.",
+    "Founder-led mobile website design and bounded local AI-visibility foundations for independent UK businesses. Start with a £99 enquiry-path fix, a £499 Local AI Visibility Diagnostic, or a fixed 90-day programme.",
   applicationName: "Linshi Studio",
   openGraph: {
     siteName: "Linshi Studio",
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
     <html lang="en-GB">
       <body>
         {children}
+        <ContactLauncher />
         <Script
           id="cloudflare-web-analytics"
           type="module"
