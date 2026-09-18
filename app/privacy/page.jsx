@@ -1,4 +1,5 @@
 import styles from "../legal.module.css";
+import { whatsappUrl } from "../contact-links";
 
 export const metadata = {
   title: "Privacy policy",
@@ -7,7 +8,6 @@ export const metadata = {
 };
 
 const email = "hello@linshistudio.com";
-const whatsappUrl = "https://wa.me/8618559108509";
 
 export default function PrivacyPage() {
   return (

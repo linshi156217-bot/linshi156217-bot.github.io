@@ -1,14 +1,14 @@
 import styles from "../legal.module.css";
+import { whatsappUrl } from "../contact-links";
 
 export const metadata = {
-  title: "Website prices, payment and timelines | Linshi Studio",
+  title: "Website prices, payment and timelines",
   description:
     "Public website prices, payment milestones, timelines and provider details from Linshi Studio: £99 enquiry-path fix, £350 quarterly review and fixed 90-day website growth programmes.",
   alternates: { canonical: "/project-guide/" },
 };
 
 const email = "hello@linshistudio.com";
-const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
 const reviewUrl = "/website-review/";
 const startUrl = `mailto:${email}?subject=Website%20project%20enquiry&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AMain%20services%3A%0AIdeal%20launch%20date%3A`;
 const sprintUrl = `mailto:${email}?subject=%C2%A399%20Enquiry-path%20fix&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AThe%20broken%20contact%2C%20quote%2C%20booking%2C%20phone%20or%20WhatsApp%20route%3A`;

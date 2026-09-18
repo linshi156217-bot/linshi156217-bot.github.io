@@ -2,12 +2,10 @@
 
 import { useState } from "react";
 import styles from "./contact-launcher.module.css";
+import { whatsappUrl } from "./contact-links";
 
 const emailUrl =
   "mailto:hello@linshistudio.com?subject=Website%20or%20visibility%20enquiry";
-const whatsappUrl =
-  "https://wa.me/qr/NFHKON7S4RKEO1?text=Hello%20Linshi%20Studio%2C%20I%20would%20like%20to%20ask%20about%20my%20website.";
-
 export default function ContactLauncher() {
   const [isOpen, setIsOpen] = useState(false);
 

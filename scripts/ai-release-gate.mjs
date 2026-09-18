@@ -11,13 +11,13 @@ const routes = [
   "/",
   "/work/",
   "/website-review/",
-  "/mobile-enquiry-check/",
   "/thank-you/?lead=LSQ-QA-20260817&source=release_gate",
   "/project-guide/",
   "/working-together/",
   "/provider-terms/",
   "/project-agreement/",
   "/website-handover-checklist/",
+  "/ai-visibility/",
   "/ai-search-visibility/",
   "/website-review-framework/",
   "/privacy/",
@@ -128,6 +128,9 @@ try {
           unlabeledControls: controls
             .filter((control) => !control.closest("label") && !control.getAttribute("aria-label") && !control.getAttribute("aria-labelledby"))
             .map((control) => control.getAttribute("name") || control.tagName),
+          invalidWhatsAppLinks: [...document.querySelectorAll('a[href*="wa.me"]')]
+            .map((link) => link.getAttribute("href") || "")
+            .filter((href) => href.includes("wa.me/qr/") || !href.startsWith("https://wa.me/8618559108509")),
         };
       });
 
@@ -138,6 +141,7 @@ try {
       if (brokenImages.length) recordFailure(route, width, `broken images: ${brokenImages.join(", ")}`);
       if (audit.missingHashTargets.length) recordFailure(route, width, `missing hash targets: ${audit.missingHashTargets.join(", ")}`);
       if (audit.unlabeledControls.length) recordFailure(route, width, `unlabelled controls: ${audit.unlabeledControls.join(", ")}`);
+      if (audit.invalidWhatsAppLinks.length) recordFailure(route, width, `invalid WhatsApp links: ${audit.invalidWhatsAppLinks.join(", ")}`);
       if (consoleErrors.length) recordFailure(route, width, `console errors: ${consoleErrors.join(" | ")}`);
 
         if (route === "/website-review/") {
@@ -161,6 +165,27 @@ try {
       await page.close();
     }
   }
+
+  const legacyResponse = await fetch(`${baseUrl}/mobile-enquiry-check/`);
+  const legacyHtml = await legacyResponse.text();
+  if (!legacyResponse.ok) {
+    recordFailure("/mobile-enquiry-check/", null, `HTTP ${legacyResponse.status}`);
+  }
+  if (!/http-equiv="refresh" content="0; url=\/project-guide\/#enquiry-path-fix"/i.test(legacyHtml)) {
+    recordFailure("/mobile-enquiry-check/", null, "retired £79 page does not immediately point to the £99 enquiry-path fix");
+  }
+  if (!/name="robots" content="noindex, follow"/i.test(legacyHtml)) {
+    recordFailure("/mobile-enquiry-check/", null, "retired £79 page is still indexable");
+  }
+  if (!/rel="canonical" href="https:\/\/linshistudio\.com\/project-guide\/"/i.test(legacyHtml)) {
+    recordFailure("/mobile-enquiry-check/", null, "retired £79 page does not canonicalise to the current project guide");
+  }
+  results.push({
+    route: "/mobile-enquiry-check/",
+    width: null,
+    httpStatus: legacyResponse.status,
+    legacyRedirect: true,
+  });
 
   const formPage = await browser.newPage({ viewport: { width: 390, height: 844 } });
   await formPage.route("https://cloudflareinsights.com/**", async (route) => {

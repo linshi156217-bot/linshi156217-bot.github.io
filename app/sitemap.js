@@ -4,7 +4,7 @@ const routes = [
   ["/", "weekly", 1],
   ["/work/", "weekly", 0.9],
   ["/project-guide/", "monthly", 0.8],
-  ["/mobile-enquiry-check/", "monthly", 0.85],
+  ["/ai-visibility/", "monthly", 0.85],
   ["/working-together/", "monthly", 0.7],
   ["/project-agreement/", "monthly", 0.7],
   ["/website-handover-checklist/", "monthly", 0.7],
