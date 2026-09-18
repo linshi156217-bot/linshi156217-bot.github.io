@@ -11,7 +11,7 @@ const email = "hello@linshistudio.com";
 const whatsappUrl = "https://wa.me/qr/NFHKON7S4RKEO1";
 const reviewUrl = "/website-review/";
 const startUrl = `mailto:${email}?subject=Website%20project%20enquiry&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AMain%20services%3A%0AIdeal%20launch%20date%3A`;
-const sprintUrl = `mailto:${email}?subject=%C2%A3149%20mobile%20enquiry%20sprint&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AThe%20mobile%20step%20that%20may%20be%20causing%20friction%3A`;
+const sprintUrl = `mailto:${email}?subject=%C2%A399%20Enquiry-path%20fix&body=Business%20name%3A%0ATown%20or%20service%20area%3A%0ACurrent%20website%20or%20social%20page%3A%0AThe%20broken%20contact%2C%20quote%2C%20booking%2C%20phone%20or%20WhatsApp%20route%3A`;
 const aiVisibilityUrl = "/ai-visibility/";
 
 const packages = [
