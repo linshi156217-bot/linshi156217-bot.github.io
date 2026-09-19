@@ -88,6 +88,8 @@ export default function PrivacyPage() {
           <a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="/project-guide/">Project guide</a>
           <a href="/provider-terms/">Provider terms</a>
+          <a href="/terms/">Service terms</a>
+          <a href="/data-deletion/">Data deletion</a>
         </div>
       </footer>
     </main>
