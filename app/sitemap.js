@@ -20,6 +20,8 @@ const routes = [
   ["/the-fox-and-bramble/", "monthly", 0.8],
   ["/privacy/", "yearly", 0.3],
   ["/provider-terms/", "yearly", 0.5],
+  ["/terms/", "yearly", 0.3],
+  ["/data-deletion/", "yearly", 0.3],
 ];
 
 export default function sitemap() {
